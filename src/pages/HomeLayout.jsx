@@ -4,6 +4,8 @@ import AppShell from "../layout/AppShell";
 import NavbarLogo from "../components/NavbarLogo";
 import StickyNav from "../components/StickyNav";
 
+import Footer from "../components/Footer";
+
 const HomeLayout = () => {
   return (
     <>
@@ -11,6 +13,7 @@ const HomeLayout = () => {
         <NavbarLogo />
         <StickyNav />
         <Outlet />
+        <Footer />
       </AppShell>
     </>
   );

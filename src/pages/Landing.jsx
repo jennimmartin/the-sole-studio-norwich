@@ -1,10 +1,9 @@
-import Hero from "../components/Hero";
-
 const Landing = () => {
   return (
-    <div>
-      <Hero />
-    </div>
+    <>
+      <div className="h-screen"></div>
+      <div className="h-screen bg-pink-500"></div>
+    </>
   );
 };
 export default Landing;
