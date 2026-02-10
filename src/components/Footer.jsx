@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <footer className="bg-black">
         <h5 className="text-center py-6 text-white">
-          <span className="hover:text-charcoal-500 duration-300">
+          <span className="text-white hover:text-neutral-400 duration-300">
             <Link to="/legal">Legal</Link>
           </span>
           {" | "}
@@ -17,7 +17,7 @@ const Footer = () => {
               href="https://jennimmartin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-charcoal-500 duration-300"
+              className="text-white hover:text-neutral-400 duration-300"
             >
               Jenni M Martin
             </a>
