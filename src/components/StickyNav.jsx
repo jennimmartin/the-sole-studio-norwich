@@ -15,7 +15,7 @@ export default function StickyNav() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 bg-black">
+      <div className="sticky top-0 z-[70] bg-black">
         <div className="align-element py-4 sm:py-6">
           {/* Desktop Navigation */}
           <nav className="hidden sm:flex justify-center gap-x-16">
@@ -68,7 +68,7 @@ export default function StickyNav() {
 
       {/* Mobile Full-Screen Menu Overlay */}
       <div
-        className={`fixed top-16 left-0 right-0 bottom-0 bg-black z-40 transition-opacity duration-300 sm:hidden ${
+        className={`fixed inset-0 bg-black z-[60] transition-opacity duration-300 sm:hidden ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
