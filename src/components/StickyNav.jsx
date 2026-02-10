@@ -4,7 +4,12 @@ import { useState } from "react";
 export default function StickyNav() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    if (!isOpen) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setIsOpen(!isOpen);
+  };
 
   const closeMenu = () => setIsOpen(false);
 
