@@ -43,7 +43,9 @@ export default function StickyNav() {
           <div className="sm:hidden flex justify-end">
             <button
               onClick={toggleMenu}
-              className="text-white p-2 focus:outline-none  hover:text-neutral-400 duration-300"
+              className={`text-white p-2 focus:outline-none hover:text-neutral-400 duration-300 ${
+                isOpen ? "fixed top-4 right-4 z-[70]" : ""
+              }`}
               aria-label="Toggle menu"
             >
               <svg
