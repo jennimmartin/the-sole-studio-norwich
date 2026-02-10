@@ -1,11 +1,17 @@
 import { Outlet } from "react-router-dom";
+import AppShell from "../layout/AppShell";
+
+import NavbarLogo from "../components/NavbarLogo";
+import StickyNav from "../components/StickyNav";
 
 const HomeLayout = () => {
   return (
     <>
-      <nav>NavBar</nav>
-      <Outlet />
-      <footer>Footer</footer>
+      <AppShell>
+        <NavbarLogo />
+        <StickyNav />
+        <Outlet />
+      </AppShell>
     </>
   );
 };
