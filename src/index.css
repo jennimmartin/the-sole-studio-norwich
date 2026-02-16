@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-sans font-light text-charcoal-500;
+    @apply font-sans text-charcoal-500;
   }
 }
 @layer components {
