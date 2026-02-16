@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="align-element">
-      <div className="flex flex-col items-center justify-center gap-6 px-4 pb-10">
-        <h1 className="text-3xl md:text-4xl font-bold mb-12 text-center max-w-3xl">
+    <div className="align-element pt-8 pb-16 md:pt-12 md:pb-24">
+      <div className="flex flex-col items-center justify-center gap-6 px-4">
+        <h1 className="text-2xl md:text-3xl text-center font-bold max-w-3xl">
           Specialist Foot Care For Active, Hard-Working Feet
         </h1>
         <h2 className="text-base md:text-lg text-center max-w-2xl">
