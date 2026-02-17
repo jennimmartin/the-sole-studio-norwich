@@ -9,6 +9,10 @@ const Footer = () => {
             <Link to="/legal">Legal</Link>
           </span>
           {" | "}
+          <span className="text-white hover:text-neutral-400 duration-300">
+            <Link to="/faq">FAQ's</Link>
+          </span>
+          {" | "}
           &copy; {new Date().getFullYear()}
           {" | "}
           <span>

@@ -7,6 +7,8 @@ import {
   Contact,
   Legal,
   Error,
+  Blog,
+  Faq,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: "legal",
         element: <Legal />,
+      },
+      {
+        path: "blog",
+        element: <Blog />,
+      },
+      {
+        path: "faq",
+        element: <Faq />,
       },
     ],
   },

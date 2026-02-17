@@ -37,6 +37,18 @@ export default function StickyNav() {
             >
               Services
             </Link>
+            <Link
+              className="text-lg text-white hover:text-neutral-400 duration-300 tracking-wide"
+              to="/contact"
+            >
+              Contact
+            </Link>
+            <Link
+              className="text-lg text-white hover:text-neutral-400 duration-300 tracking-wide"
+              to="/blog"
+            >
+              Blog
+            </Link>
           </nav>
 
           {/* Mobile Hamburger */}
@@ -97,6 +109,20 @@ export default function StickyNav() {
             onClick={closeMenu}
           >
             Services
+          </Link>
+          <Link
+            className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"
+            to="/contact"
+            onClick={closeMenu}
+          >
+            Contact
+          </Link>
+          <Link
+            className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"
+            to="/blog"
+            onClick={closeMenu}
+          >
+            Blog
           </Link>
         </nav>
       </div>
