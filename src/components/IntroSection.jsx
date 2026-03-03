@@ -7,41 +7,17 @@ const Introsection = () => {
         </h2>
         <div className="space-y-4 text-base md:text-lg">
           <p>
-            If you're on your feet all day, train regularly, or struggle with
-            recurring foot issues, a standard beauty treatment often isn't
-            enough.
+            If you are on your feet all day, train and exercise regularly, or
+            struggle with recurring foot issues, then a standard beauty
+            treatment may well not be enough.
           </p>
           <p>
-            At The Sole Studio Norwich, every treatment is focused on how your
-            feet function as well as how they look. Whether you're dealing with
-            discomfort, hard skin, damaged toenails, or simply tired, overworked
-            feet, treatments are tailored to what your feet actually need.
+            At The Sole Studio Norwich, each treatment is focused on your feet
+            and your foot concerns. Whether you struggle with discomfort, hard
+            skin and calluses, damaged toenails, or simply tired, overworked
+            feet, the treatments are tailored to what your feet actually need.
           </p>
-          <p className="font-medium">
-            This is professional, judgement-free foot care — without unnecessary
-            clinical intervention.
-          </p>
-          <h3 className="text-2xl pt-3 md:text-3xl font-bold mb-6 text-center md:text-left">
-            About The Sole Studio
-          </h3>
-          <div className="space-y-4 text-base md:text-lg">
-            <p>
-              The Sole Studio Norwich was created to bridge the gap between
-              beauty treatments and clinical foot care.
-            </p>
-            <p>
-              I specialise in working with people who use their feet hard —
-              runners, gym-goers, professionals on their feet all day, and
-              anyone dealing with ongoing foot concerns that don’t require
-              podiatry. My approach combines expert technique, attention to
-              detail, and genuine care, ensuring your feet feel better, function
-              better, and look better.
-            </p>
-            <p className="font-medium">
-              If a condition falls outside my scope, I’ll always advise you
-              honestly and guide you toward appropriate care.
-            </p>
-          </div>
+          <p>This is professional, judgement-free foot care.</p>
         </div>
       </div>
     </section>
