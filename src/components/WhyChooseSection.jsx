@@ -9,11 +9,13 @@ export const WhyChooseSection = () => {
         <ul className="space-y-4 mb-8">
           <li className="flex items-start gap-3">
             <span className="text-xl">✓</span>
-            <span>Specialist foot-focused treatments only</span>
+            <span>Specialist foot-focused treatments</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-xl">✓</span>
-            <span>Ideal for active lifestyles & standing professions</span>
+            <span>
+              Ideal for active lifestyles and those who work on their feet
+            </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-xl">✓</span>
