@@ -10,8 +10,9 @@ export const EXTERNAL_LINKS = {
 
   // Social media (empty until Suzanne sets them up)
   facebook: "https://facebook.com/suzannesanctuary",
-  instagram: "https://instagram.com/suzannesanctuary",
-  tiktok: "",
+  instagram: "https://www.instagram.com/suzannes_sanctuary_norwich",
+  tiktok:
+    "https://www.tiktok.com/search?q=suzanne%27s%20sanctuar%20nowich&t=1772724242846",
 
   // Reviews (empty until configured)
   googleReviews: "",
