@@ -7,7 +7,7 @@ const Faq = () => {
         <h1 className="text-4xl md:text-5xl text-center mb-4">
           Frequently Asked Questions
         </h1>
-        <p className="text-center text-charcoal-500 mb-12 max-w-2xl mx-auto">
+        <p className="text-center mb-12 max-w-2xl mx-auto">
           Find answers to common questions about our services, appointments, and
           treatments.
         </p>

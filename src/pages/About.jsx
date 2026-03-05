@@ -4,9 +4,10 @@ const About = () => {
   return (
     <section className="align-element py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="pb-6 text-3xl md:text-4xl mb-6 text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl text-center mb-4">
           About The Sole Studio Norwich
-        </h2>
+        </h1>
+
         <h3 className="text-2xl md:text-3xl mb-6 text-center md:text-left">
           Specialist foot care with purpose
         </h3>
