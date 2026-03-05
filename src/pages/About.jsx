@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import BookNowButton from "../components/ui/BookNowButton";
 
 const About = () => {
   return (
@@ -97,9 +97,7 @@ const About = () => {
             I look forward to welcoming you and providing a professional
             experience where your comfort, privacy and care always comes first.
           </p>
-          <button className="px-6 py-3 bg-black text-white hover:bg-neutral-800 transition-all duration-300">
-            Book Your Appointment Today
-          </button>
+          <BookNowButton variant="primary" size="large" />
         </div>
       </div>
     </section>

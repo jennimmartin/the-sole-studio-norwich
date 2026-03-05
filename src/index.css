@@ -23,3 +23,14 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-10;
   }
 }
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}

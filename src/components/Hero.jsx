@@ -18,7 +18,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-4">
           <BookNowButton variant="primary" size="large" />
-          <ViewTreatmentsButton />
+          <ViewTreatmentsButton variant="primary" size="large" />
         </div>
       </div>
     </div>
