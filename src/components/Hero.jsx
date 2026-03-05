@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import BookNowButton from "../components/ui/BookNowButton";
+import ViewTreatmentsButton from "./ui/ViewTreatmentsButton";
 
 const Hero = () => {
   return (
@@ -16,14 +17,8 @@ const Hero = () => {
           confidence.
         </p>
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-4">
-          <button className="px-6 py-3 bg-black text-white hover:bg-neutral-800 transition-all duration-300">
-            Book an Appointment
-          </button>
-          <Link to="/services">
-            <button className="px-6 py-3 outline outline-1 outline-black hover:bg-black hover:text-white transition-all duration-300">
-              View Treatments
-            </button>
-          </Link>
+          <BookNowButton variant="primary" size="large" />
+          <ViewTreatmentsButton />
         </div>
       </div>
     </div>

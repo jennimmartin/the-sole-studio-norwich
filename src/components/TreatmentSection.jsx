@@ -1,3 +1,5 @@
+import BookNowButton from "../components/ui/BookNowButton";
+
 const TreatmentSection = () => {
   return (
     <section className="bg-neutral-50 py-16 md:py-24">
@@ -16,9 +18,7 @@ const TreatmentSection = () => {
               feet. Ideal for active individuals, people who work on their feet
               or anyone with sore tired feet.
             </p>
-            <button className="px-6 py-3 bg-black text-white hover:bg-neutral-800 transition-all duration-300">
-              Book Now
-            </button>
+            <BookNowButton variant="primary" />
           </div>
 
           {/* Toenail Reconstruction */}
@@ -31,9 +31,7 @@ const TreatmentSection = () => {
               underneath. Perfect for those wanting confidence without medical
               treatment.
             </p>
-            <button className="px-6 py-3 bg-black text-white hover:bg-neutral-800 transition-all duration-300">
-              Book Now
-            </button>
+            <BookNowButton variant="primary" />
           </div>
 
           {/* Problem-Based Pedicures */}
@@ -45,9 +43,7 @@ const TreatmentSection = () => {
               issues, and general foot health. Each session is adapted to your
               individual needs and concerns - not a one size-fits-all service.
             </p>
-            <button className="px-6 py-3 bg-black text-white hover:bg-neutral-800 transition-all duration-300">
-              Book Now
-            </button>
+            <BookNowButton variant="primary" />
           </div>
         </div>
       </div>
