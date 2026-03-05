@@ -5,7 +5,7 @@ export default function ViewTreatmentsButton({
   className = "",
 }) {
   const baseStyles =
-    "transition-all duration-300 cursor-pointer inline-block text-center outline outline-1 outline-black hover:bg-black hover:text-white bg-white text-black";
+    "transition-all duration-300 cursor-pointer inline-block text-center outline outline-1 outline-neutral-200 hover:bg-black hover:text-white bg-white text-black";
 
   const sizes = {
     default: "px-6 py-3",
