@@ -2,7 +2,7 @@ const Introsection = () => {
   return (
     <section className="align-element py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center md:text-left">
+        <h2 className="text-3xl md:text-4xl mb-6 text-center md:text-left">
           Foot care that goes beyond a standard pedicure
         </h2>
         <div className="space-y-4 text-base md:text-lg">

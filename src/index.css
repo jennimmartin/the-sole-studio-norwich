@@ -10,7 +10,14 @@
   body {
     @apply font-sans text-charcoal-500;
   }
+  h1,
+  h2,
+  h3 {
+    @apply text-black;
+    @apply font-semibold;
+  }
 }
+
 @layer components {
   .align-element {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-10;
