@@ -2,16 +2,16 @@ import BookNowButton from "../components/ui/BookNowButton";
 
 const About = () => {
   return (
-    <section className="align-element py-16 md:py-24">
+    <section className-="align-element py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl text-center mb-4">
+        <h1 className="text-4xl md:text-5xl text-center mb-4 py-12">
           About The Sole Studio Norwich
         </h1>
 
         <h3 className="text-2xl md:text-3xl mb-6 text-center md:text-left">
           Specialist foot care with purpose
         </h3>
-        <div className="space-y-4 text-base md:text-lg">
+        <div className="space-y-4 text-base md:text-lg pb-8">
           <p>
             The Sole Studio Norwich was created in 2026 to offer something
             missing. Expert, focused care for people who genuinely rely on their

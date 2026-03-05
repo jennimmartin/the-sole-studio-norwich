@@ -2,14 +2,14 @@ import BookNowButton from "../components/ui/BookNowButton";
 
 const TreatmentSection = () => {
   return (
-    <section className="bg-neutral-50 py-16 md:py-24">
+    <section className="py-16 md:py-24">
       <div className="align-element px-4">
         <h2 className="text-3xl text-black md:text-4xl font-semibold mb-12 text-center">
           Specialist Treatments
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Thai Foot Massage */}
-          <div className="bg-white p-8 flex flex-col">
+          <div className="bg-neutral-50 p-8 flex flex-col">
             <h3 className="text-xl mb-4 min-h-[3.5rem]">Thai Foot Massage</h3>
             <p className="text-sm md:text-base mb-6 flex-grow">
               A deeply restorative treatment designed to relieve tension,
@@ -23,7 +23,7 @@ const TreatmentSection = () => {
           </div>
 
           {/* Toenail Reconstruction */}
-          <div className="bg-white p-8 flex flex-col">
+          <div className="bg-neutral-50 p-8 flex flex-col">
             <h3 className="text-xl mb-4 min-h-[3.5rem]">
               Toenail Reconstruction
             </h3>
@@ -40,7 +40,7 @@ const TreatmentSection = () => {
           </div>
 
           {/* Problem-Based Pedicures */}
-          <div className="bg-white p-8 flex flex-col">
+          <div className="bg-neutral-50 p-8 flex flex-col">
             <h3 className="text-xl mb-4 min-h-[3.5rem]">
               Bespoke Problem-Based Pedicures
             </h3>
