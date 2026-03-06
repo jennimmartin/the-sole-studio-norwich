@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="align-element pt-8 pb-16 md:pt-12 md:pb-24">
       <div className="flex flex-col items-center justify-center gap-6 px-4">
-        <h1 className="text-4xl md:text-5xl text-center max-w-3xl">
+        <h1 className="text-3xl md:text-5xl text-center max-w-3xl">
           Specialist Foot Care For Active, Hard-Working Feet
         </h1>
         <h2 className="text-charcoal-500 text-1xl md:text-2xl text-center max-w-2xl">
