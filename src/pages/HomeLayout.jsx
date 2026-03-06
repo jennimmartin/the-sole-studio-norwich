@@ -6,10 +6,13 @@ import StickyNav from "../components/StickyNav";
 
 import Footer from "../components/Footer";
 
+import ScrollToTop from "../components/ScrollToTop";
+
 const HomeLayout = () => {
   return (
     <>
       <AppShell>
+        <ScrollToTop />
         <NavbarLogo />
         <StickyNav />
         <Outlet />
