@@ -6,7 +6,7 @@ export const EXTERNAL_LINKS = {
   // Booking system
   booking: isDevelopment
     ? "https://suzannes-sanctuary.book.app/book-now" // Test URL for development
-    : "https://the-sole-studio-norwich.book.app/book-now", // Real URL for production
+    : "https://suzannes-sanctuary.book.app/book-now", // Real URL for production - it will have sole-studio
 
   // Social media (empty until Suzanne sets them up)
   facebook: "https://facebook.com/suzannesanctuary",
