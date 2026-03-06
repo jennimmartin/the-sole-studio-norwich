@@ -1,4 +1,112 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { getBlogPosts } from "../lib/contentful";
+
 const Blog = () => {
-  return <div>Blog</div>;
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getBlogPosts()
+      .then((data) => {
+        setPosts(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error loading blog posts:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-2xl text-charcoal-500">Loading posts...</div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-white py-16 md:py-24">
+      <div className="align-element">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl mb-4">Blog</h1>
+          <p className="text-lg text-charcoal-500 max-w-2xl mx-auto">
+            Insights on foot care, wellness, and looking after yourself
+          </p>
+        </div>
+
+        {/* Posts Grid */}
+        {posts.length === 0 ? (
+          <div className="text-center py-20">
+            <p className="text-lg text-charcoal-500">
+              No posts yet. Check back soon.
+            </p>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
+
+// Blog Card Component
+const BlogCard = ({ post }) => {
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  };
+
+  return (
+    <Link to={`/blog/${post.slug}`} className="group">
+      <article className="bg-white border border-neutral-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        {/* Image */}
+        {post.featuredImage && (
+          <div className="aspect-[4/3] bg-neutral-100 overflow-hidden">
+            <img
+              src={post.featuredImage}
+              alt={post.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        )}
+
+        <div className="p-6">
+          {/* Date & Author */}
+          <div className="text-sm text-charcoal-500 mb-3">
+            {formatDate(post.publishDate)} · {post.author}
+          </div>
+
+          {/* Title */}
+          <h2 className="text-xl md:text-2xl mb-3 group-hover:text-charcoal-500 transition-colors">
+            {post.title}
+          </h2>
+
+          {/* Excerpt */}
+          <p className="text-charcoal-500 leading-relaxed mb-4 line-clamp-3">
+            {post.excerpt}
+          </p>
+
+          {/* Read More */}
+          <div className="text-sm group-hover:translate-x-2 transition-transform inline-block">
+            Read more →
+          </div>
+        </div>
+      </article>
+    </Link>
+  );
+};
+
 export default Blog;

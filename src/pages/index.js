@@ -6,4 +6,5 @@ export { default as Error } from "./Error";
 export { default as Legal } from "./Legal";
 export { default as Contact } from "./Contact";
 export { default as Blog } from "./Blog";
+export { default as BlogPost } from "./BlogPost";
 export { default as Faq } from "./Faq";

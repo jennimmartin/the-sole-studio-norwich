@@ -2,7 +2,7 @@ import BookNowButton from "../components/ui/BookNowButton";
 
 const About = () => {
   return (
-    <section className-="align-element py-16 md:py-24">
+    <section className="align-element py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-5xl text-center mb-4 py-12">
           About The Sole Studio Norwich

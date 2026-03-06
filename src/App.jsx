@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import {
   Landing,
   HomeLayout,
@@ -9,6 +8,7 @@ import {
   Legal,
   Error,
   Blog,
+  BlogPost,
   Faq,
 } from "./pages";
 
@@ -41,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "blog",
         element: <Blog />,
+      },
+      {
+        path: "blog/:slug", // ← Add this route
+        element: <BlogPost />,
       },
       {
         path: "faq",
