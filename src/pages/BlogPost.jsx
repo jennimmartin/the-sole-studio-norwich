@@ -78,11 +78,13 @@ const BlogPost = () => {
         {/* Featured Image */}
         {post.featuredImage && (
           <div className="max-w-4xl mx-auto mb-12">
-            <img
-              src={post.featuredImage}
-              alt={post.title}
-              className="w-full h-auto"
-            />
+            <div className="aspect-[16/9] overflow-hidden bg-neutral-100">
+              <img
+                src={post.featuredImage}
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         )}
 
