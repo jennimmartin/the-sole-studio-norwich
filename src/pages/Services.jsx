@@ -60,7 +60,7 @@ const Services = () => {
                 Professional foot care for everyone
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {coreTreatments.map((treatment) => (
                 <TreatmentCard key={treatment.id} treatment={treatment} />
               ))}
@@ -81,7 +81,7 @@ const Services = () => {
                 Advanced care for specific concerns
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {advancedTreatments.map((treatment) => (
                 <TreatmentCard key={treatment.id} treatment={treatment} />
               ))}
@@ -101,7 +101,7 @@ const Services = () => {
               </p>
             </div>
             <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-8 items-stretch">
                 {addons.map((treatment) => (
                   <TreatmentCard
                     key={treatment.id}
@@ -115,17 +115,75 @@ const Services = () => {
         </section>
       )}
 
-      {/* Packages Section - Placeholder for future */}
-      <section className="py-16 md:py-24 ">
-        <div className="align-element text-center">
-          <h2 className="text-3xl md:text-4xl mb-6">Treatment Packages</h2>
-          <p className="text-lg mb-6 max-w-2xl mx-auto">
-            Coming soon: loyalty programmes and package options
-          </p>
-          <p className="text-neutral-400">
-            In the meantime, book your appointment and we'll discuss what works
-            best for you.
-          </p>
+      {/* Special Offers & Loyalty */}
+      <section className="py-16 md:py-24">
+        <div className="align-element">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl mb-4">Special Offers</h2>
+            <p className="text-base text-charcoal-500 max-w-2xl mx-auto">
+              Rewards for loyal clients and those who care for others
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            {/* Care Worker Appreciation */}
+            <div className="bg-white border border-neutral-200 p-8">
+              <h3 className="text-2xl mb-4">Care Worker Appreciation</h3>
+              <p className="text-charcoal-500 mb-6 leading-relaxed">
+                If you work in care, healthcare, or a standing profession, show
+                your NHS badge or care worker ID to receive 10% off your first
+                treatment.
+              </p>
+              <p className="text-sm text-charcoal-500 italic">
+                Your feet work hard for others. Let me help them recover.
+              </p>
+            </div>
+
+            {/* Birthday Treatment */}
+            <div className="bg-white border border-neutral-200 p-8">
+              <h3 className="text-2xl mb-4">Birthday Month Treat</h3>
+              <p className="text-charcoal-500 mb-6 leading-relaxed">
+                Book any treatment during your birthday month and choose a free
+                add-on: gel polish application or extended massage.
+              </p>
+              <p className="text-sm text-charcoal-500 italic">
+                Mention your birthday when booking to claim your gift.
+              </p>
+            </div>
+
+            {/* Loyalty Reward */}
+            <div className="bg-white border border-neutral-200 p-8">
+              <h3 className="text-2xl mb-4">Loyalty Reward</h3>
+              <p className="text-charcoal-500 mb-6 leading-relaxed">
+                Book four treatments and receive £10 off your fifth appointment.
+                Applies to all treatments except add-ons.
+              </p>
+              <p className="text-sm text-charcoal-500 italic">
+                Automatically tracked — no cards to carry or lose.
+              </p>
+            </div>
+
+            {/* Referral Programme */}
+            <div className="bg-white border border-neutral-200 p-8">
+              <h3 className="text-2xl mb-4">Refer a Friend</h3>
+              <p className="text-charcoal-500 mb-6 leading-relaxed">
+                Recommend The Sole Studio to someone new and you'll both receive
+                £5 off your next treatment when they book their first
+                appointment.
+              </p>
+              <p className="text-sm text-charcoal-500 italic">
+                Just ask them to mention your name when booking.
+              </p>
+            </div>
+          </div>
+
+          {/* Note */}
+          <div className="text-center mt-12">
+            <p className="text-sm text-charcoal-500 max-w-3xl mx-auto">
+              Offers cannot be combined. One discount per treatment. All offers
+              subject to availability and may be updated at any time.
+            </p>
+          </div>
         </div>
       </section>
     </div>
@@ -137,7 +195,7 @@ const TreatmentCard = ({ treatment, isAddon = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-white border border-neutral-200 p-8 hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-white border border-neutral-200 p-8 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
       {/* Title & Price */}
       <div className="mb-6">
         <h3 className="text-2xl mb-2">{treatment.title}</h3>
@@ -194,7 +252,12 @@ const TreatmentCard = ({ treatment, isAddon = false }) => {
 
       {/* Book Button */}
       {!isAddon && (
-        <BookNowButton variant="secondary" className="w-full justify-center" />
+        <div className="mt-auto">
+          <BookNowButton
+            variant="secondary"
+            className="w-full justify-center"
+          />
+        </div>
       )}
     </div>
   );
