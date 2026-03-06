@@ -5,17 +5,14 @@ export default function StickyNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    if (!isOpen) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   const closeMenu = () => setIsOpen(false);
 
   return (
     <>
-      <div className="sticky top-0 z-[70] bg-black">
+      <div className="sticky top-0 z-[40] bg-black">
         <div className="align-element py-4 sm:py-6">
           {/* Desktop Navigation */}
           <nav className="hidden sm:flex justify-center gap-x-16">
@@ -56,18 +53,18 @@ export default function StickyNav() {
             <button
               onClick={toggleMenu}
               className={`text-white p-2 focus:outline-none hover:text-neutral-400 duration-300 ${
-                isOpen ? "fixed top-4 right-4 z-[70]" : ""
+                isOpen ? "fixed top-4 right-4 z-[90]" : ""
               }`}
               aria-label="Toggle menu"
             >
               <svg
                 className="w-6 h-6"
                 fill="none"
+                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
               >
                 {isOpen ? (
                   <path d="M6 18L18 6M6 6l12 12" />
@@ -82,7 +79,7 @@ export default function StickyNav() {
 
       {/* Mobile Full-Screen Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black z-[60] transition-opacity duration-300 sm:hidden ${
+        className={`fixed inset-0 bg-black z-[80] transition-opacity duration-300 sm:hidden ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
