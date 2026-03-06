@@ -88,7 +88,7 @@ export default function StickyNav() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col items-center justify-center min-h-[100dvh] gap-8">
+        <nav className="flex min-h-[100dvh] flex-col items-center justify-center gap-8 px-6 py-24">
           <Link
             className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"
             to="/"
