@@ -48,32 +48,28 @@ export default function StickyNav() {
             </Link>
           </nav>
 
-          {/* Mobile Hamburger */}
-          <div className="sm:hidden flex justify-end">
-            <button
-              onClick={toggleMenu}
-              className={`text-white p-2 focus:outline-none hover:text-neutral-400 duration-300 ${
-                isOpen ? "fixed top-4 right-4 z-[90]" : ""
-              }`}
-              aria-label="Toggle menu"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
+          {/* Mobile Hamburger (only shows when menu is closed) */}
+          {!isOpen && (
+            <div className="sm:hidden flex justify-end">
+              <button
+                onClick={toggleMenu}
+                className="text-white p-2 focus:outline-none hover:text-neutral-400 duration-300"
+                aria-label="Open menu"
               >
-                {isOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
-                ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
@@ -85,6 +81,26 @@ export default function StickyNav() {
             : "opacity-0 pointer-events-none"
         }`}
       >
+        {/* Close Button - Fixed Position */}
+        <button
+          onClick={closeMenu}
+          className="fixed top-4 right-4 z-[90] text-white p-2 focus:outline-none hover:text-neutral-400 duration-300"
+          aria-label="Close menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* Menu Links */}
         <nav className="flex min-h-[100dvh] flex-col items-center justify-center gap-8 px-6 py-24">
           <Link
             className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"
