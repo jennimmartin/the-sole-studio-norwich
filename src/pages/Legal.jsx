@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AccordionSection from "../components/AccordionSection";
 
 const Legal = () => {
   return (
@@ -12,13 +13,19 @@ const Legal = () => {
         </p>
 
         <div className="space-y-4">
-          <LegalSection
+          <AccordionSection
             title="Customer Policies"
             content={customerPoliciesContent}
           />
-          <LegalSection title="Privacy Policy" content={privacyPolicyContent} />
-          <LegalSection title="Cookie Policy" content={cookiePolicyContent} />
-          <LegalSection
+          <AccordionSection
+            title="Privacy Policy"
+            content={privacyPolicyContent}
+          />
+          <AccordionSection
+            title="Cookie Policy"
+            content={cookiePolicyContent}
+          />
+          <AccordionSection
             title="Terms of Service"
             content={termsOfServiceContent}
           />
@@ -38,30 +45,6 @@ const Legal = () => {
           </p>
         </div>
       </div>
-    </div>
-  );
-};
-
-// Legal Section Component (Single Accordion)
-const LegalSection = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border border-neutral-200">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-neutral-50 transition-colors"
-      >
-        <span className="font-semibold text-xl pr-8">{title}</span>
-        <span className="text-2xl flex-shrink-0">{isOpen ? "−" : "+"}</span>
-      </button>
-      {isOpen && (
-        <div className="px-6 pb-6 pt-4">
-          <div className="text-charcoal-500 whitespace-pre-line leading-relaxed">
-            {content}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

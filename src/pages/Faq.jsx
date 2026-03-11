@@ -1,4 +1,4 @@
-import { useState } from "react";
+import AccordionSection from "../components/AccordionSection";
 
 const Faq = () => {
   return (
@@ -13,42 +13,24 @@ const Faq = () => {
         </p>
 
         <div className="space-y-4">
-          <FAQSection title="General Questions" content={generalFAQsContent} />
-          <FAQSection title="Thai Foot Massage" content={thaiFAQsContent} />
-          <FAQSection
+          <AccordionSection
+            title="General Questions"
+            content={generalFAQsContent}
+          />
+          <AccordionSection
+            title="Thai Foot Massage"
+            content={thaiFAQsContent}
+          />
+          <AccordionSection
             title="Toenail Reconstruction"
             content={toenailFAQsContent}
           />
-          <FAQSection
+          <AccordionSection
             title="Bespoke Problem-Based Pedicures"
             content={pedicureFAQsContent}
           />
         </div>
       </div>
-    </div>
-  );
-};
-
-// FAQ Section Component (Single Accordion)
-const FAQSection = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border border-neutral-200">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-neutral-50 transition-colors"
-      >
-        <span className="font-semibold text-xl pr-8">{title}</span>
-        <span className="text-2xl flex-shrink-0">{isOpen ? "−" : "+"}</span>
-      </button>
-      {isOpen && (
-        <div className="px-6 pb-6 pt-4">
-          <div className="text-charcoal-500 whitespace-pre-line leading-relaxed">
-            {content}
-          </div>
-        </div>
-      )}
     </div>
   );
 };
