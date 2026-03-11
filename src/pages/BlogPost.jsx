@@ -92,12 +92,15 @@ const BlogPost = () => {
         <div className="max-w-3xl mx-auto">
           <div
             className="prose prose-lg max-w-none
-              prose-headings:font-semibold
-              prose-p:text-charcoal-500 prose-p:leading-relaxed
+              prose-headings:font-semibold prose-headings:mb-4 prose-headings:mt-8
+              prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl
+              prose-p:text-charcoal-500 prose-p:leading-relaxed prose-p:mb-6
               prose-a:text-black prose-a:underline hover:prose-a:text-charcoal-500
-              prose-ul:text-charcoal-500 prose-ol:text-charcoal-500
+              prose-ul:text-charcoal-500 prose-ul:mb-6 prose-ul:list-disc prose-ul:pl-6
+              prose-ol:text-charcoal-500 prose-ol:mb-6 prose-ol:list-decimal prose-ol:pl-6
+              prose-li:mb-2
               prose-strong:text-black
-              prose-blockquote:border-l-black prose-blockquote:italic"
+              prose-blockquote:border-l-black prose-blockquote:italic prose-blockquote:pl-4"
             dangerouslySetInnerHTML={{ __html: post.body }}
           />
         </div>
