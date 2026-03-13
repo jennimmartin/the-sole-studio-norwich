@@ -37,6 +37,7 @@ const EmailPopup = () => {
       const formData = new FormData();
       formData.append("form-name", "email-signup");
       formData.append("email", email);
+      formData.append("source", "Newsletter Popup - Free Foot Care Guide");
 
       const response = await fetch("/", {
         method: "POST",
@@ -47,14 +48,14 @@ const EmailPopup = () => {
       if (response.ok) {
         setSubmitted(true);
         localStorage.setItem("emailPopupSubmitted", "true");
-        
+
         // Trigger PDF download
         setTimeout(() => {
           const link = document.createElement("a");
           link.href = "/Free_Foot_Care_Guide.pdf";
           link.download = "Free_Foot_Care_Guide.pdf";
           link.click();
-          
+
           // Close popup after 3 seconds
           setTimeout(() => {
             setShowPopup(false);
@@ -74,7 +75,7 @@ const EmailPopup = () => {
   return (
     <>
       {/* Overlay */}
-      <div 
+      <div
         className="fixed inset-0 bg-black bg-opacity-50 z-[100] transition-opacity duration-300"
         onClick={handleClose}
       />
@@ -108,16 +109,22 @@ const EmailPopup = () => {
                 Get Your Free Foot Care Guide
               </h2>
               <p className="text-charcoal-500 mb-6">
-                Sign up to receive professional foot care tips, treatment insights, and exclusive offers.
+                Sign up to receive professional foot care tips, treatment
+                insights, and exclusive offers.
               </p>
               <p className="text-sm text-charcoal-500 mb-6">
-                <strong>Free download:</strong> Your Essential Foot Care Guide (PDF)
+                <strong>Free download:</strong> Your Essential Foot Care Guide
+                (PDF)
               </p>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} data-netlify="true" name="email-signup">
+              <form
+                onSubmit={handleSubmit}
+                data-netlify="true"
+                name="email-signup"
+              >
                 <input type="hidden" name="form-name" value="email-signup" />
-                
+
                 <div className="mb-4">
                   <input
                     type="email"
@@ -163,7 +170,8 @@ const EmailPopup = () => {
                 Thank you!
               </h3>
               <p className="text-charcoal-500">
-                Your free guide is downloading now.<br />
+                Your free guide is downloading now.
+                <br />
                 Check your email for more foot care tips.
               </p>
             </div>
