@@ -174,6 +174,24 @@ const Footer = () => {
                     </svg>
                   </a>
                 </div>
+                {/* Download Treatment Menu */}
+                <div className="mt-6">
+                  <a
+                    href="/Treatment_Menu.pdf"
+                    download="The_Sole_Studio_Treatment_Menu.pdf"
+                    className="text-black underline hover:text-charcoal-500 transition-colors text-sm pr-0.5"
+                  >
+                    Download Treatment Menu (PDF)
+                  </a>{" "}
+                  {" | "}
+                  <span className="text-black underline hover:text-charcoal-500 transition-colors text-sm px-0.5">
+                    <Link to="/legal">Legal</Link>
+                  </span>
+                  {" | "}
+                  <span className="text-black underline hover:text-charcoal-500 transition-colors text-sm px-0.5">
+                    <Link to="/faq">FAQs</Link>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -184,14 +202,6 @@ const Footer = () => {
       <div className="bg-black">
         <div className="align-element">
           <h5 className="text-center py-6 text-white text-sm">
-            <span className="text-white hover:text-neutral-400 duration-300">
-              <Link to="/legal">Legal</Link>
-            </span>
-            {" | "}
-            <span className="text-white hover:text-neutral-400 duration-300">
-              <Link to="/faq">FAQs</Link>
-            </span>
-            {" | "}
             &copy; {new Date().getFullYear()} {FOOTER_DATA.businessName}
             {" | "}
             <span>

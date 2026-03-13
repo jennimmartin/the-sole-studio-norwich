@@ -104,13 +104,15 @@ We collect and process the following personal information:
 • Appointment history and treatment records
 • Payment information (processed securely through our booking system)
 • Communication preferences for marketing purposes
+• Email addresses collected through our newsletter signup
 
 How We Use Your Information
 Your personal information is used to:
 • Process and manage your bookings and appointments
 • Provide safe and appropriate treatments based on your health information
 • Communicate with you about your appointments and services
-• Send you marketing communications (only if you have consented)
+• Send you marketing communications, newsletters, and foot care tips (only if you have consented)
+• Provide downloadable resources such as our free foot care guide
 • Maintain accurate treatment records for your safety and continuity of care
 • Comply with legal and regulatory requirements
 
@@ -118,12 +120,13 @@ Legal Basis for Processing
 We process your personal data under the following legal bases:
 • Contract: To fulfill our booking and treatment obligations
 • Legal Obligation: To maintain treatment records as required by law
-• Consent: For marketing communications (you can withdraw consent at any time)
+• Consent: For marketing communications and newsletter subscriptions (you can withdraw consent at any time)
 • Legitimate Interests: To provide safe, effective treatments and manage our business
 
 How We Store Your Information
 Your information is stored:
 • Electronically in our booking system (Ovatu) with appropriate security measures
+• Email addresses are stored securely via Netlify Forms
 • In physical treatment records kept securely at the studio
 • Treatment records are retained for 7 years in accordance with professional guidelines
 • Personal data is stored in the UK and complies with UK GDPR
@@ -131,6 +134,7 @@ Your information is stored:
 Who We Share Your Information With
 We do not sell or share your personal information with third parties except:
 • Our booking system provider (Ovatu) for appointment management
+• Netlify for secure form submission and email collection
 • Payment processors for secure transaction processing
 • Professional advisors (e.g., insurance, legal) where necessary
 • If required by law or to protect safety
@@ -149,7 +153,14 @@ Under UK GDPR, you have the right to:
 To exercise any of these rights, please contact hello@thesolestudionorwich.co.uk
 
 Marketing Communications
-We may send you information about new treatments, special offers, and appointment reminders. You can opt out at any time by clicking 'unsubscribe' in any email or contacting us directly. You will continue to receive essential appointment-related communications.`;
+We may send you information about new treatments, special offers, foot care tips, and appointment reminders. You can opt out at any time by clicking 'unsubscribe' in any email or contacting us directly. You will continue to receive essential appointment-related communications.
+
+Newsletter Signup
+If you sign up for our newsletter or free resources:
+• We will only email you content you've requested (foot care tips, guides, offers)
+• We will never share your email address with third parties
+• You can unsubscribe at any time using the link in any email
+• Your email will be stored securely and used only for the purposes you agreed to`;
 
 const cookiePolicyContent = `What Are Cookies
 Cookies are small text files stored on your device when you visit our website. They help us provide you with a better browsing experience and allow certain features to function properly.

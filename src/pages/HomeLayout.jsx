@@ -8,6 +8,9 @@ import Footer from "../components/Footer";
 
 import ScrollToTop from "../components/ScrollToTop";
 
+import EmailPopup from "../components/EmailPopup";
+import CookieConsent from "../components/CookieConsent";
+
 const HomeLayout = () => {
   return (
     <>
@@ -18,6 +21,8 @@ const HomeLayout = () => {
         <Outlet />
         <Footer />
       </AppShell>
+      <EmailPopup />
+      <CookieConsent />
     </>
   );
 };

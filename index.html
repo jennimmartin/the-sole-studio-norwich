@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
 
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,5 +19,17 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- netlify form -->
+    <form name="contact" method="POST" netlify data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+    <!-- Netlify Form for Email Signup -->
+    <form name="email-signup" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+    </form>
   </body>
 </html>
