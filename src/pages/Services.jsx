@@ -31,11 +31,15 @@ const Services = () => {
   }
 
   // Group treatments by category
-  const coreTreatments = treatments.filter((t) => t.category === "Core");
-  const advancedTreatments = treatments.filter(
-    (t) => t.category === "Advanced"
+  const footTreatments = treatments.filter(
+    (t) => t.category === "Foot Treatments"
   );
-  const addons = treatments.filter((t) => t.category === "Add-on");
+  const specialistTreatments = treatments.filter(
+    (t) => t.category === "Specialist Treatments"
+  );
+  const beautyServices = treatments.filter(
+    (t) => t.category === "Beauty Services"
+  );
 
   return (
     <div className="bg-white">
@@ -50,18 +54,19 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Core Treatments */}
-      {coreTreatments.length > 0 && (
+      {/* Foot Treatments */}
+      {footTreatments.length > 0 && (
         <section className="py-16 md:py-24">
           <div className="align-element">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">Core Treatments</h2>
+              <h2 className="text-3xl md:text-4xl mb-4">Foot Treatments</h2>
               <p className="text-base text-charcoal-500 max-w-2xl mx-auto">
-                Professional foot care for everyone
+                Expert foot care including Thai massage, ELIM treatments, and
+                pedicures
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {coreTreatments.map((treatment) => (
+              {footTreatments.map((treatment) => (
                 <TreatmentCard key={treatment.id} treatment={treatment} />
               ))}
             </div>
@@ -69,8 +74,8 @@ const Services = () => {
         </section>
       )}
 
-      {/* Advanced Treatments */}
-      {advancedTreatments.length > 0 && (
+      {/* Specialist Treatments */}
+      {specialistTreatments.length > 0 && (
         <section className="py-16 md:py-24">
           <div className="align-element">
             <div className="text-center mb-12">
@@ -78,11 +83,11 @@ const Services = () => {
                 Specialist Treatments
               </h2>
               <p className="text-base text-charcoal-500 max-w-2xl mx-auto">
-                Advanced care for specific concerns
+                Advanced toenail reconstruction for damaged or missing nails
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {advancedTreatments.map((treatment) => (
+              {specialistTreatments.map((treatment) => (
                 <TreatmentCard key={treatment.id} treatment={treatment} />
               ))}
             </div>
@@ -90,26 +95,20 @@ const Services = () => {
         </section>
       )}
 
-      {/* Add-ons */}
-      {addons.length > 0 && (
+      {/* Beauty Services */}
+      {beautyServices.length > 0 && (
         <section className="py-16 md:py-24">
           <div className="align-element">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">Enhancements</h2>
+              <h2 className="text-3xl md:text-4xl mb-4">Beauty Services</h2>
               <p className="text-base text-charcoal-500 max-w-2xl mx-auto">
-                Add to any treatment
+                Gel manicures, brow tinting, and lash treatments
               </p>
             </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 items-stretch">
-                {addons.map((treatment) => (
-                  <TreatmentCard
-                    key={treatment.id}
-                    treatment={treatment}
-                    isAddon
-                  />
-                ))}
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+              {beautyServices.map((treatment) => (
+                <TreatmentCard key={treatment.id} treatment={treatment} />
+              ))}
             </div>
           </div>
         </section>
@@ -191,7 +190,7 @@ const Services = () => {
 };
 
 // Treatment Card Component
-const TreatmentCard = ({ treatment, isAddon = false }) => {
+const TreatmentCard = ({ treatment }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -251,14 +250,9 @@ const TreatmentCard = ({ treatment, isAddon = false }) => {
       )}
 
       {/* Book Button */}
-      {!isAddon && (
-        <div className="mt-auto">
-          <BookNowButton
-            variant="secondary"
-            className="w-full justify-center"
-          />
-        </div>
-      )}
+      <div className="mt-auto">
+        <BookNowButton variant="secondary" className="w-full justify-center" />
+      </div>
     </div>
   );
 };
