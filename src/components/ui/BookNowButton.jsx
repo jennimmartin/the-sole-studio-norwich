@@ -1,13 +1,12 @@
 // src/components/ui/BookNowButton.jsx
-
 import { EXTERNAL_LINKS } from "../../config/externalLinks";
 
 export default function BookNowButton({
   variant = "primary",
   size = "default",
   className = "",
+  children = "Book an Appointment", // Default text
 }) {
-  // Your actual button styles from the code
   const baseStyles =
     "transition-all duration-300 cursor-pointer inline-block text-center";
 
@@ -32,7 +31,7 @@ export default function BookNowButton({
       rel="noopener noreferrer"
       className={classes}
     >
-      Book an Appointment
+      {children}
     </a>
   );
 }

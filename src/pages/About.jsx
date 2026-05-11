@@ -22,23 +22,15 @@ const About = () => {
             <p>
               Many people fall into a grey area when it comes to foot health.
               Their feet are tired, uncomfortable, damaged, or causing
-              frustration. A traditional beauty treatment doesn't address their
+              frustration. A traditional beauty treatment doesn’t address their
               problems fully and podiatry feels unnecessary.
             </p>
             <p>The Sole Studio Norwich exists in the space between.</p>
-            <p>
-              I specialise in working with active individuals, standing
-              professions, and clients experiencing ongoing foot concerns who
-              want and need more than a standard pedicure, but don't require
-              medical intervention. Every treatment is designed to support
-              comfort, function and confidence, whilst maintaining the highest
-              professional and hygiene standards.
-            </p>
           </div>
 
           {/* Section 2: A specialist approach */}
           <div className="space-y-4 text-base md:text-lg">
-            <h2 className="text-2xl md:text-3xl mb-6">
+            <h2 className="text-xl md:text-2xl mb-6">
               A specialist approach - not one-size-fits-all
             </h2>
             <p>
@@ -47,10 +39,9 @@ const About = () => {
             </p>
             <p>
               Services such as Thai foot massages, toenail reconstruction, and
-              bespoke problem based pedicures are chosen and delivered with
-              purpose. Whether this is supporting recovery, restoring the
-              appearance of damaged toe nails, relieving tension, or improving
-              the overall foot comfort.
+              Elim pedicures are delivered with purpose. Whether this is
+              supporting recovery, restoring the appearance of damaged toe
+              nails, relieving tension, or improving the overall foot comfort.
             </p>
             <p>
               There is no judgement, no pressure. Just honest professional care.
@@ -67,14 +58,14 @@ const About = () => {
             <p>Those experiencing recurring foot concerns</p>
             <p>Anyone who wants expert foot care without medical treatment.</p>
             <p>
-              If a condition falls outside of my scope, I'll always advise you
-              honestly and guide you to the appropriate care.
+              If a condition falls outside of our scope, you will be advised
+              honestly and guided to the appropriate care.
             </p>
           </div>
 
           {/* Section 4: A calm, private space */}
           <div className="space-y-4 text-base md:text-lg">
-            <h2 className="text-2xl md:text-3xl mb-6">A calm, private space</h2>
+            <h2 className="text-1xl md:text-2xl mb-6">A calm, private space</h2>
             <p>
               The Sole Studio Norwich is a quiet, appointment-only environment
               designed to make clients feel at ease from the moment they arrive.
@@ -93,37 +84,54 @@ const About = () => {
               Meet Suzanne - Founder and therapist
             </h2>
             <p>
-              Hi I'm Suzanne, the owner and therapist behind The Sole Studio
-              Norwich. I created this space with the intention to offer
-              professional high quality foot care in a private, non judgemental
-              environment.
+              Hi, I’m Suzanne Martin, the owner and therapist behind The Sole
+              Studio Norwich. I was born and raised in Norfolk and have lived
+              here all my life. I created The Sole Studio Norwich to provide
+              high-quality, professional foot care in a private, welcoming, and
+              non-judgemental environment.
             </p>
             <p>
-              After working in the beauty industry since 2018 and noticing that
-              many people require more from their pedicures I decided to focus
-              my attention on feet. I believe that foot care is an essential
-              part of overall wellbeing. My approach is thorough, respectful and
-              always tailored to your individual needs. I will ensure that you
-              feel relaxed, confident and well cared for from the moment you
-              arrive.
+              After working in the beauty industry since 2018, I began to notice
+              how many people felt uncomfortable or self-conscious about their
+              feet. At the same time, I saw the difference that the right care
+              and treatment could make. This inspired me to focus my work on
+              foot care and supporting those who may be struggling with similar
+              concerns.
+            </p>
+            <p>
+              My passion for this area is also personal. As a child, I lost my
+              toenail in an accident, and although I don’t remember the pain, I
+              clearly remember the embarrassment of having a missing toenail. It
+              took years to grow back properly, and even after it healed, I
+              continued to feel self-conscious about my feet. Over time, this
+              led to further neglect and concerns such as dry skin and cracked
+              heels.
+            </p>
+            <p>
+              Through my experience, I realised just how common these feelings
+              are. Many people want help but may feel hesitant or embarrassed to
+              seek it. Having already moved my business from a salon setting
+              into a private treatment room, I knew I could create a space where
+              clients would feel comfortable, respected, and at ease—this became
+              The Sole Studio Norwich.
             </p>
             <p>
               I specialise in providing detailed, hygienic treatments that focus
-              on both comfort and results. Whether you are seeking routine
+              on both comfort and results. Whether you are looking for regular
               maintenance or more targeted care, every service is delivered with
               discretion and the highest standards of cleanliness.
             </p>
             <p>
               I look forward to welcoming you and providing a professional
-              experience where your comfort, privacy and care always comes
+              experience where your comfort, privacy, and care always come
               first.
             </p>
           </div>
 
           {/* CTA */}
-          <div className="pt-8">
-            <BookNowButton variant="primary" size="large" />
-          </div>
+          <BookNowButton variant="primary" size="large">
+            Book Your Appointment Today
+          </BookNowButton>
         </div>
       </div>
     </section>
