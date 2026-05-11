@@ -3,7 +3,7 @@ export const WhyChooseSection = () => {
     <section className="align-element py-16 md:py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold text-black mb-8 text-center">
-          Why choose The Sole Studio Norwich?
+          Why choose The Sole Studio Norwich
         </h2>
 
         <ul className="space-y-4 mb-8">
@@ -23,17 +23,29 @@ export const WhyChooseSection = () => {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-xl">✓</span>
-            <span>Calm, private studio environment</span>
+            <span>Calm, private environment</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-xl">✓</span>
             <span>Personal, unrushed, judgement-free care</span>
           </li>
+          <li className="flex items-start gap-3">
+            <span className="text-xl">✓</span>
+            <span>Free off road parking </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-xl">✓</span>
+            <span>Evening and weekend appointments </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-xl">✓</span>
+            <span>Online booking</span>
+          </li>
         </ul>
 
         <p className="text-lg italic text-center">
           If you've ever felt uncomfortable, embarrassed, or rushed during foot
-          treatments, you'll notice the difference immediately.
+          treatment, you'll notice the difference immediately.
         </p>
       </div>
     </section>
