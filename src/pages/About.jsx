@@ -1,10 +1,9 @@
-// src/pages/About.jsx
 import { Section } from "../layout";
 import BookNowButton from "../components/ui/BookNowButton";
 
 const About = () => {
   return (
-    <Section>
+    <Section size="large">
       <h1 className="text-4xl md:text-5xl text-center mb-12">
         About The Sole Studio Norwich
       </h1>

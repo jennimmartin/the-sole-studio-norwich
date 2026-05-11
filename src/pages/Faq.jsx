@@ -1,41 +1,37 @@
 import AccordionSection from "../components/AccordionSection";
+import { Section } from "../layout";
 
 const Faq = () => {
   return (
-    <div className="bg-white py-16 md:py-24">
-      <div className="align-element">
-        <h1 className="text-4xl md:text-5xl text-center mb-4">
-          Frequently Asked Questions
-        </h1>
-        <p className="text-center text-charcoal-500 mb-12 max-w-2xl mx-auto">
-          Find answers to common questions about our services, appointments, and
-          treatments.
-        </p>
+    <Section size="large">
+      <h1 className="text-4xl md:text-5xl text-center mb-4">
+        Frequently Asked Questions
+      </h1>
+      <p className="text-center text-charcoal-500 mb-12 max-w-2xl mx-auto">
+        Find answers to common questions about our services, appointments, and
+        treatments.
+      </p>
 
-        <div className="space-y-4">
-          <AccordionSection
-            title="General Questions"
-            content={generalFAQsContent}
-          />
-          <AccordionSection
-            title="Thai Foot Massage"
-            content={thaiFAQsContent}
-          />
-          <AccordionSection
-            title="Toenail Reconstruction"
-            content={toenailFAQsContent}
-          />
-          <AccordionSection
-            title="Bespoke Problem-Based Pedicures"
-            content={pedicureFAQsContent}
-          />
-        </div>
+      <div className="space-y-4">
+        <AccordionSection
+          title="General Questions"
+          content={generalFAQsContent}
+        />
+        <AccordionSection title="Thai Foot Massage" content={thaiFAQsContent} />
+        <AccordionSection
+          title="Toenail Reconstruction"
+          content={toenailFAQsContent}
+        />
+        <AccordionSection
+          title="Bespoke Problem-Based Pedicures"
+          content={pedicureFAQsContent}
+        />
       </div>
-    </div>
+    </Section>
   );
 };
 
-// FAQ Content
+// FAQ Content (keep all your existing content variables exactly as they are)
 const generalFAQsContent = `What services do you offer?
 We offer specialist professional foot care treatments including Thai foot massage, toenail reconstruction and bespoke problem-based pedicures, including callus removal, cracked heel repair or simply tired overworked feet.
 
@@ -65,19 +61,19 @@ Thai Foot massage is a traditional therapy that combines massage, stretching, an
 
 What are the benefits of Thai Foot Massage?
 Results vary by individual but many clients often experience:
-• Deep relaxation and stress relief
-• Improved circulation
-• Reduced swelling and fatigue in the feet and legs
-• Relief from tension and stiffness
-• Improved sleep and overall wellbeing
+- Deep relaxation and stress relief
+- Improved circulation
+- Reduced swelling and fatigue in the feet and legs
+- Relief from tension and stiffness
+- Improved sleep and overall wellbeing
 
 What happens during the service?
 Your session will include:
-• A consultation
-• Foot cleansing
-• Application of an oil or cream
-• Massage of the feet, ankles, and lower legs
-• Acupressure using hands and a traditional wooden reflexology stick
+- A consultation
+- Foot cleansing
+- Application of an oil or cream
+- Massage of the feet, ankles, and lower legs
+- Acupressure using hands and a traditional wooden reflexology stick
 
 Does Thai Foot Massage hurt?
 Thai Foot Massage can involve firm pressure and feel intense, especially on certain reflex points. It should feel therapeutic but not painful. We always work within your comfort level and communicate throughout.
@@ -87,12 +83,12 @@ No, only your shoes and socks are removed. You may be asked to roll your trouser
 
 Is Thai Foot Massage safe for everyone?
 Thai Foot Massage may not be suitable if you have:
-• Foot injuries or fractures
-• Open wounds or infections
-• Severe varicose veins
-• Blood clots
-• Advanced diabetes
-• Certain medical conditions
+- Foot injuries or fractures
+- Open wounds or infections
+- Severe varicose veins
+- Blood clots
+- Advanced diabetes
+- Certain medical conditions
 
 If you are unsure please feel free to contact hello@thesolestudionorwich.co.uk
 
@@ -110,11 +106,11 @@ Toenail reconstruction is a cosmetic treatment that restores the natural appeara
 
 Who is it suitable for?
 It is ideal for people with:
-• Damaged or split toenails
-• Nails affected by trauma
-• Partially missing nails
-• Thickened or uneven nails
-• Cosmetic concerns after a fungal nail treatment
+- Damaged or split toenails
+- Nails affected by trauma
+- Partially missing nails
+- Thickened or uneven nails
+- Cosmetic concerns after a fungal nail treatment
 
 Is toenail reconstruction safe?
 Yes, when performed by a trained professional.
@@ -136,19 +132,19 @@ Yes, you can add gel polish application to your appointment when booking or use 
 
 How do I care for my reconstructed nail?
 You will receive aftercare instructions at your appointment. It is recommended to:
-• Avoid picking or lifting the product
-• Trim carefully as it grows
-• Attend maintenance appointments as advised
+- Avoid picking or lifting the product
+- Trim carefully as it grows
+- Attend maintenance appointments as advised
 
 Can the reconstruction be removed?
 Yes, the product can be safely filed down or professionally removed during an appointment. It is not recommended that you remove it yourself at home.
 
 When should toenail reconstruction be avoided?
 Toenail reconstruction is not suitable if you have:
-• An active fungal infection
-• Open cuts or wounds
-• Severe nail bed damage
-• Certain medical conditions affecting healing
+- An active fungal infection
+- Open cuts or wounds
+- Severe nail bed damage
+- Certain medical conditions affecting healing
 
 If you are unsure please feel free to contact hello@thesolestudionorwich.co.uk`;
 
@@ -160,10 +156,10 @@ Regular or traditional pedicures focus mainly on relaxation and polish applicati
 
 What foot concerns can you treat?
 We treat:
-• Cracked heels
-• Hard skin and callus build-up
-• Dry, dehydrated skin
-• Tired, sore and overworked feet
+- Cracked heels
+- Hard skin and callus build-up
+- Dry, dehydrated skin
+- Tired, sore and overworked feet
 
 If we are unable to treat your concern you will be referred to someone more suitable such as a podiatrist or GP.
 
