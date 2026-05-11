@@ -11,16 +11,16 @@ const AboutSection = () => {
             and podiatry.
           </p>
           <p>
-            I specialise in working with people who use their feet hard -
+            Specialising in working with people who use their feet hard -
             runners, gym-goers, people who work on their feet all day, and
             anyone dealing with ongoing foot concerns which don’t require
-            podiatry. My approach combines expert techniques, attention to
+            podiatry. Our approach combines expert techniques, attention to
             detail, and genuine care. Your feet will feel better, function
             better, and look better.
           </p>
           <p>
-            If a condition falls outside of my scope, I’ll always advise you
-            honestly and guide you to the appropriate care.
+            If a condition falls outside of our scope, you will always be
+            advised honestly and be guided to the appropriate care.
           </p>
         </div>
       </div>
