@@ -13,9 +13,9 @@ const FOOTER_DATA = {
   phone: "07854 918746",
   email: "hello@thesolestudionorwich.co.uk",
   openingHours: [
-    { day: "Saturday", time: "9am to 4pm" },
-    { day: "Tuesday", time: "6:15pm to 8:30pm" },
-    { day: "Thursday", time: "6:15pm to 8:30pm" },
+    { day: "Tuesday", time: "6:15pm to 9:00pm" },
+    { day: "Thursday", time: "6:15pm to 9:00pm" },
+    { day: "Saturday", time: "9:00am to 4:00pm" },
   ],
   map: {
     embedUrl:
@@ -81,7 +81,9 @@ const Footer = () => {
                     <br />
                     {FOOTER_DATA.address.line2}
                     <br />
-                    {FOOTER_DATA.address.city} {FOOTER_DATA.address.postcode}
+                    {FOOTER_DATA.address.city}
+                    <br />
+                    {FOOTER_DATA.address.postcode}
                   </p>
                   <p>
                     <a
