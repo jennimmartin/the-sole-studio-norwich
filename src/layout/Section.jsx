@@ -5,8 +5,8 @@ export const Section = ({
   className = "",
 }) => {
   const sizeClasses = {
-    compact: "py-8 md:py-12",
-    default: "py-12 md:py-16", // Standard spacing
+    compact: "py-6 md:py-10",
+    default: "py-8 md:py-12", // Standard spacing
     large: "py-16 md:py-24", // Extra spacing for page tops
   };
 
