@@ -44,7 +44,7 @@ export const WhyChooseSection = () => {
         </li>
       </ul>
       <p className="text-lg italic text-center">
-        If you've ever felt uncomfortable, embarrassed, or rushed during foot
+        If you have ever felt uncomfortable, embarrassed, or rushed during foot
         treatment, you'll notice the difference immediately.
       </p>
     </Section>
