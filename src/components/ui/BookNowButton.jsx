@@ -32,7 +32,7 @@ export default function BookNowButton({
       rel="noopener noreferrer"
       className={classes}
     >
-      Book Now
+      Book an Appointment
     </a>
   );
 }

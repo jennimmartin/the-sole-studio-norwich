@@ -6,15 +6,15 @@ const Hero = () => {
     <div className="align-element pt-8 pb-16 md:pt-12 md:pb-24">
       <div className="flex flex-col items-center justify-center gap-6 px-4">
         <h1 className="text-2xl md:text-5xl text-center max-w-3xl">
-          Specialist Foot Care For Active, Hard-Working Feet
+          Expert foot care for every step
         </h1>
         <h2 className="text-charcoal-500 text-1xl md:text-2xl text-center max-w-2xl">
-          Targeted treatments for people who rely on their feet — combining
-          professional standards with a calm, private studio experience.
+          Providing targeted foot treatments for those who rely on their feet.
+          Combining professional standards with a calm, private experience.
         </h2>
         <p className="text-sm md:text-base text-center max-w-xl">
-          Between beauty and clinical care. Focused on comfort, recovery, and
-          confidence.
+          Bridging the gap between beauty and podiatry. Focused on comfort,
+          recovery and confidence.
         </p>
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-4">
           <BookNowButton variant="primary" size="large" />
