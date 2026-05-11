@@ -39,16 +39,16 @@ const TreatmentSection = () => {
             </div>
           </div>
 
-          {/* Problem-Based Pedicures */}
+          {/* Elim Pedicures */}
           <div className="border border-neutral-200 p-8 flex flex-col">
-            <h3 className="text-xl mb-4 min-h-[3.5rem]">
-              Bespoke Problem-Based Pedicures
-            </h3>
+            <h3 className="text-xl mb-4 min-h-[3.5rem]">Elim Pedicures</h3>
             <p className="text-sm md:text-base mb-6 flex-grow">
-              Not all pedicures are the same. These treatments focus on specific
-              foot concerns such as hard skin and calluses, discomfort, nail
-              issues, and general foot health. Each session is adapted to your
-              individual needs and concerns - not a one size-fits-all service.
+              Not all pedicures are the same. An Elim pedicure is a
+              medical-grade foot treatment that improves both the health and
+              appearance of the feet. Using advanced skincare ingredients, it
+              removes hard skin, calluses, and dryness through a chemical peel
+              rather than traditional filing. It is ideal for treating cracked
+              heels and stubborn callus build-up.
             </p>
             <div className="mt-auto">
               <BookNowButton variant="primary" />
