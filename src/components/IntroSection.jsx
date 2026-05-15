@@ -1,9 +1,10 @@
 const IntroSection = () => {
   return (
-    <>
-      <h2 className="text-3xl md:text-4xl mb-6 text-center md:text-left">
+    <div className="align-element">
+      <h2 className="text-2xl md:text-3xl mb-6">
         Foot care that goes beyond a standard pedicure
       </h2>
+
       <div className="space-y-4 text-base md:text-lg">
         <p>
           If you are on your feet all day, train and exercise regularly, or
@@ -18,7 +19,7 @@ const IntroSection = () => {
         </p>
         <p>This is professional, judgement-free foot care.</p>
       </div>
-    </>
+    </div>
   );
 };
 
