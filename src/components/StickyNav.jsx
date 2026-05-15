@@ -30,9 +30,9 @@ export default function StickyNav() {
             </Link>
             <Link
               className="text-lg text-white hover:text-neutral-400 duration-300 tracking-wide"
-              to="/services"
+              to="/treatments"
             >
-              Services
+              Treatments
             </Link>
             <Link
               className="text-lg text-white hover:text-neutral-400 duration-300 tracking-wide"
@@ -118,10 +118,10 @@ export default function StickyNav() {
           </Link>
           <Link
             className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"
-            to="/services"
+            to="/treatments"
             onClick={closeMenu}
           >
-            Services
+            Treatments
           </Link>
           <Link
             className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"

@@ -1,11 +1,11 @@
+import PageTitle from "../components/PageTitle";
+
 import BookNowButton from "../components/ui/BookNowButton";
 
 const About = () => {
   return (
-    <>
-      <h1 className="text-4xl md:text-5xl text-center mb-12">
-        About The Sole Studio Norwich
-      </h1>
+    <div className="align-element">
+      <PageTitle title={"About The Sole Studio Nowich"} />
 
       <div className="space-y-12">
         {/* Section 1: Specialist foot care with purpose */}
@@ -25,13 +25,9 @@ const About = () => {
             problems fully and podiatry feels unnecessary.
           </p>
           <p>The Sole Studio Norwich exists in the space between.</p>
-        </div>
-
-        {/* Section 2: A specialist approach */}
-        <div className="space-y-4 text-base md:text-lg">
-          <h2 className="text-xl md:text-2xl mb-6">
+          <p className="font-extrabold">
             A specialist approach - not one-size-fits-all
-          </h2>
+          </p>
           <p>
             The Sole Studio Norwich focuses on feet. This allows every treatment
             to be tailored, unrushed, and genuinely effective.
@@ -60,11 +56,7 @@ const About = () => {
             If a condition falls outside of our scope, you will be advised
             honestly and guided to the appropriate care.
           </p>
-        </div>
-
-        {/* Section 4: A calm, private space */}
-        <div className="space-y-4 text-base md:text-lg">
-          <h2 className="text-1xl md:text-2xl mb-6">A calm, private space</h2>
+          <p className="font-extrabold">A calm, private space</p>
           <p>
             The Sole Studio Norwich is a quiet, appointment-only environment
             designed to make clients feel at ease from the moment they arrive.
@@ -131,7 +123,7 @@ const About = () => {
           </BookNowButton>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

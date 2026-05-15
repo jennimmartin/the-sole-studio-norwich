@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getTreatments } from "../lib/contentful";
 import BookNowButton from "../components/ui/BookNowButton";
 
-const Services = () => {
+const Treatments = () => {
   const [treatments, setTreatments] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -248,4 +248,4 @@ const TreatmentCard = ({ treatment }) => {
   );
 };
 
-export default Services;
+export default Treatments;

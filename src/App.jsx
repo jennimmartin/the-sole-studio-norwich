@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   Landing,
   HomeLayout,
-  Services,
+  Treatments,
   About,
   Contact,
   Legal,
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
         element: <Landing />,
       },
       {
-        path: "services",
-        element: <Services />,
+        path: "Treatments",
+        element: <Treatments />,
       },
       {
         path: "about",
