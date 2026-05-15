@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTreatments } from "../lib/contentful";
 import BookNowButton from "../components/ui/BookNowButton";
-import { Section } from "../layout";
 
 const Services = () => {
   const [treatments, setTreatments] = useState([]);
@@ -45,7 +44,7 @@ const Services = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <Section size="large">
+      <>
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl mb-4">Treatments</h1>
           <p className="text-lg text-charcoal-500 max-w-3xl mx-auto">
@@ -53,11 +52,11 @@ const Services = () => {
             completely private.
           </p>
         </div>
-      </Section>
+      </>
 
       {/* Foot Treatments */}
       {footTreatments.length > 0 && (
-        <Section width="wide">
+        <>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl mb-4">Foot Treatments</h2>
             <p className="text-base text-charcoal-500 max-w-2xl mx-auto">
@@ -70,12 +69,12 @@ const Services = () => {
               <TreatmentCard key={treatment.id} treatment={treatment} />
             ))}
           </div>
-        </Section>
+        </>
       )}
 
       {/* Specialist Treatments */}
       {specialistTreatments.length > 0 && (
-        <Section width="wide">
+        <>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl mb-4">Specialist Treatments</h2>
             <p className="text-base text-charcoal-500 max-w-2xl mx-auto">
@@ -87,12 +86,12 @@ const Services = () => {
               <TreatmentCard key={treatment.id} treatment={treatment} />
             ))}
           </div>
-        </Section>
+        </>
       )}
 
       {/* Beauty Services */}
       {beautyServices.length > 0 && (
-        <Section width="wide">
+        <>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl mb-4">Beauty Services</h2>
             <p className="text-base text-charcoal-500 max-w-2xl mx-auto">
@@ -104,11 +103,11 @@ const Services = () => {
               <TreatmentCard key={treatment.id} treatment={treatment} />
             ))}
           </div>
-        </Section>
+        </>
       )}
 
       {/* Special Offers & Loyalty */}
-      <Section width="wide">
+      <>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl mb-4">Special Offers</h2>
           <p className="text-base text-charcoal-500 max-w-2xl mx-auto">
@@ -174,7 +173,7 @@ const Services = () => {
             subject to availability and may be updated at any time.
           </p>
         </div>
-      </Section>
+      </>
     </div>
   );
 };

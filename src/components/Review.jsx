@@ -1,10 +1,8 @@
-// src/components/Review.jsx
-import { Section } from "../layout";
 import ViewTreatmentsButton from "./ui/ViewTreatmentsButton";
 
 const Review = () => {
   return (
-    <Section width="wide">
+    <>
       <h2 className="text-3xl md:text-4xl mb-12 text-center">
         What clients say - hand selected reviews
       </h2>
@@ -45,7 +43,7 @@ const Review = () => {
           </div>
         </div>
       </div>
-    </Section>
+    </>
   );
 };
 

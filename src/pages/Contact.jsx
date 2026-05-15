@@ -1,10 +1,8 @@
 import ContactForm from "../components/ui/ContactForm";
-import { Section } from "../layout";
 
 const Contact = () => {
   return (
-    <Section size="large" className="bg-neutral-50">
-      {" "}
+    <>
       {/* First section = large */}
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl md:text-5xl text-center mb-4">Get In Touch</h1>
@@ -14,7 +12,7 @@ const Contact = () => {
         </p>
         <ContactForm />
       </div>
-    </Section>
+    </>
   );
 };
 

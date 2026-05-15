@@ -1,10 +1,8 @@
-// src/components/TreatmentSection.jsx
-import { Section } from "../layout";
 import BookNowButton from "./ui/BookNowButton";
 
 const TreatmentSection = () => {
   return (
-    <Section width="wide">
+    <>
       <h2 className="text-3xl text-black md:text-4xl font-semibold mb-12 text-center">
         Specialist Treatments
       </h2>
@@ -55,7 +53,7 @@ const TreatmentSection = () => {
           </div>
         </div>
       </div>
-    </Section>
+    </>
   );
 };
 

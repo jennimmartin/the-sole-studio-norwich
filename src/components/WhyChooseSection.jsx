@@ -1,9 +1,6 @@
-// src/components/WhyChooseSection.jsx
-import { Section } from "../layout";
-
 export const WhyChooseSection = () => {
   return (
-    <Section>
+    <>
       <h2 className="text-3xl md:text-4xl font-semibold text-black mb-8 text-center">
         Why choose The Sole Studio Norwich
       </h2>
@@ -47,7 +44,7 @@ export const WhyChooseSection = () => {
         If you have ever felt uncomfortable, embarrassed, or rushed during foot
         treatment, you'll notice the difference immediately.
       </p>
-    </Section>
+    </>
   );
 };
 

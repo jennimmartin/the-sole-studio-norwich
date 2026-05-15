@@ -1,5 +1,4 @@
 import { Link, useRouteError } from "react-router-dom";
-import { Section } from "../layout";
 
 const Error = () => {
   const error = useRouteError();
@@ -7,7 +6,7 @@ const Error = () => {
   const is404 = error?.status === 404;
 
   return (
-    <Section size="large">
+    <>
       <div className="text-center max-w-2xl mx-auto">
         {/* Error Code */}
         <div className="text-8xl md:text-9xl font-semibold text-neutral-200 mb-4">
@@ -54,13 +53,12 @@ const Error = () => {
                 <Link to="/contact" className="underline hover:text-black">
                   contact us
                 </Link>
-                .
               </>
             )}
           </div>
         </div>
       </div>
-    </Section>
+    </>
   );
 };
 

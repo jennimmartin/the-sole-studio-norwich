@@ -1,9 +1,8 @@
 import AccordionSection from "../components/AccordionSection";
-import { Section } from "../layout";
 
 const Faq = () => {
   return (
-    <Section size="large">
+    <>
       <h1 className="text-4xl md:text-5xl text-center mb-4">
         Frequently Asked Questions
       </h1>
@@ -27,7 +26,7 @@ const Faq = () => {
           content={pedicureFAQsContent}
         />
       </div>
-    </Section>
+    </>
   );
 };
 

@@ -1,10 +1,9 @@
 import { useState } from "react";
 import AccordionSection from "../components/AccordionSection";
-import { Section } from "../layout";
 
 const Legal = () => {
   return (
-    <Section size="large">
+    <>
       <h1 className="text-4xl md:text-5xl text-center mb-4">
         Legal Information
       </h1>
@@ -41,7 +40,7 @@ const Legal = () => {
           </a>
         </p>
       </div>
-    </Section>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getBlogPosts } from "../lib/contentful";
-import { Section } from "../layout";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -30,7 +29,7 @@ const Blog = () => {
   }
 
   return (
-    <Section size="large" width="wide">
+    <>
       {/* Header */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl mb-4">Blog</h1>
@@ -53,7 +52,7 @@ const Blog = () => {
           ))}
         </div>
       )}
-    </Section>
+    </>
   );
 };
 

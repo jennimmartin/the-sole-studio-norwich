@@ -1,9 +1,6 @@
-// src/components/AboutSection.jsx
-import { Section } from "../layout";
-
 const AboutSection = () => {
   return (
-    <Section>
+    <>
       <h2 className="text-3xl md:text-4xl mb-6 text-center md:text-left">
         About The Sole Studio Norwich
       </h2>
@@ -24,7 +21,7 @@ const AboutSection = () => {
           honestly and be guided to the appropriate care.
         </p>
       </div>
-    </Section>
+    </>
   );
 };
 
