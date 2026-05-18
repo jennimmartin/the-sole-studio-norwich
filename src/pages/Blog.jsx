@@ -29,7 +29,7 @@ const Blog = () => {
   }
 
   return (
-    <>
+    <div className="align-element">
       {/* Header */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl mb-4">Blog</h1>
@@ -52,7 +52,7 @@ const Blog = () => {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

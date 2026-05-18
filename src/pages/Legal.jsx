@@ -3,7 +3,7 @@ import AccordionSection from "../components/AccordionSection";
 
 const Legal = () => {
   return (
-    <>
+    <div className="align-element">
       <h1 className="text-4xl md:text-5xl text-center mb-4">
         Legal Information
       </h1>
@@ -40,7 +40,7 @@ const Legal = () => {
           </a>
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

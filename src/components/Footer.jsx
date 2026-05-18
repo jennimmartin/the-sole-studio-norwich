@@ -54,6 +54,7 @@ const Footer = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="The Sole Studio Norwich Location"
                 ></iframe>
+                <p className="mt-2">Free off road parking available</p>
               </div>
             </div>
 

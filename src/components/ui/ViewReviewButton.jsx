@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
-export default function ViewTreatmentsButton({
+export default function ViewReviewButton({
   size = "default",
   className = "",
+  href = "",
 }) {
   const baseStyles =
     "transition-all duration-300 cursor-pointer inline-block text-center outline outline-1 outline-neutral-200 hover:bg-black hover:text-white bg-white text-black";
@@ -16,8 +17,13 @@ export default function ViewTreatmentsButton({
   const classes = `${baseStyles} ${sizes[size]} ${className}`;
 
   return (
-    <Link to="/treatments" className={classes}>
-      View Treatments
+    <Link
+      to={href}
+      className={classes}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Review
     </Link>
   );
 }

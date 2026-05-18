@@ -42,7 +42,7 @@ const Treatments = () => {
   );
 
   return (
-    <div className="bg-white">
+    <div className="align-element">
       {/* Hero Section */}
       <>
         <div className="text-center">

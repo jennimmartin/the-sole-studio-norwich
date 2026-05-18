@@ -2,7 +2,7 @@ import AccordionSection from "../components/AccordionSection";
 
 const Faq = () => {
   return (
-    <>
+    <div className="align-element">
       <h1 className="text-4xl md:text-5xl text-center mb-4">
         Frequently Asked Questions
       </h1>
@@ -26,7 +26,7 @@ const Faq = () => {
           content={pedicureFAQsContent}
         />
       </div>
-    </>
+    </div>
   );
 };
 
