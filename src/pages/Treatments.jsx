@@ -104,7 +104,7 @@ const Treatments = () => {
           <div>
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">Beauty Services</h2>
-              <p className="text-base md:text-lg">
+              <p className="text-base md:text-lg  max-w-2xl">
                 Medical-grade toenail reconstruction for damaged, missing, or
                 compromised nails. A safe, non-invasive solution that restores
                 appearance while protecting the nail bed as it grows.

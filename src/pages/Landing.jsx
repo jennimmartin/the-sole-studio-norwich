@@ -21,8 +21,7 @@ const Landing = () => {
         </p>
 
         <p className="text-sm sm:text-base text-neutral-500 mb-6 sm:mb-8 md:mb-10 max-w-xl mx-auto">
-          Bridging the gap between beauty and podiatry in a calm, private
-          setting.
+          Bridging the gap between beauty and podiatry.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-md sm:max-w-none mx-auto">

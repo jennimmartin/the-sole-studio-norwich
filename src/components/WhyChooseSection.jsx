@@ -8,28 +8,19 @@ export const WhyChooseSection = () => {
         <div className="space-y-12">
           <div className="space-y-4 text-base md:text-lg">
             <p>
-              At The Sole Studio Norwich, foot care is the focus - not an add-on
-              treatment.
+              Many people struggle with tired, uncomfortable, or damaged feet
+              but feel caught between a standard beauty pedicure and clinical
+              podiatry.
             </p>
             <p>
-              Many people struggle with tired, uncomfortable, damaged, or
-              neglected feet but feel caught between a standard beauty pedicure
-              and clinical podiatry. The Sole Studio Norwich was created to
-              offer a professional alternative for those looking for expert foot
-              care in a calm, private environment.
+              The Sole Studio Norwich offers a professional alternative - expert
+              foot care in a calm, private environment where treatments are
+              tailored to your individual concerns.
             </p>
             <p>
-              Each treatment is tailored to your individual foot concerns.
-              Whether you are dealing with hard skin, cracked heels, damaged
-              toenails, pressure from long hours on your feet, or simply feet
-              that feel overworked and uncomfortable, treatments are designed
-              with both comfort and results in mind.
-            </p>
-            <p>
-              The studio specialises in services including Elim pedicures, Thai
-              foot massage, and toenail reconstruction, delivered with high
-              hygiene standards, professional products, and careful attention to
-              detail.
+              Whether dealing with hard skin, cracked heels, damaged toenails,
+              or simply overworked feet, every treatment is designed with both
+              comfort and results in mind.
             </p>
             <p>
               Clients often choose The Sole Studio Norwich because they want:
@@ -53,19 +44,12 @@ export const WhyChooseSection = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-xl">✓</span>
-                <span>
-                  Professional care focused entirely on foot health and comfort
-                </span>
+                <span>Professional care focused entirely on foot health</span>
               </li>
             </ul>
             <p>
               If a concern falls outside the scope of treatment, guidance will
               always be given honestly and professionally.
-            </p>
-            <p>
-              The aim is simple - to help clients leave feeling more
-              comfortable, more confident, and reassured that their feet are in
-              experienced hands.
             </p>
           </div>
         </div>
