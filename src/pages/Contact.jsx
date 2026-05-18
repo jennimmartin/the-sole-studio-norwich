@@ -1,15 +1,19 @@
 import ContactForm from "../components/ui/ContactForm";
+import PageTitle from "../components/PageTitle";
 
 const Contact = () => {
   return (
     <div className="align-element">
-      {/* First section = large */}
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-4xl md:text-5xl text-center mb-4">Get In Touch</h1>
-        <p className="text-center text-charcoal-500 mb-12">
-          Have a question? Send me a message and I'll get back to you within 24
-          hours.
-        </p>
+      <PageTitle title="Get In Touch" />
+
+      <div className="space-y-12">
+        <div className="space-y-4 text-base md:text-lg">
+          <p>
+            Have a question about treatments, availability, or anything else?
+            Send me a message and I'll get back to you as soon as I can.
+          </p>
+          <p>You can also reach me directly at the details below.</p>
+        </div>
         <ContactForm />
       </div>
     </div>

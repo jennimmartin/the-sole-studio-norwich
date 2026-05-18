@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getBlogPosts } from "../lib/contentful";
 
+import PageTitle from "../components/PageTitle";
+
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,11 +32,11 @@ const Blog = () => {
 
   return (
     <div className="align-element">
+      <PageTitle title="Blog" />
       {/* Header */}
-      <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl mb-4">Blog</h1>
-        <p className="text-lg text-charcoal-500 max-w-2xl mx-auto">
-          Insights on foot care, wellness, and looking after yourself
+      <div className="space-y-12 mb-12">
+        <p className="space-y-4 text-base md:text-lg max-w-2xl">
+          Insights on foot care, wellness, and looking after yourself.
         </p>
       </div>
 

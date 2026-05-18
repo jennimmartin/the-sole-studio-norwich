@@ -46,7 +46,6 @@ const Landing = () => {
       <IntroSection />
       <TreatmentSection />
       <WhyChooseSection />
-
       <Review />
     </div>
   );

@@ -43,7 +43,7 @@ const ContactForm = () => {
       <div className="bg-white border-2 border-black p-8 text-center">
         <h3 className="text-2xl mb-2">Message Sent</h3>
         <p className="text-charcoal-500">
-          Thanks — I'll be in touch within 24 hours.
+          Thanks — I'll be in touch as soon as I can.
         </p>
       </div>
     );
