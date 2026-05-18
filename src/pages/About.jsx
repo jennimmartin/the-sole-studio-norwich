@@ -5,7 +5,7 @@ import BookNowButton from "../components/ui/BookNowButton";
 const About = () => {
   return (
     <div className="align-element">
-      <PageTitle title={"About The Sole Studio Nowich"} />
+      <PageTitle title="About The Sole Studio Nowich" />
 
       <div className="space-y-12">
         {/* Section 1: Specialist foot care with purpose */}

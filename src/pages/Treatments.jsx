@@ -240,7 +240,7 @@ const TreatmentCard = ({ treatment }) => {
 
       {/* Book Button */}
       <div className="mt-auto">
-        <BookNowButton variant="secondary" className="w-full justify-center">
+        <BookNowButton variant="" className="w-full justify-center">
           Book Now
         </BookNowButton>
       </div>
