@@ -8,6 +8,11 @@ const Treatments = () => {
   const [treatments, setTreatments] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Toggle state for each section
+  const [showAllFoot, setShowAllFoot] = useState(false);
+  const [showAllSpecialist, setShowAllSpecialist] = useState(false);
+  const [showAllBeauty, setShowAllBeauty] = useState(false);
+
   useEffect(() => {
     getTreatments()
       .then((data) => {
@@ -50,9 +55,8 @@ const Treatments = () => {
 
   return (
     <div className="align-element">
-      {/* Match About page spacing with space-y-12 */}
       <div className="space-y-12">
-        {/* Hero Section */}
+        {/* Hero Section - CENTERED */}
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl mb-4">Treatments</h1>
           <p className="text-lg max-w-3xl mx-auto">
@@ -60,7 +64,8 @@ const Treatments = () => {
             completely private.
           </p>
         </div>
-        {/* Foot Treatments */}
+
+        {/* Foot Treatments - LEFT-ALIGNED */}
         {footTreatments.length > 0 && (
           <div>
             <div className="mb-12">
@@ -72,14 +77,32 @@ const Treatments = () => {
                 tired, overworked, or uncomfortable feet.
               </p>
             </div>
+
+            {/* Show first 3 cards, or all if expanded */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {footTreatments.map((treatment) => (
-                <TreatmentCard key={treatment.id} treatment={treatment} />
-              ))}
+              {(showAllFoot ? footTreatments : footTreatments.slice(0, 3)).map(
+                (treatment) => (
+                  <TreatmentCard key={treatment.id} treatment={treatment} />
+                )
+              )}
             </div>
+
+            {/* Toggle button - only show if more than 3 treatments */}
+            {footTreatments.length > 3 && (
+              <div className="mt-8">
+                <button
+                  onClick={() => setShowAllFoot(!showAllFoot)}
+                  className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
+                >
+                  {showAllFoot ? "View Less" : "View All Foot Treatments"}
+                  <span className="text-xl">{showAllFoot ? "−" : "+"}</span>
+                </button>
+              </div>
+            )}
           </div>
         )}
-        {/* Specialist Treatments */}
+
+        {/* Specialist Treatments - LEFT-ALIGNED */}
         {specialistTreatments.length > 0 && (
           <div>
             <div className="mb-12">
@@ -92,34 +115,60 @@ const Treatments = () => {
                 appearance while protecting the nail bed as it grows.
               </p>
             </div>
+
+            {/* Show first 3 cards, or all if expanded */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {specialistTreatments.map((treatment) => (
+              {(showAllSpecialist
+                ? specialistTreatments
+                : specialistTreatments.slice(0, 3)
+              ).map((treatment) => (
                 <TreatmentCard key={treatment.id} treatment={treatment} />
               ))}
             </div>
+
+            {/* Toggle button - only show if more than 3 treatments */}
+            {specialistTreatments.length > 3 && (
+              <div className="mt-8">
+                <button
+                  onClick={() => setShowAllSpecialist(!showAllSpecialist)}
+                  className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
+                >
+                  {showAllSpecialist
+                    ? "View Less"
+                    : "View All Specialist Treatments"}
+                  <span className="text-xl">
+                    {showAllSpecialist ? "−" : "+"}
+                  </span>
+                </button>
+              </div>
+            )}
           </div>
         )}
-        {/* Beauty Services */}
+
+        {/* Beauty Services - LEFT-ALIGNED */}
         {beautyServices.length > 0 && (
           <div>
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">Beauty Services</h2>
-              <p className="text-base md:text-lg  max-w-2xl">
-                Medical-grade toenail reconstruction for damaged, missing, or
-                compromised nails. A safe, non-invasive solution that restores
-                appearance while protecting the nail bed as it grows.
+              <p className="text-base md:text-lg mb-2">
+                Gel manicures, brow tinting, and lash treatments to complement
+                your foot care appointments.
               </p>
 
-              {/* Patch test note if applicable */}
+              {/* Patch test note */}
               {hasPatchTestTreatment && (
-                <p className="text-sm text-charcoal-500 mt-4">
+                <p className="text-sm text-charcoal-500">
                   Tints require a patch test 48 hours prior to your appointment
                 </p>
               )}
             </div>
 
+            {/* Show first 3 cards, or all if expanded */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {beautyServices.map((treatment) => (
+              {(showAllBeauty
+                ? beautyServices
+                : beautyServices.slice(0, 3)
+              ).map((treatment) => (
                 <TreatmentCard
                   key={treatment.id}
                   treatment={treatment}
@@ -130,8 +179,21 @@ const Treatments = () => {
               ))}
             </div>
 
-            {/* Patch test key below cards */}
-            {hasPatchTestTreatment && (
+            {/* Toggle button - only show if more than 3 treatments */}
+            {beautyServices.length > 3 && (
+              <div className="mt-8">
+                <button
+                  onClick={() => setShowAllBeauty(!showAllBeauty)}
+                  className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
+                >
+                  {showAllBeauty ? "View Less" : "View All Beauty Services"}
+                  <span className="text-xl">{showAllBeauty ? "−" : "+"}</span>
+                </button>
+              </div>
+            )}
+
+            {/* Patch test key - only show when all cards visible */}
+            {showAllBeauty && hasPatchTestTreatment && (
               <div className="mt-8">
                 <p className="text-sm text-charcoal-500">
                   ○ Requires patch test 48 hours prior
@@ -141,18 +203,17 @@ const Treatments = () => {
           </div>
         )}
 
+        {/* Special Offers - CENTERED */}
         <SpecialOffers />
 
-        {/*
-       
+        {/* Loyalty & Discounts - CENTERED */}
         <LoyaltyRewards />
-        */}
       </div>
     </div>
   );
 };
 
-// Treatment Card Component
+// Treatment Card Component - UNCHANGED
 const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -215,7 +276,7 @@ const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
         </div>
       )}
 
-      {/* Book Button - Less prominent on desktop */}
+      {/* Book Button */}
       <div className="mt-auto">
         <BookNowButton
           variant=""
