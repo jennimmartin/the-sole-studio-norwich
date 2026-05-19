@@ -25,6 +25,43 @@ const Treatments = () => {
       });
   }, []);
 
+  // Helper function to scroll to section with offset for sticky nav
+  const scrollToSection = (sectionId) => {
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const navHeight = 50; // Rounded up from 49px
+        const elementPosition =
+          element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - navHeight - 40; // 20px breathing room
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
+  };
+
+  // Toggle handlers with scroll
+  const handleToggleFoot = () => {
+    const newState = !showAllFoot;
+    setShowAllFoot(newState);
+    if (!newState) scrollToSection("foot-treatments");
+  };
+
+  const handleToggleSpecialist = () => {
+    const newState = !showAllSpecialist;
+    setShowAllSpecialist(newState);
+    if (!newState) scrollToSection("specialist-treatments");
+  };
+
+  const handleToggleBeauty = () => {
+    const newState = !showAllBeauty;
+    setShowAllBeauty(newState);
+    if (!newState) scrollToSection("beauty-services");
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -67,7 +104,7 @@ const Treatments = () => {
 
         {/* Foot Treatments - LEFT-ALIGNED */}
         {footTreatments.length > 0 && (
-          <div>
+          <div id="foot-treatments">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">Foot Treatments</h2>
               <p className="text-base md:text-lg">
@@ -91,7 +128,7 @@ const Treatments = () => {
             {footTreatments.length > 3 && (
               <div className="mt-8">
                 <button
-                  onClick={() => setShowAllFoot(!showAllFoot)}
+                  onClick={handleToggleFoot}
                   className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
                 >
                   {showAllFoot ? "View Less" : "View All Foot Treatments"}
@@ -104,7 +141,7 @@ const Treatments = () => {
 
         {/* Specialist Treatments - LEFT-ALIGNED */}
         {specialistTreatments.length > 0 && (
-          <div>
+          <div id="specialist-treatments">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">
                 Specialist Treatments
@@ -130,7 +167,7 @@ const Treatments = () => {
             {specialistTreatments.length > 3 && (
               <div className="mt-8">
                 <button
-                  onClick={() => setShowAllSpecialist(!showAllSpecialist)}
+                  onClick={handleToggleSpecialist}
                   className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
                 >
                   {showAllSpecialist
@@ -147,7 +184,7 @@ const Treatments = () => {
 
         {/* Beauty Services - LEFT-ALIGNED */}
         {beautyServices.length > 0 && (
-          <div>
+          <div id="beauty-services">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">Beauty Services</h2>
               <p className="text-base md:text-lg mb-2">
@@ -183,7 +220,7 @@ const Treatments = () => {
             {beautyServices.length > 3 && (
               <div className="mt-8">
                 <button
-                  onClick={() => setShowAllBeauty(!showAllBeauty)}
+                  onClick={handleToggleBeauty}
                   className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
                 >
                   {showAllBeauty ? "View Less" : "View All Beauty Services"}
@@ -213,7 +250,7 @@ const Treatments = () => {
   );
 };
 
-// Treatment Card Component - UNCHANGED
+// Treatment Card Component
 const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
