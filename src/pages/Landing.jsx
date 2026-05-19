@@ -5,6 +5,8 @@ import TreatmentSection from "../components/TreatmentSection";
 import WhyChooseSection from "../components/WhyChooseSection";
 
 import Review from "../components/Review";
+import BookNowButton from "../components/ui/BookNowButton";
+import ViewTreatmentsButton from "../components/ui/ViewTreatmentsButton";
 
 const Landing = () => {
   return (
@@ -23,21 +25,9 @@ const Landing = () => {
         <p className="text-sm sm:text-base text-neutral-500 mb-6 sm:mb-8 md:mb-10 max-w-xl mx-auto">
           Bridging the gap between beauty and podiatry.
         </p>
-
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-md sm:max-w-none mx-auto">
-          <Link
-            to="/contact"
-            className="bg-black text-white px-8 py-3 font-medium hover:bg-neutral-800 transition-colors duration-300 text-center w-full sm:w-auto"
-          >
-            Book an Appointment
-          </Link>
-
-          <Link
-            to="/treatments"
-            className="bg-white text-black px-8 py-3 border-2 border-black font-medium hover:bg-neutral-100 transition-colors duration-300 text-center w-full sm:w-auto"
-          >
-            View Treatments
-          </Link>
+          <BookNowButton />
+          <ViewTreatmentsButton />
         </div>
       </section>
 
