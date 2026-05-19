@@ -18,10 +18,23 @@ const Contact = () => {
         {/* Direct Contact Info */}
         <div className="max-w-2xl space-y-3 text-base md:text-lg pt-8">
           <p>
-            <strong>Email:</strong> hello@thesolestudionorwich.co.uk
+            <strong>Email:</strong>{" "}
+            <a
+              href="mailto:hello@thesolestudionorwich.co.uk"
+              className="underline hover:text-black transition-colors"
+            >
+              hello@thesolestudionorwich.co.uk
+            </a>
           </p>
+
           <p>
-            <strong>Phone:</strong> 07854 918746
+            <strong>Phone:</strong>{" "}
+            <a
+              href="tel:+447854918746"
+              className="underline hover:text-black transition-colors"
+            >
+              07854 918746
+            </a>
           </p>
           <p>
             <strong>Address:</strong> Suite G, Sapphire House, Roundtree Way,

@@ -29,7 +29,7 @@ const Legal = () => {
 
       {/* Footer */}
       <div className="mt-16 pt-8 border-t border-neutral-200 text-center">
-        <p className="text-sm text-charcoal-500">Last updated: March 2026</p>
+        <p className="text-sm text-charcoal-500">Last updated: May 2026</p>
         <p className="text-sm text-charcoal-500 mt-2">
           If you have any questions, please contact{" "}
           <a
@@ -163,11 +163,12 @@ const cookiePolicyContent = `What Are Cookies
 Cookies are small text files stored on your device when you visit our website. They help us provide you with a better browsing experience and allow certain features to function properly.
 
 Cookies We Use
+
 Essential Cookies (Always Active):
 - Session cookies for the booking system
 - Security cookies to protect your data
 
-Analytics Cookies (If Google Analytics is enabled):
+Analytics Cookies (If enabled):
 - Google Analytics to understand how visitors use our website
 - These help us improve the user experience
 - No personally identifiable information is collected
@@ -177,13 +178,23 @@ Booking System Cookies:
 - These are necessary for the booking functionality to work
 
 Third-Party Cookies
+
 Our website may use third-party services that set their own cookies:
 - Ovatu (booking system): Manages appointment bookings
-- Google Analytics (if enabled): Tracks website usage anonymously
+- Google services (Maps, Reviews, Analytics, Fonts): May set cookies when you interact with embedded maps, review links, or when loading Google Fonts
+- Social media platforms: May set cookies if you interact with our social media links
 
 These third parties have their own privacy policies governing their use of cookies.
 
+External Resources
+
+Our website uses:
+- Google Fonts for typography (fonts are loaded from Google's servers)
+- Stock images from Pexels and similar free image services (these do not set cookies)
+- Google Search Console for website monitoring (does not set user-facing cookies)
+
 Managing Cookies
+
 You can control cookies through your browser settings:
 - Most browsers allow you to refuse or accept cookies
 - You can delete cookies that have already been set
@@ -196,6 +207,7 @@ To manage cookies in your browser:
 - Edge: Settings > Cookies and site permissions
 
 Updates to This Policy
+
 We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.`;
 
 const termsOfServiceContent = `Acceptance of Terms
