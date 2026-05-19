@@ -5,7 +5,7 @@ import BookNowButton from "../components/ui/BookNowButton";
 const About = () => {
   return (
     <div className="align-element">
-      <PageTitle title="About The Sole Studio Nowich" />
+      <PageTitle title="About The Sole Studio Norwich" />
 
       <div className="space-y-12">
         {/* Section 1: Specialist foot care with purpose */}
@@ -46,7 +46,7 @@ const About = () => {
         {/* Section 3: Who is this for */}
         <div className="space-y-4 text-base md:text-lg">
           <h2 className="text-2xl md:text-3xl mb-6">
-            Who is The Sole Studio Norwich for
+            Who is The Sole Studio Norwich for?
           </h2>
           <p>People with active lifestyles</p>
           <p>Clients who spend long hours on their feet</p>
