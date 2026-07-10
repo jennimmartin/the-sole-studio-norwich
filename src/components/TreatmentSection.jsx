@@ -3,7 +3,7 @@ import BookNowButton from "./ui/BookNowButton";
 const TreatmentSection = () => {
   return (
     <div className="align-element">
-      <h2 className="text-3xl text-black md:text-4xl font-semibold mb-12">
+      <h2 className="text-3xl text-black md:text-4xl font-semibold mb-12 text-center">
         Specialist Treatments
       </h2>
       <div className="grid md:grid-cols-3 gap-8">

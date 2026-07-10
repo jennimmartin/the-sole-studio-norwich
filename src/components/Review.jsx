@@ -4,7 +4,9 @@ const Review = () => {
   return (
     <>
       <div className="align-element">
-        <h2 className="text-3xl md:text-4xl mb-12">What clients say</h2>
+        <h2 className="text-3xl md:text-4xl mb-12 text-center">
+          What clients say
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {/* review one */}
           <div className="border border-neutral-200 p-8 flex flex-col">
