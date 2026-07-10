@@ -2,7 +2,7 @@ export const WhyChooseSection = () => {
   return (
     <>
       <div className="align-element">
-        <h2 className="text-3xl md:text-4xl font-semibold text-black mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold text-black mb-8">
           Why choose The Sole Studio Norwich
         </h2>
         <div className="space-y-12">
