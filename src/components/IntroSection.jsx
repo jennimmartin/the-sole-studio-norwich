@@ -7,19 +7,17 @@ const IntroSection = () => {
 
       <div className="space-y-4 text-base md:text-lg">
         <p>
-          If you spend long hours on your feet, train regularly, or struggle
-          with recurring foot concerns, a standard beauty treatment may not
-          address what your feet actually need.
+          If you are on your feet all day, train and exercise regularly, or
+          struggle with recurring foot issues, then a standard beauty treatment
+          may well not be enough.
         </p>
         <p>
-          At The Sole Studio Norwich, treatments are tailored to concerns such
-          as hard skin, calluses, damaged toenails, discomfort, and tired,
-          overworked feet.
+          At The Sole Studio Norwich, each treatment is focused on your feet and
+          your foot concerns. Whether you struggle with discomfort, hard skin
+          and calluses, damaged toenails, or simply tired, overworked feet, the
+          treatments are tailored to what your feet actually need.
         </p>
-        <p>
-          Professional, judgement-free care focused entirely on foot health and
-          comfort.
-        </p>
+        <p>This is professional, judgement-free foot care.</p>
       </div>
     </div>
   );
