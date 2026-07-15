@@ -1,7 +1,7 @@
 const IntroSection = () => {
   return (
     <div className="align-element">
-      <h2 className="text-2xl md:text-3xl mb-6">
+      <h2 className="text-2xl md:text-3xl mb-6 text-center">
         Foot care that goes beyond a standard pedicure
       </h2>
 
