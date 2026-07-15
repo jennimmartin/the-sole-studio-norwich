@@ -47,7 +47,7 @@ const Legal = () => {
 // Keep all your existing content variables exactly as they are
 const customerPoliciesContent = `[[Booking and Appointments]]
 
--All appointments must be booked in advance. Where possible, appointments should be made through our online booking system. If you require assistance, please contact us at [[hello@thesolestudionorwich.co.uk.]]
+-All appointments must be booked in advance. Where possible, appointments should be made through our online booking system. If you require assistance, please contact us at [hello@thesolestudionorwich.co.uk|mailto:hello@thesolestudionorwich.co.uk]
 - A [[50% non-refundable deposit]] is required at the time of booking to secure your appointment.
 - When booking, you must provide a valid name, telephone number, and email address. This information is required to send appointment confirmations, reminders, and important updates regarding your booking.
 - Appointments are not confirmed until you have received a confirmation email or message from us.
@@ -253,17 +253,17 @@ Under UK data protection law, you have the right to:
 - Request data portability
 - Withdraw consent where processing is based on consent
 
-To exercise any of these rights, please contact us at:  [[hello@thesolestudionorwich.co.uk]]
+To exercise any of these rights, please contact us at:  [hello@thesolestudionorwich.co.uk|mailto:hello@thesolestudionorwich.co.uk]
 
 We will respond to requests in accordance with applicable data protection legislation.
 
 You also have the right to lodge a complaint with the:
 
-[Information Commissioner's Office (ICO)|https://ico.org.uk]
+Information Commissioner's Office (ICO)
 
 You can find further information at:
 
-[[Information Commissioner's Office]]
+[Information Commissioner's Office|https://ico.org.uk]
 
 [[Website Security]]
 
