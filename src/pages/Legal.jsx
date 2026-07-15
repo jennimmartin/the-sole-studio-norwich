@@ -13,16 +13,16 @@ const Legal = () => {
 
       <div className="space-y-4">
         <AccordionSection
-          title="Customer Policies"
+          title="Customer Policies and Procedures"
           content={customerPoliciesContent}
         />
         <AccordionSection
           title="Privacy Policy"
           content={privacyPolicyContent}
         />
-        <AccordionSection title="Cookie Policy" content={cookiePolicyContent} />
+
         <AccordionSection
-          title="Terms of Service"
+          title="Terms and Conditions"
           content={termsOfServiceContent}
         />
       </div>
@@ -45,238 +45,467 @@ const Legal = () => {
 };
 
 // Keep all your existing content variables exactly as they are
-const customerPoliciesContent = `1. Booking & Appointments
-- All appointments must be made in advance either online or by phone
-- A valid name, contact number, and email address must be provided at the time of booking
-- Appointments are not confirmed until the customer receives a confirmation email or message
+const customerPoliciesContent = `Booking and Appointments
 
-2. Customer Arrival & Check-In
-- Please arrive 10–15 minutes early to allow time for check-in and preparation
-- Late arrivals may result in the appointment being shortened or rescheduled
-- The studio reserves the right to refuse entry if a client is excessively late
+- All appointments must be booked in advance. Where possible, appointments should be made through our online booking system. If you require assistance, please contact us at hello@thesolestudionorwich.co.uk.
+- A 50% non-refundable deposit is required at the time of booking to secure your appointment.
+- When booking, you must provide a valid name, telephone number, and email address. This information is required to send appointment confirmations, reminders, and important updates regarding your booking.
+- Appointments are not confirmed until you have received a confirmation email or message from us.
+- As The Sole Studio Norwich operates from a private studio, we kindly ask that you attend your appointment alone. Unfortunately, we are unable to accommodate additional guests unless prior arrangements have been agreed.
+- Please arrive promptly for your appointment. As we do not have a dedicated waiting area, access to the building may not be available before your scheduled appointment time. You will be met at reception and escorted to the studio.
+- If you arrive late, your treatment time may need to be shortened to avoid disrupting subsequent appointments. Where there is insufficient time to safely or effectively carry out your treatment, your appointment may need to be rescheduled and the full treatment fee may still apply.
 
-3. Cancellation & Rescheduling
-- Cancellations or reschedules must be made at least 24 hours before the scheduled appointment
-- Late cancellations (less than 24 hours' notice) may incur a cancellation fee or lose the appointment charge
-- No-shows (missed appointments without notice) may be charged in full
-- Refunds or reschedules for missed appointments are at management discretion
+Consultation Process
 
-4. Payments & Fees
-- Full payment is required at the time of booking or before the service begins
-- Accepted payment methods include major credit/debit cards and online payments
-- Any outstanding balances must be settled before service delivery
+- All new clients must complete a consultation form before their first appointment.
+- To ensure treatments remain safe and appropriate, all clients are required to complete a health questionnaire before each visit. Depending on the treatment booked, you may also be asked to complete additional treatment-specific consultation forms.
+- It is your responsibility to provide accurate, complete, and up-to-date information to the best of your knowledge.
+- For your safety, you must inform us of any relevant medical conditions, allergies, medications, pregnancy, recent procedures, or ongoing treatments that may affect your suitability for treatment.
+- Failure to disclose relevant information may result in treatment being refused or discontinued.
 
-5. Refund Policy
-- Refunds are not provided for completed services
-- If a prepaid session or package hasn't been used, refunds may be considered up to a certain date before service begins
-- Refunds for product purchases follow statutory rights under UK consumer law
+Deposits
 
-6. Health & Safety
-- Clients should inform staff of any health conditions, allergies, injuries, or medications when booking
-- The studio may refuse treatment if a condition might compromise client safety
-- By attending, clients confirm they are medically fit for the service provided
+- A deposit equal to 50% of the treatment cost is required when booking.
+- Your deposit will be deducted from the final balance payable on the day of your appointment.
+- If you provide more than 24 hours' notice to cancel or reschedule your appointment, your deposit will be transferred to your client account as credit and may be used towards a future appointment.
+- If you provide less than 24 hours' notice, fail to attend your appointment, or arrive too late for your treatment to be carried out, your deposit will be forfeited.
+- Where a refund is requested instead of account credit, we reserve the right to apply a £5 administration fee to cover processing costs.
 
-7. Client Conduct
-- All clients are expected to behave respectfully toward staff and other clients
-- The studio operates a zero-tolerance policy for abusive or threatening behaviour
+Cancellation Policy
 
-8. Personal Belongings
-- Clients are responsible for their personal items brought into the studio
-- The studio is not liable for loss or damage to belongings
+- We kindly ask that any appointment changes or cancellations are made with at least 24 hours' notice.
+- Appointments cancelled or rescheduled with less than 24 hours' notice will result in the loss of the deposit paid.
+- Appointments cancelled or amended with more than 24 hours' notice will have the deposit transferred to account credit for future use.
+- Where possible, cancellations and amendments should be made through our online booking system. If you are unable to do so, please contact us at hello@thesolestudionorwich.co.uk.
 
-9. Privacy & Data Protection
-- Personal data collected for bookings is stored and used in accordance with data protection laws
-- Clients may opt out of marketing communications at any time
+By booking an appointment, you acknowledge and agree to this cancellation policy.
 
-10. Changes to Terms
-- The studio reserves the right to modify policies, prices, or service terms at any time
-- Updated policies will be made available on the website and communicated where appropriate`;
+Missed Appointments (No-Shows)
+
+- Failure to attend an appointment without providing notice will be recorded as a No-Show.
+- In the event of a No-Show, the full cost of the scheduled treatment may be charged.
+- Repeated missed appointments may result in restrictions being placed on future bookings, including a requirement for full payment at the time of booking.
+- We reserve the right to refuse future appointments where there is a history of repeated cancellations, missed appointments, or non-payment.
+
+Right to Refuse Treatment
+
+The safety, wellbeing, and comfort of our clients and staff are our priority. We therefore reserve the right to refuse, postpone, or discontinue treatment where necessary.
+
+This includes, but is not limited to, the following circumstances:
+
+Arrival significantly late for an appointment.
+- A medical condition, injury, allergy, medication, or other contraindication makes treatment unsuitable or unsafe.
+- The client is under the age of 16.
+- The client is believed to be under the influence of alcohol, drugs, or any substance that may impair judgement or safety.
+- Aggressive, abusive, threatening, discriminatory, or disrespectful behaviour towards staff, clients, or visitors.
+- Inappropriate, unreasonable, or unprofessional conduct.
+- Failure to provide accurate consultation information.
+- Outstanding payments or repeated breaches of our policies.
+- A history of repeated missed appointments or cancellations.
+
+Where treatment is refused for health and safety reasons, we will discuss alternative options where appropriate.
+
+We reserve the right to refuse service at our discretion where necessary to protect our staff, clients, business operations, or professional standards.
+
+Treatment Results
+
+Individual treatment results vary from person to person and cannot be guaranteed.
+
+Any photographs, testimonials, reviews, or examples shown on our website, social media platforms, or marketing materials are provided for illustrative purposes only and should not be considered a guarantee of specific results.
+
+Treatment outcomes depend on many factors, including individual characteristics, medical history, lifestyle factors, and adherence to aftercare advice.
+
+Payments
+
+Payment of any outstanding balance is due at the time of your appointment unless otherwise agreed in writing.
+
+We reserve the right to withhold treatment or future bookings where payment remains outstanding.
+
+Complaints Procedure
+
+We are committed to providing a professional and high-quality service. If you are dissatisfied with any aspect of your experience, we encourage you to contact us so that we can investigate and resolve the matter promptly.
+
+Complaints should be submitted in writing by email to:
+
+hello@thesolestudionorwich.co.uk
+
+or by post to:
+
+The Sole Studio Norwich
+Suite G, Sapphire House
+Roundtree Way
+Norwich
+NR7 8SQ
+
+We aim to acknowledge all complaints within 7 working days and will endeavour to resolve them as quickly as possible.
+
+By booking an appointment with The Sole Studio Norwich, you confirm that you have read, understood, and agree to these Customer Policies and Procedures.
+`;
 
 // (Keep all other content variables - privacyPolicyContent, cookiePolicyContent, termsOfServiceContent - exactly as they are)
 
-const privacyPolicyContent = `What Information We Collect
-We collect and process the following personal information:
-- Name, email address, phone number, and postal address
-- Health information relevant to treatments (medical conditions, allergies, medications)
-- Appointment history and treatment records
-- Payment information (processed securely through our booking system)
-- Communication preferences for marketing purposes
-- Email addresses collected through our newsletter signup
+const privacyPolicyContent = `The Sole Studio Norwich ("we", "us", "our") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our website, contact us, book appointments, purchase products or services, or otherwise interact with our business.
+
+If you have any questions regarding this Privacy Policy or the way we process your personal data, please contact us at:
+
+hello@thesolestudionorwich.co.uk
+
+Who We Are
+The Sole Studio Norwich is the data controller responsible for the personal information collected through our website and business operations.
+We process personal data in accordance with:
+- The UK General Data Protection Regulation (UK GDPR)
+- The Data Protection Act 2018
+- Any other applicable data protection legislation
+
+Information We Collect
+We may collect and process the following types of personal information:
+Information You Provide
+- Name
+- Email address
+- Telephone number
+- Postal address
+- Date of birth
+- Appointment and booking details
+- Medical and health information relevant to treatments
+- Consultation forms and treatment records
+- Photographs taken with your consent
+- Feedback, reviews, enquiries, or correspondence
+
+Information Collected Automatically
+When you visit our website, we may automatically collect:
+- IP address
+- Browser type and version
+- Device information
+- Operating system
+- Website usage information
+- Pages viewed and time spent on our website
+This information is collected through cookies and similar technologies.
 
 How We Use Your Information
-Your personal information is used to:
-- Process and manage your bookings and appointments
-- Provide safe and appropriate treatments based on your health information
-- Communicate with you about your appointments and services
-- Send you marketing communications, newsletters, and foot care tips (only if you have consented)
-- Provide downloadable resources such as our free foot care guide
-- Maintain accurate treatment records for your safety and continuity of care
-- Comply with legal and regulatory requirements
-
-Legal Basis for Processing
-We process your personal data under the following legal bases:
-- Contract: To fulfill our booking and treatment obligations
-- Legal Obligation: To maintain treatment records as required by law
-- Consent: For marketing communications and newsletter subscriptions (you can withdraw consent at any time)
-- Legitimate Interests: To provide safe, effective treatments and manage our business
-
-How We Store Your Information
-Your information is stored:
-- Electronically in our booking system (Ovatu) with appropriate security measures
-- Email addresses are stored securely via Netlify Forms
-- In physical treatment records kept securely at the studio
-- Treatment records are retained for 7 years in accordance with professional guidelines
-- Personal data is stored in the UK and complies with UK GDPR
-
-Who We Share Your Information With
-We do not sell or share your personal information with third parties except:
-- Our booking system provider (Ovatu) for appointment management
-- Netlify for secure form submission and email collection
-- Payment processors for secure transaction processing
-- Professional advisors (e.g., insurance, legal) where necessary
-- If required by law or to protect safety
-All third parties are required to keep your information secure and confidential.
-
-Your Rights
-Under UK GDPR, you have the right to:
-- Access your personal data
-- Request correction of inaccurate data
-- Request deletion of your data (subject to legal retention requirements)
-- Object to processing for marketing purposes
-- Withdraw consent at any time
-- Request data portability
-- Lodge a complaint with the Information Commissioner's Office (ICO)
-
-To exercise any of these rights, please contact hello@thesolestudionorwich.co.uk
+We use your personal information to:
+- Manage bookings and appointments
+- Provide treatments, products, and services
+- Maintain client records
+- Respond to enquiries and requests
+- Process payments
+- Send appointment confirmations and reminders
+- Improve our website and services
+- Comply with legal and regulatory obligations
+- Protect the safety of our clients and business
+Where you have provided consent, we may also use your information to send marketing communications about our services, offers, and promotions.
 
 Marketing Communications
-We may send you information about new treatments, special offers, foot care tips, and appointment reminders. You can opt out at any time by clicking 'unsubscribe' in any email or contacting us directly. You will continue to receive essential appointment-related communications.
+We will only send marketing communications where:
+- You have given your consent; or
+- We are otherwise permitted to do so under applicable law.
+You can withdraw your consent and unsubscribe from marketing communications at any time by:
+- Clicking the unsubscribe link in our emails; or
+- Contacting us at hello@thesolestudionorwich.co.uk
+Opting out of marketing communications will not affect service-related communications such as appointment reminders or treatment information.
 
-Newsletter Signup
-If you sign up for our newsletter or free resources:
-- We will only email you content you've requested (foot care tips, guides, offers)
-- We will never share your email address with third parties
-- You can unsubscribe at any time using the link in any email
-- Your email will be stored securely and used only for the purposes you agreed to`;
+Lawful Basis for Processing
+We process personal information under one or more of the following lawful bases:
+- Performance of a contract (providing treatments, products, and services)
+- Compliance with legal obligations
+- Legitimate business interests
+- Your consent (where required)
+Where special category data (such as health information) is collected, we process it only where permitted under applicable data protection laws and where necessary for the provision of treatments and services.
 
-const cookiePolicyContent = `What Are Cookies
-Cookies are small text files stored on your device when you visit our website. They help us provide you with a better browsing experience and allow certain features to function properly.
+Sharing Your Information
+We do not sell your personal information.
 
-Cookies We Use
+We may share your information with trusted third-party service providers where necessary for:
+- Appointment booking systems
+- Payment processing
+- Website hosting and maintenance
+- Email and communication services. Contact form submissions are processed by Netlify Forms, which forwards your message to our email address for response purposes
+- Professional advisers
+- Regulatory authorities
+We may also disclose information where required by law, regulation, court order, or lawful request from a government or law enforcement authority.
 
-Essential Cookies (Always Active):
-- Session cookies for the booking system
-- Security cookies to protect your data
+All third-party providers are required to protect your information and process it in accordance with applicable data protection laws.
 
-Analytics Cookies (If enabled):
-- Google Analytics to understand how visitors use our website
-- These help us improve the user experience
-- No personally identifiable information is collected
+Data Retention
+We retain personal information only for as long as necessary to:
+- Provide our services;
+- Meet legal, regulatory, insurance, and professional obligations; or
+-Resolve disputes and enforce our agreements.
+Treatment records may be retained for longer periods where required by professional standards, insurance requirements, or legal obligations.
 
-Booking System Cookies:
-- Ovatu booking system cookies to manage your appointments
-- These are necessary for the booking functionality to work
+Your Rights
+Under UK data protection law, you have the right to:
+- Access your personal information
+- Request correction of inaccurate information
+- Request erasure of your information in certain circumstances
+- Restrict processing
+- Object to processing
+- Request data portability
+- Withdraw consent where processing is based on consent
 
-Third-Party Cookies
+To exercise any of these rights, please contact us at:  hello@thesolestudionorwich.co.uk
 
-Our website may use third-party services that set their own cookies:
-- Ovatu (booking system): Manages appointment bookings
-- Google services (Maps, Reviews, Analytics, Fonts): May set cookies when you interact with embedded maps, review links, or when loading Google Fonts
-- Social media platforms: May set cookies if you interact with our social media links
+We will respond to requests in accordance with applicable data protection legislation.
 
-These third parties have their own privacy policies governing their use of cookies.
+You also have the right to lodge a complaint with the:
 
-External Resources
+Information Commissioner's Office (ICO)
 
-Our website uses:
-- Google Fonts for typography (fonts are loaded from Google's servers)
-- Stock images from Pexels and similar free image services (these do not set cookies)
-- Google Search Console for website monitoring (does not set user-facing cookies)
+You can find further information at:
 
-Managing Cookies
+Information Commissioner's Office
 
-You can control cookies through your browser settings:
-- Most browsers allow you to refuse or accept cookies
-- You can delete cookies that have already been set
-- Blocking all cookies may affect website functionality, particularly the booking system
+Website Security
 
-To manage cookies in your browser:
-- Chrome: Settings > Privacy and Security > Cookies
-- Firefox: Settings > Privacy & Security
-- Safari: Preferences > Privacy
-- Edge: Settings > Cookies and site permissions
+We take appropriate technical and organisational measures to protect your personal information from unauthorised access, loss, misuse, alteration, or disclosure.
+However, while we strive to protect your information, no method of internet transmission or electronic storage can be guaranteed to be completely secure.
 
-Updates to This Policy
+International Data Transfers
 
-We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.`;
+Some of our service providers may process information outside the United Kingdom.
+Where personal data is transferred internationally, we will ensure that appropriate safeguards are in place to protect your information in accordance with UK data protection law.
 
-const termsOfServiceContent = `Acceptance of Terms
-By using this website and booking services, you agree to comply with and be bound by these Terms of Service. If you do not agree with these terms, please do not use our website or services.
+Cookies
 
-Use of Website
-This website is provided for information about our services, booking appointments, and accessing health and foot care advice.
+Our website uses cookies and similar technologies to improve user experience, analyse website traffic, and support website functionality.
+Cookies are small text files stored on your device when you visit a website.
 
-You agree not to:
-- Use the website for any unlawful purpose
-- Attempt to gain unauthorized access to any part of the website
-- Transmit any harmful code or malware
-- Use automated systems to access the website without permission
+We may use:
 
-Intellectual Property
-All content on this website, including text, images, logos, graphics, website design and layout, and treatment descriptions is the property of The Sole Studio Norwich or licensed for use. You may not copy, reproduce, or distribute any content without written permission.
+Essential Cookies
 
-Service Limitations
-The Sole Studio Norwich provides professional foot care treatments but:
-- We are not a medical facility
-- Treatments are not a substitute for medical advice or treatment
-- We may refuse treatment if we believe it is not appropriate or safe
-- We may refer you to a GP or podiatrist for concerns outside our scope
+Required for the operation and security of the website.
 
-Always consult your GP for medical concerns.
+Analytics Cookies
 
-Booking and Payment Terms
-By making a booking, you agree to:
-- Provide accurate personal and health information
-- Arrive on time for your appointment
-- Pay in full at the time of booking or before treatment
-- Comply with our cancellation policy (see Customer Policies)
+Used to help us understand how visitors interact with our website so that we can improve performance and user experience.
 
-Failure to comply may result in cancellation fees or refusal of service.
+Functional Cookies
 
-Liability and Disclaimers
-To the extent permitted by law:
-- We do not guarantee specific results from treatments
-- We are not liable for any indirect or consequential losses
-- Our liability for any claim is limited to the amount paid for the service
-- We maintain appropriate professional indemnity insurance
+Used to remember preferences and improve website functionality.
 
-This does not affect your statutory rights as a consumer under UK law.
+You can control or disable cookies through your browser settings. Please note that disabling certain cookies may affect website functionality.
 
-Health and Safety
-You are responsible for:
-- Disclosing all relevant health information
-- Following pre- and post-treatment advice
-- Informing us of any adverse reactions
+For more information about cookies, visit:
 
-We reserve the right to refuse or stop treatment if we believe it may compromise your safety.
+All About Cookies
 
-Links to Third-Party Sites
-Our website may contain links to third-party websites (e.g., booking system, social media). We are not responsible for the content or privacy practices of these sites. Please review their terms and policies separately.
+Analytics
 
-Changes to Terms
-We reserve the right to update these Terms of Service at any time. Changes will be posted on this page with an updated date. Continued use of the website after changes constitutes acceptance of the new terms.
+We may use analytics services to collect anonymous information about how visitors use our website.
 
-Governing Law
-These Terms of Service are governed by the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.
+This information helps us understand website performance, improve user experience, and identify areas for improvement.
 
-Contact Information
-For questions about these Terms of Service, please contact:
+Analytics information does not normally identify individual users.
+
+Third-Party Websites
+
+Our website may contain links to third-party websites.
+
+Our website also uses Google Fonts for typography. Google Fonts does not collect personal data but loads font files from Google's servers.
+
+We are not responsible for the privacy practices, content, or security of external websites. We encourage you to read the privacy policies of any websites you visit.
+
+Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time to reflect changes in our services, legal obligations, or business practices.
+
+Any updates will be published on this page and will take effect immediately upon publication.
+
+We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
+
+Contact Us
+
+If you have any questions about this Privacy Policy or the way your personal information is handled, please contact:
 
 The Sole Studio Norwich
-Suite G, Sapphire House, Roundtree Way
-Norwich NR7 8SQ
+Suite G, Sapphire House
+Roundtree Way
+Norwich
+NR7 8SQ
 
-Email: hello@thesolestudionorwich.co.uk
-Phone: 07854 918746`;
+hello@thesolestudionorwich.co.uk
+`;
+
+const termsOfServiceContent = `1. Introduction
+
+These Terms and Conditions govern the use of the website and services provided by The Sole Studio Norwich ("we", "us", "our").
+
+By accessing our website, booking an appointment, purchasing a product or service, or otherwise engaging with our business, you confirm that you have read, understood, and agree to be bound by these Terms and Conditions and our Privacy Policy.
+
+If you do not agree to these Terms, you must not use our website or services.
+
+2. Appointments and Bookings
+
+Appointments must be booked in advance using our online booking system or by contacting us at hello@thesolestudionorwich.co.uk.
+
+A 50% deposit is required to secure all appointments.
+
+Appointments are not confirmed until you receive confirmation from us.
+
+You must provide accurate and up-to-date contact information when booking.
+
+As we operate from a private studio, clients are asked to attend appointments alone unless otherwise agreed in advance.
+
+Please arrive on time. As we do not have a waiting area, access to the premises may not be available before your appointment time.
+
+Late arrival may result in a reduced treatment time or cancellation of the appointment. Full treatment charges may still apply.
+
+3. Consultations and Client Responsibilities
+
+All new clients must complete a consultation form before treatment.
+
+You may also be required to complete a health questionnaire and treatment-specific consent forms before each appointment.
+
+You are responsible for providing complete and accurate information regarding:
+
+- Medical conditions
+- Medications
+- Allergies
+- Pregnancy
+- Previous treatments
+- Any other information relevant to your treatment
+
+Failure to disclose relevant information may result in treatment being refused or may affect treatment outcomes.
+
+You agree to follow all pre-treatment, aftercare, and homecare advice provided.
+
+4. Deposits, Cancellations and Missed Appointments
+
+Deposits are deducted from the final balance due on the day of treatment.
+
+If you cancel or reschedule with more than 24 hours' notice, your deposit will be transferred to your client account as credit for future use.
+
+If you cancel, reschedule, fail to attend, or arrive too late for treatment with less than 24 hours' notice, your deposit will be forfeited.
+
+Refunds requested instead of account credit may be subject to a £5 administration fee.
+
+Failure to attend an appointment without notice will be treated as a No-Show.
+
+Repeated No-Shows, late cancellations, or non-payment may result in full payment being required at the time of booking or refusal of future appointments.
+
+5. Right to Refuse Treatment
+
+We reserve the right to refuse, postpone, modify, or discontinue treatment where:
+
+- Treatment is deemed unsuitable or unsafe.
+- Medical contraindications are identified.
+- Required consultation information has not been provided.
+- A client is under the influence of alcohol or drugs.
+- A client behaves in an abusive, aggressive, threatening, inappropriate, or disrespectful manner.
+-A client is under the minimum treatment age requirement.
+- There is a history of repeated missed appointments or non-payment.
+
+Client safety will always be our primary consideration.
+
+6. Treatment Results and Disclaimer
+
+All treatments carry risks and individual results will vary.
+
+No treatment outcome can be guaranteed.
+
+Photographs, testimonials, reviews, and case studies are provided for illustrative purposes only and should not be regarded as guarantees of results.
+
+Information provided on our website is for general information purposes only and does not constitute medical advice.
+
+If you have concerns regarding your suitability for treatment, you should seek advice from an appropriate healthcare professional before proceeding.
+
+7. Payments and Refunds
+
+Payment for treatments and products is due at the time of your appointment unless otherwise agreed.
+
+Refunds will be considered in accordance with your statutory consumer rights.
+
+Unused treatments, promotional offers, packages, deposits, gift vouchers, and discounted services are generally non-refundable unless required by law.
+
+8. Photographs and Marketing Consent
+
+Clinical photographs may be taken for treatment assessment and record keeping.
+
+Separate consent will always be obtained before any photographs are used for marketing, social media, educational, or promotional purposes.
+
+Consent for marketing use is voluntary and may be withdrawn at any time for future use.
+
+All personal data and photographs are processed in accordance with our Privacy Policy and applicable data protection legislation.
+
+9. Promotions, Gift Vouchers and Offers
+
+Promotions, discounts, vouchers, gift vouchers, package offers, and promotional codes:
+
+- Cannot normally be used in conjunction with any other offer.
+- Have no cash value.
+- Are non-transferable.
+- Cannot be exchanged for cash.
+- Must be used before their expiry date.
+
+We reserve the right to amend or withdraw promotions at any time.
+
+10. Website Use
+
+You agree to use our website only for lawful purposes.
+
+You must not:
+
+- Attempt to gain unauthorised access to the website.
+- Introduce viruses, malware, or harmful code.
+- Use the website to send unsolicited communications.
+- Copy, reproduce, or misuse website content.
+- Interfere with the operation or security of the website.
+
+We reserve the right to suspend or terminate access where misuse is suspected.
+
+11. Intellectual Property
+
+All content on this website, including text, images, branding, logos, graphics, videos, and design elements, is owned by or licensed to The Sole Studio Norwich and is protected by intellectual property laws.
+
+You may access the website for personal, non-commercial use only.
+
+No content may be copied, reproduced, distributed, modified, or used without our prior written consent.
+
+12. Website Availability
+
+Whilst we take reasonable steps to maintain the website, we do not guarantee uninterrupted availability or error-free operation.
+
+The website is provided on an "as available" basis.
+
+We shall not be liable for any loss arising from website downtime, technical issues, viruses, or circumstances outside our reasonable control.
+
+13. Limitation of Liability
+
+Nothing in these Terms excludes or limits liability that cannot legally be excluded under English law.
+
+Subject to this, our total liability arising from any treatment, product, or service shall not exceed the amount paid by you for the relevant treatment, product, or service.
+
+We shall not be liable for any indirect, incidental, consequential, or economic loss.
+
+14. Complaints
+
+We are committed to providing excellent service.
+
+Any complaints should be submitted in writing to:
+
+hello@thesolestudionorwich.co.uk
+
+or
+
+The Sole Studio Norwich
+Suite G, Sapphire House
+Roundtree Way
+Norwich
+NR7 8SQ
+
+We aim to acknowledge complaints within 7 working days and resolve them as promptly as possible.
+
+15. General
+
+We may update these Terms and Conditions from time to time.
+
+If any provision is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+
+These Terms constitute the entire agreement between you and The Sole Studio Norwich regarding your use of our website and services.
+
+A person who is not a party to these Terms has no rights under the Contracts (Rights of Third Parties) Act 1999.
+
+These Terms are governed by the laws of England and Wales, and the courts of England and Wales shall have exclusive jurisdiction over any dispute arising from them.
+`;
 
 export default Legal;
