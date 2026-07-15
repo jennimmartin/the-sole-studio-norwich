@@ -3,38 +3,73 @@ import { useState } from "react";
 const AccordionSection = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Format content with bold sub-headings
-  const formatContent = (text) => {
-    // Split by double newlines to get paragraphs/sections
-    const sections = text.split("\n\n");
+  const parseContent = (text) => {
+    return text.split("\n").map((line, index) => {
+      // Remove dash if it's a bullet point
+      let cleanLine = line;
+      let isBullet = false;
 
-    return sections.map((section, index) => {
-      const lines = section.split("\n");
-      const firstLine = lines[0];
+      if (line.startsWith("-")) {
+        cleanLine = line.slice(1).trim();
+        isBullet = true;
+      }
 
-      // Check if first line looks like a heading (ends with colon, is a question, or is short and capitalized)
-      const isHeading =
-        (firstLine.match(/^[A-Z][^\.]*:?$/) &&
-          firstLine.length < 80 &&
-          !firstLine.startsWith("•")) ||
-        firstLine.endsWith("?");
+      // Parse [[bold]] and [text|url]
+      const parts = [];
+      let lastIndex = 0;
 
-      if (isHeading) {
+      const regex = /\[\[([^\]]+)\]\]|\[([^\|]+)\|([^\]]+)\]/g;
+      let match;
+
+      while ((match = regex.exec(cleanLine)) !== null) {
+        // Add text before match
+        if (match.index > lastIndex) {
+          parts.push(cleanLine.slice(lastIndex, match.index));
+        }
+
+        // Add bold
+        if (match[1]) {
+          parts.push(
+            <strong key={`bold-${index}-${match.index}`} className="font-bold">
+              {match[1]}
+            </strong>
+          );
+        }
+        // Add link
+        else if (match[2] && match[3]) {
+          parts.push(
+            <a
+              key={`link-${index}-${match.index}`}
+              href={match[3]}
+              className="underline text-blue-600 hover:text-blue-800 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {match[2]}
+            </a>
+          );
+        }
+
+        lastIndex = regex.lastIndex;
+      }
+
+      // Add remaining text
+      if (lastIndex < cleanLine.length) {
+        parts.push(cleanLine.slice(lastIndex));
+      }
+
+      // Return the line
+      if (isBullet) {
         return (
-          <div key={index} className="mb-4">
-            <div className="font-bold text-black mb-2">{firstLine}</div>
-            {lines.slice(1).map((line, i) => (
-              <div key={i}>{line}</div>
-            ))}
+          <div key={index} className="ml-6 mb-2">
+            • {parts.length > 0 ? parts : cleanLine}
           </div>
         );
       }
 
       return (
-        <div key={index} className="mb-4">
-          {lines.map((line, i) => (
-            <div key={i}>{line}</div>
-          ))}
+        <div key={index} className="mb-3">
+          {parts.length > 0 ? parts : cleanLine}
         </div>
       );
     });
@@ -52,7 +87,7 @@ const AccordionSection = ({ title, content }) => {
       {isOpen && (
         <div className="px-6 pb-6 pt-4">
           <div className="text-charcoal-500 leading-relaxed">
-            {formatContent(content)}
+            {parseContent(content)}
           </div>
         </div>
       )}
