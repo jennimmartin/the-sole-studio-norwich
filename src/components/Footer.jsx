@@ -140,6 +140,7 @@ const Footer = () => {
                       </svg>
                     </a>
                   )}
+
                   {FOOTER_DATA.social.tiktok && (
                     <a
                       href={FOOTER_DATA.social.tiktok}

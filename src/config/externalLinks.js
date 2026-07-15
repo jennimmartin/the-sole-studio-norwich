@@ -5,14 +5,13 @@ const isDevelopment = process.env.NODE_ENV === "development";
 export const EXTERNAL_LINKS = {
   // Booking system
   booking: isDevelopment
-    ? "https://suzannes-sanctuary.book.app/book-now" // Test URL for development
-    : "https://suzannes-sanctuary.book.app/book-now", // Real URL for production - it will have sole-studio
+    ? "https://thesolestudionorwich.book.app/book-now" // Test URL for development
+    : "https://thesolestudionorwich.book.app/book-now", // Real URL for production - it will have sole-studio
 
   // Social media
   facebook: "https://facebook.com/thesolestudionorwich",
   instagram: "https://www.instagram.com/thesolestudionorwich",
-  tiktok:
-    "https://www.tiktok.com/search?q=suzanne%27s%20sanctuar%20nowich&t=1772724242846",
+  tiktok: "",
 
   // Reviews (empty until configured)
   googleReviews: "",
