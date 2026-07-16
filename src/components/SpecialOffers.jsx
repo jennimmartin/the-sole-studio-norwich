@@ -1,22 +1,20 @@
+import BookNowButton from "./ui/BookNowButton";
+
 const SpecialOffers = () => {
   return (
     <div className="">
       {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl tracking-wide">Special Offers</h2>
-      </div>
+      <div className="text-center mb-16"></div>
       {/* Offer of the Month - Featured */}
-      <div className="max-w-3xl mx-auto mb-16 border-t-2 border-b-2 border-black py-12 text-center">
-        <p className="text-xs uppercase tracking-widest mb-3 text-charcoal-500">
-          Offer of the Month
+      <div className="max-w-3xl mx-auto mb-16 border-t-2 border-b-2 py-12 text-center bg-white border border-neutral-200 p-8 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+        <h2 className="text-2xl mb-8">Limited Edition Treatments</h2>
+        <p className="text-sm mx-auto mb-8">
+          Discover our exclusive limited edition treatments, thoughtfully
+          created to enhance your results and elevate your relaxation. Available
+          for a limited time only, each treatment is inspired by the season and
+          offered in limited availability.
         </p>
-        <h3 className="text-2xl md:text-3xl mb-6 font-light">
-          Complimentary Scent Enhancement
-        </h3>
-        <p className="text-base md:text-lg text-charcoal-500 max-w-xl mx-auto">
-          Choose from our curated selection of aromatherapy oils to personalise
-          your treatment experience at no extra cost.
-        </p>
+        <BookNowButton>Book now</BookNowButton>
       </div>
       {/* Other Specials - Grid
 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-x-16 gap-y-12">

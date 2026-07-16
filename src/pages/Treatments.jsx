@@ -118,17 +118,28 @@ const Treatments = () => {
         {/* Hero Section - CENTERED */}
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl mb-4">Treatments</h1>
-          <p className="text-lg max-w-3xl mx-auto">
+          <p>
             Specialist foot care tailored to your needs. Professional, unrushed,
             completely private.
           </p>
         </div>
+
+        {/* Special Offers - CENTERED */}
+        <SpecialOffers />
 
         {/* Thai Foot Massage */}
         {thaiFootMassage.length > 0 && (
           <div id="thai-foot-massage">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">Thai Foot Massage</h2>
+              <p>
+                Restorative relief for tired, overworked feet. A therapeutic
+                treatment using traditional Thai techniques to improve
+                circulation, ease tension, and support foot health. Ideal for
+                foot fatigue, tightness, and preventative care. Leave feeling
+                lighter, relaxed, and more mobile in a calm, professional
+                setting.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
@@ -161,6 +172,18 @@ const Treatments = () => {
               <h2 className="text-3xl md:text-4xl mb-4">
                 Toenail Reconstruction
               </h2>
+              <p>
+                Specialist restoration for damaged or compromised nails. Restore
+                the natural appearance and strength of a damaged or unsightly
+                toenail with this advanced, hygiene-first reconstruction
+                treatment. Designed for nails affected by trauma,
+                discolouration, thickening, or partial loss, this service uses
+                specialist Wilde Pedique Silver Plus technology to safely
+                rebuild and protect the nail while supporting overall nail
+                health. Ideal for clients who feel self-conscious about their
+                toenails or want a reliable, professional solution that
+                prioritises both appearance and long-term condition.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
@@ -192,7 +215,17 @@ const Treatments = () => {
         {elim.length > 0 && (
           <div id="elim">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">ELIM</h2>
+              <h2 className="text-3xl md:text-4xl mb-4">ELIM</h2>A
+              results-driven, medical-grade pedicure designed to restore
+              comfort, improve skin condition, and support long-term foot
+              health. This advanced, non-invasive treatment goes beyond a
+              traditional pedicure, using specialist Elim products to gently and
+              effectively remove hard skin and calluses—without harsh filing or
+              blades. The focus is on safe, controlled exfoliation that protects
+              the skin while delivering visible, lasting results. Ideal for
+              clients seeking a professional, hygiene-first approach to
+              maintaining smooth, healthy feet in a calm and trusted
+              environment.
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
@@ -220,6 +253,18 @@ const Treatments = () => {
           <div id="pedicures">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">Pedicures</h2>
+              <p>
+                Treat your feet to a professional, restorative pedicure designed
+                to improve comfort, hygiene, and overall foot health. Your
+                treatment begins with precise nail shaping, detailed cuticle
+                care, and gentle, effective exfoliation to reduce dry, rough
+                areas. A warm soak follows to soften the skin. The treatment is
+                completed with a nourishing massage to enhance circulation,
+                relieve tension, and restore comfort to tired, overworked feet.
+                Delivered in a clean and calm environment, this pedicure is
+                ideal for maintaining healthy, well-cared-for feet with
+                consistent, preventative care.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
@@ -251,6 +296,12 @@ const Treatments = () => {
           <div id="gel-manicures">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">Gel Manicures</h2>
+              <p>
+                Available exclusively when booked alongside a gel pedicure. The
+                result is a consistent, high-standard finish across both hands
+                and feet, achieving clean, long-lasting results that support
+                both appearance and nail health.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
@@ -280,6 +331,12 @@ const Treatments = () => {
           <div id="eyebrows-lashes">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">Eyebrows & Lashes</h2>
+              <p className="mb-2">
+                Natural definition with a clean, professional finish. Tailored
+                brow and lash services designed to enhance your natural shape,
+                colour, and overall definition while maintaining healthy skin
+                and hair.
+              </p>
               {hasPatchTestTreatment && (
                 <p className="text-sm text-charcoal-500">
                   Tints require a patch test 48 hours prior to your appointment
@@ -321,11 +378,7 @@ const Treatments = () => {
           </div>
         )}
 
-        {/* Special Offers - CENTERED */}
-        <SpecialOffers />
-
         {/* Loyalty & Discounts - CENTERED */}
-        <LoyaltyRewards />
       </div>
     </div>
   );
