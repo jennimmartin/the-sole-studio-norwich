@@ -14,7 +14,7 @@ const SpecialOffers = () => {
           for a limited time only, each treatment is inspired by the season and
           offered in limited availability.
         </p>
-        <BookNowButton>Book now</BookNowButton>
+        <BookNowButton>Book Now</BookNowButton>
       </div>
       {/* Other Specials - Grid
 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-x-16 gap-y-12">
