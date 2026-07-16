@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AccordionSection = ({ title, content }) => {
+const AccordionSection = ({ title, content, isRichText = false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const parseContent = (text) => {
@@ -87,7 +87,11 @@ const AccordionSection = ({ title, content }) => {
       {isOpen && (
         <div className="px-6 pb-6 pt-4">
           <div className="text-charcoal-500 leading-relaxed">
-            {parseContent(content)}
+            {isRichText ? (
+              <div dangerouslySetInnerHTML={{ __html: content }} />
+            ) : (
+              parseContent(content)
+            )}
           </div>
         </div>
       )}

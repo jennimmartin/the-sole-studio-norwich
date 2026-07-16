@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getFaqs } from "../lib/contentful";
-import AccordionSection from "../components/AccordionSection";
+import AccordionSectionRichText from "../components/AccordionSectionRichText";
 
 const Faq = () => {
   const [faqs, setFaqs] = useState([]);
@@ -50,7 +50,7 @@ const Faq = () => {
       <div className="space-y-4">
         {Object.entries(groupedFaqs).map(([category, questions]) =>
           questions.length > 0 ? (
-            <AccordionSection
+            <AccordionSectionRichText
               key={category}
               title={category}
               content={formatFaqsForAccordion(questions)}
@@ -63,10 +63,12 @@ const Faq = () => {
 };
 
 const formatFaqsForAccordion = (faqs) => {
-  return faqs
+  const result = faqs
     .sort((a, b) => a.displayOrder - b.displayOrder)
-    .map((faq) => `${faq.question}\n${faq.answer}`)
-    .join("\n\n");
+    .map((faq) => `<strong>${faq.question}</strong><br/><br/>${faq.answer}`)
+    .join("<br/><br/>");
+
+  return result;
 };
 
 export default Faq;

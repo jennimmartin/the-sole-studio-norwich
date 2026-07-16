@@ -100,7 +100,9 @@ export const getFaqs = async () => {
     return response.items.map((item) => ({
       id: item.sys.id,
       question: item.fields.question,
-      answer: item.fields.answer,
+      answer: item.fields.answer
+        ? documentToHtmlString(item.fields.answer)
+        : "",
       category: item.fields.category?.[0] || "",
       displayOrder: item.fields.displayOrder || 0,
     }));
