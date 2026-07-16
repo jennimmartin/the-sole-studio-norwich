@@ -9,9 +9,12 @@ const Treatments = () => {
   const [loading, setLoading] = useState(true);
 
   // Toggle state for each section
-  const [showAllFoot, setShowAllFoot] = useState(false);
-  const [showAllSpecialist, setShowAllSpecialist] = useState(false);
-  const [showAllBeauty, setShowAllBeauty] = useState(false);
+  const [showAllThai, setShowAllThai] = useState(false);
+  const [showAllToenail, setShowAllToenail] = useState(false);
+  const [showAllElim, setShowAllElim] = useState(false);
+  const [showAllPedicures, setShowAllPedicures] = useState(false);
+  const [showAllGelMani, setShowAllGelMani] = useState(false);
+  const [showAllBrows, setShowAllBrows] = useState(false);
 
   useEffect(() => {
     getTreatments()
@@ -30,10 +33,10 @@ const Treatments = () => {
     setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
-        const navHeight = 50; // Rounded up from 49px
+        const navHeight = 50;
         const elementPosition =
           element.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - navHeight - 40; // 20px breathing room
+        const offsetPosition = elementPosition - navHeight - 40;
 
         window.scrollTo({
           top: offsetPosition,
@@ -44,22 +47,40 @@ const Treatments = () => {
   };
 
   // Toggle handlers with scroll
-  const handleToggleFoot = () => {
-    const newState = !showAllFoot;
-    setShowAllFoot(newState);
-    if (!newState) scrollToSection("foot-treatments");
+  const handleToggleThai = () => {
+    const newState = !showAllThai;
+    setShowAllThai(newState);
+    if (!newState) scrollToSection("thai-foot-massage");
   };
 
-  const handleToggleSpecialist = () => {
-    const newState = !showAllSpecialist;
-    setShowAllSpecialist(newState);
-    if (!newState) scrollToSection("specialist-treatments");
+  const handleToggleToenail = () => {
+    const newState = !showAllToenail;
+    setShowAllToenail(newState);
+    if (!newState) scrollToSection("toenail-reconstruction");
   };
 
-  const handleToggleBeauty = () => {
-    const newState = !showAllBeauty;
-    setShowAllBeauty(newState);
-    if (!newState) scrollToSection("beauty-services");
+  const handleToggleElim = () => {
+    const newState = !showAllElim;
+    setShowAllElim(newState);
+    if (!newState) scrollToSection("elim");
+  };
+
+  const handleTogglePedicures = () => {
+    const newState = !showAllPedicures;
+    setShowAllPedicures(newState);
+    if (!newState) scrollToSection("pedicures");
+  };
+
+  const handleToggleGelMani = () => {
+    const newState = !showAllGelMani;
+    setShowAllGelMani(newState);
+    if (!newState) scrollToSection("gel-manicures");
+  };
+
+  const handleToggleBrows = () => {
+    const newState = !showAllBrows;
+    setShowAllBrows(newState);
+    if (!newState) scrollToSection("eyebrows-lashes");
   };
 
   if (loading) {
@@ -74,19 +95,20 @@ const Treatments = () => {
     );
   }
 
-  // Group treatments by category
-  const footTreatments = treatments.filter(
-    (t) => t.category === "Foot Treatments"
+  // Group treatments by NEW categories
+  const thaiFootMassage = treatments.filter(
+    (t) => t.category === "Thai Foot Massage"
   );
-  const specialistTreatments = treatments.filter(
-    (t) => t.category === "Specialist Treatments"
+  const toenailReconstruction = treatments.filter(
+    (t) => t.category === "Toenail Reconstruction"
   );
-  const beautyServices = treatments.filter(
-    (t) => t.category === "Beauty Services"
-  );
+  const elim = treatments.filter((t) => t.category === "Elim");
+  const pedicures = treatments.filter((t) => t.category === "Pedicures");
+  const gelMani = treatments.filter((t) => t.category === "Gel Manicures");
+  const brows = treatments.filter((t) => t.category === "Eyebrows & Lashes");
 
   // Check if any beauty services need patch test
-  const hasPatchTestTreatment = beautyServices.some((t) =>
+  const hasPatchTestTreatment = brows.some((t) =>
     t.title.toLowerCase().includes("tint")
   );
 
@@ -102,79 +124,121 @@ const Treatments = () => {
           </p>
         </div>
 
-        {/* Foot Treatments - LEFT-ALIGNED */}
-        {footTreatments.length > 0 && (
-          <div id="foot-treatments">
+        {/* Thai Foot Massage */}
+        {thaiFootMassage.length > 0 && (
+          <div id="thai-foot-massage">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">Foot Treatments</h2>
-              <p className="text-base md:text-lg">
-                Professional foot care designed to restore comfort and support
-                long-term foot health. From therapeutic Thai massage to advanced
-                Elim pedicures, each treatment addresses the specific needs of
-                tired, overworked, or uncomfortable feet.
-              </p>
+              <h2 className="text-3xl md:text-4xl mb-4">Thai Foot Massage</h2>
             </div>
 
-            {/* Show first 3 cards, or all if expanded */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {(showAllFoot ? footTreatments : footTreatments.slice(0, 3)).map(
-                (treatment) => (
-                  <TreatmentCard key={treatment.id} treatment={treatment} />
-                )
-              )}
+              {(showAllThai
+                ? thaiFootMassage
+                : thaiFootMassage.slice(0, 3)
+              ).map((treatment) => (
+                <TreatmentCard key={treatment.id} treatment={treatment} />
+              ))}
             </div>
 
-            {/* Toggle button - only show if more than 3 treatments */}
-            {footTreatments.length > 3 && (
+            {thaiFootMassage.length > 3 && (
               <div className="mt-8">
                 <button
-                  onClick={handleToggleFoot}
+                  onClick={handleToggleThai}
                   className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
                 >
-                  {showAllFoot ? "View Less" : "View All Foot Treatments"}
-                  <span className="text-xl">{showAllFoot ? "−" : "+"}</span>
+                  {showAllThai ? "View Less" : "View All Thai Foot Massage"}
+                  <span className="text-xl">{showAllThai ? "−" : "+"}</span>
                 </button>
               </div>
             )}
           </div>
         )}
 
-        {/* Specialist Treatments - LEFT-ALIGNED */}
-        {specialistTreatments.length > 0 && (
-          <div id="specialist-treatments">
+        {/* Toenail Reconstruction */}
+        {toenailReconstruction.length > 0 && (
+          <div id="toenail-reconstruction">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl mb-4">
-                Specialist Treatments
+                Toenail Reconstruction
               </h2>
-              <p className="text-base md:text-lg">
-                Medical-grade toenail reconstruction for damaged, missing, or
-                compromised nails. A safe, non-invasive solution that restores
-                appearance while protecting the nail bed as it grows.
-              </p>
             </div>
 
-            {/* Show first 3 cards, or all if expanded */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {(showAllSpecialist
-                ? specialistTreatments
-                : specialistTreatments.slice(0, 3)
+              {(showAllToenail
+                ? toenailReconstruction
+                : toenailReconstruction.slice(0, 3)
               ).map((treatment) => (
                 <TreatmentCard key={treatment.id} treatment={treatment} />
               ))}
             </div>
 
-            {/* Toggle button - only show if more than 3 treatments */}
-            {specialistTreatments.length > 3 && (
+            {toenailReconstruction.length > 3 && (
               <div className="mt-8">
                 <button
-                  onClick={handleToggleSpecialist}
+                  onClick={handleToggleToenail}
                   className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
                 >
-                  {showAllSpecialist
+                  {showAllToenail
                     ? "View Less"
-                    : "View All Specialist Treatments"}
+                    : "View All Toenail Reconstruction"}
+                  <span className="text-xl">{showAllToenail ? "−" : "+"}</span>
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Elim */}
+        {elim.length > 0 && (
+          <div id="elim">
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl mb-4">ELIM</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+              {(showAllElim ? elim : elim.slice(0, 3)).map((treatment) => (
+                <TreatmentCard key={treatment.id} treatment={treatment} />
+              ))}
+            </div>
+
+            {elim.length > 3 && (
+              <div className="mt-8">
+                <button
+                  onClick={handleToggleElim}
+                  className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
+                >
+                  {showAllElim ? "View Less" : "View All Elim"}
+                  <span className="text-xl">{showAllElim ? "−" : "+"}</span>
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Pedicures */}
+        {pedicures.length > 0 && (
+          <div id="pedicures">
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl mb-4">Pedicures</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+              {(showAllPedicures ? pedicures : pedicures.slice(0, 3)).map(
+                (treatment) => (
+                  <TreatmentCard key={treatment.id} treatment={treatment} />
+                )
+              )}
+            </div>
+
+            {pedicures.length > 3 && (
+              <div className="mt-8">
+                <button
+                  onClick={handleTogglePedicures}
+                  className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
+                >
+                  {showAllPedicures ? "View Less" : "View All Pedicures"}
                   <span className="text-xl">
-                    {showAllSpecialist ? "−" : "+"}
+                    {showAllPedicures ? "−" : "+"}
                   </span>
                 </button>
               </div>
@@ -182,17 +246,40 @@ const Treatments = () => {
           </div>
         )}
 
-        {/* Beauty Services - LEFT-ALIGNED */}
-        {beautyServices.length > 0 && (
-          <div id="beauty-services">
+        {/* Gel Manicures */}
+        {gelMani.length > 0 && (
+          <div id="gel-manicures">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">Beauty Services</h2>
-              <p className="text-base md:text-lg mb-2">
-                Gel manicures, brow tinting, and lash treatments to complement
-                your foot care appointments.
-              </p>
+              <h2 className="text-3xl md:text-4xl mb-4">Gel Manicures</h2>
+            </div>
 
-              {/* Patch test note */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+              {(showAllGelMani ? gelMani : gelMani.slice(0, 3)).map(
+                (treatment) => (
+                  <TreatmentCard key={treatment.id} treatment={treatment} />
+                )
+              )}
+            </div>
+
+            {gelMani.length > 3 && (
+              <div className="mt-8">
+                <button
+                  onClick={handleToggleGelMani}
+                  className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
+                >
+                  {showAllGelMani ? "View Less" : "View All Gel Manicures"}
+                  <span className="text-xl">{showAllGelMani ? "−" : "+"}</span>
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Eyebrows & Lashes */}
+        {brows.length > 0 && (
+          <div id="eyebrows-lashes">
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl mb-4">Eyebrows & Lashes</h2>
               {hasPatchTestTreatment && (
                 <p className="text-sm text-charcoal-500">
                   Tints require a patch test 48 hours prior to your appointment
@@ -200,12 +287,8 @@ const Treatments = () => {
               )}
             </div>
 
-            {/* Show first 3 cards, or all if expanded */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {(showAllBeauty
-                ? beautyServices
-                : beautyServices.slice(0, 3)
-              ).map((treatment) => (
+              {(showAllBrows ? brows : brows.slice(0, 3)).map((treatment) => (
                 <TreatmentCard
                   key={treatment.id}
                   treatment={treatment}
@@ -216,21 +299,19 @@ const Treatments = () => {
               ))}
             </div>
 
-            {/* Toggle button - only show if more than 3 treatments */}
-            {beautyServices.length > 3 && (
+            {brows.length > 3 && (
               <div className="mt-8">
                 <button
-                  onClick={handleToggleBeauty}
+                  onClick={handleToggleBrows}
                   className="text-base font-medium hover:text-charcoal-500 transition-colors flex items-center gap-2"
                 >
-                  {showAllBeauty ? "View Less" : "View All Beauty Services"}
-                  <span className="text-xl">{showAllBeauty ? "−" : "+"}</span>
+                  {showAllBrows ? "View Less" : "View All Eyebrows & Lashes"}
+                  <span className="text-xl">{showAllBrows ? "−" : "+"}</span>
                 </button>
               </div>
             )}
 
-            {/* Patch test key - only show when all cards visible */}
-            {showAllBeauty && hasPatchTestTreatment && (
+            {showAllBrows && hasPatchTestTreatment && (
               <div className="mt-8">
                 <p className="text-sm text-charcoal-500">
                   ○ Requires patch test 48 hours prior
