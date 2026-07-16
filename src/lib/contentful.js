@@ -88,3 +88,24 @@ export const getBlogPost = async (slug) => {
     return null;
   }
 };
+
+// Fetch all FAQs
+export const getFaqs = async () => {
+  try {
+    const response = await client.getEntries({
+      content_type: "faq",
+      order: "fields.displayOrder",
+    });
+
+    return response.items.map((item) => ({
+      id: item.sys.id,
+      question: item.fields.question,
+      answer: item.fields.answer,
+      category: item.fields.category?.[0] || "",
+      displayOrder: item.fields.displayOrder || 0,
+    }));
+  } catch (error) {
+    console.error("Error fetching FAQs:", error);
+    return [];
+  }
+};

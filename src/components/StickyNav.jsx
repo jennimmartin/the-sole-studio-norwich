@@ -42,6 +42,12 @@ export default function StickyNav() {
             </Link>
             <Link
               className="text-lg text-white hover:text-neutral-400 duration-300 tracking-wide"
+              to="/faq"
+            >
+              FAQs
+            </Link>
+            <Link
+              className="text-lg text-white hover:text-neutral-400 duration-300 tracking-wide"
               to="/blog"
             >
               Blog
@@ -129,6 +135,13 @@ export default function StickyNav() {
             onClick={closeMenu}
           >
             Contact
+          </Link>
+          <Link
+            className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"
+            to="/faq"
+            onClick={closeMenu}
+          >
+            FAQs
           </Link>
           <Link
             className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"
