@@ -41,7 +41,7 @@ const AccordionSection = ({ title, content, isRichText = false }) => {
             <a
               key={`link-${index}-${match.index}`}
               href={match[3]}
-              className="underline text-blue-600 hover:text-blue-800 transition-colors"
+              className="underline hover:text-charcoal-500 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -86,7 +86,7 @@ const AccordionSection = ({ title, content, isRichText = false }) => {
       </button>
       {isOpen && (
         <div className="px-6 pb-6 pt-4">
-          <div className="text-charcoal-500 leading-relaxed">
+          <div className="text-charcoal-500 leading-relaxed prose prose-sm max-w-none">
             {isRichText ? (
               <div dangerouslySetInnerHTML={{ __html: content }} />
             ) : (
