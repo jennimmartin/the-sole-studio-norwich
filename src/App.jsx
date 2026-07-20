@@ -12,6 +12,10 @@ import {
   Faq,
 } from "./pages";
 
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,7 +27,7 @@ const router = createBrowserRouter([
         element: <Landing />,
       },
       {
-        path: "Treatments",
+        path: "treatments",
         element: <Treatments />,
       },
       {

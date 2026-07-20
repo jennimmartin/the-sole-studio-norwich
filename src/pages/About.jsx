@@ -1,7 +1,6 @@
 import PageTitle from "../components/PageTitle";
 
 import BookNowButton from "../components/ui/BookNowButton";
-import suzannePhoto from "../../public/images/suzanne-placeholder.png";
 
 const About = () => {
   return (
@@ -82,9 +81,9 @@ const About = () => {
               Swap the src below for her actual photo before this goes live.
             */}
             <img
-              src={suzannePhoto}
+              src="/images/suzanne-placeholder.png"
               alt="Suzanne Martin, founder of The Sole Studio Norwich"
-              className="w-full sm:max-w-sm border border-neutral-200"
+              className="w-full sm:max-w-sm sm:mx-auto border border-neutral-200"
             />
           </div>
 
