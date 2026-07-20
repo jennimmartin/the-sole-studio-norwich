@@ -35,7 +35,7 @@ const Blog = () => {
       <PageTitle title="Blog" />
       {/* Header */}
       <div className="space-y-12 mb-12">
-        <p className="text-base md:text-lg text-charcoal-500">
+        <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 mx-auto">
           Insights on foot care, wellness, and looking after yourself.
         </p>
       </div>

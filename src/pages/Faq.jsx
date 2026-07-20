@@ -41,7 +41,7 @@ const Faq = () => {
   return (
     <div className="align-element">
       <PageTitle title="Frequently Asked Questions" />
-      <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 max-w-2xl mx-auto">
+      <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 mx-auto">
         Find answers to common questions about our services, appointments, and
         treatments.
       </p>

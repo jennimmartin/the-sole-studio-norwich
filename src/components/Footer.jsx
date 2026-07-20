@@ -89,7 +89,7 @@ const Footer = () => {
                   <p>
                     <a
                       href={`tel:${FOOTER_DATA.phone.replace(/\s/g, "")}`}
-                      className="hover:text-neutral-800 transition-colors"
+                      className="underline hover:text-neutral-800 transition-colors"
                     >
                       {FOOTER_DATA.phone}
                     </a>
@@ -97,7 +97,7 @@ const Footer = () => {
                   <p>
                     <a
                       href={`mailto:${FOOTER_DATA.email}`}
-                      className="hover:text-neutral-800 transition-colors"
+                      className="underline hover:text-neutral-800 transition-colors"
                     >
                       {FOOTER_DATA.email}
                     </a>

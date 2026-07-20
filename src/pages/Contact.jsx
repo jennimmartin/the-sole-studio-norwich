@@ -8,7 +8,7 @@ const Contact = () => {
 
       <div className="space-y-12">
         <div className="space-y-4 text-base md:text-lg">
-          <p>
+          <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 mx-auto">
             Have a question about treatments, availability, or anything else?
             Send me a message and I'll get back to you as soon as I can.
           </p>

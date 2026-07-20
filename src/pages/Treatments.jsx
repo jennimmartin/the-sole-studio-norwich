@@ -394,7 +394,7 @@ const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
     <div className="bg-white border border-neutral-200 p-8 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
       {/* Title & Price */}
       <div className="mb-6">
-        <h3 className="text-2xl mb-2">
+        <h3 className="text-2xl mb-2 min-h-[3.5rem]">
           {treatment.title}{" "}
           {needsPatchTest && <span className="text-charcoal-500">○</span>}
         </h3>
@@ -408,7 +408,7 @@ const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
 
       {/* Target Audience */}
       {treatment.targetAudience && (
-        <p className="text-sm text-charcoal-500 mb-4 italic">
+        <p className="text-sm text-charcoal-500 mb-4 italic min-h-[2.5rem]">
           {treatment.targetAudience}
         </p>
       )}
