@@ -5,6 +5,12 @@ const AccordionSection = ({ title, content, isRichText = false }) => {
 
   const parseContent = (text) => {
     return text.split("\n").map((line, index) => {
+      // Blank lines are just paragraph separators in the source text —
+      // every real line already carries its own bottom margin, so an
+      // empty line rendered as its own margin-bearing div was doubling
+      // up the gap between paragraphs. Skip them entirely.
+      if (line.trim() === "") return null;
+
       // Remove dash if it's a bullet point
       let cleanLine = line;
       let isBullet = false;
@@ -13,6 +19,11 @@ const AccordionSection = ({ title, content, isRichText = false }) => {
         cleanLine = line.slice(1).trim();
         isBullet = true;
       }
+
+      // Detect a standalone section header line, e.g. "[[Booking and Appointments]]"
+      // with nothing else on the line — give these a bit more breathing
+      // room above so sections read clearly without needing blank-line spacers.
+      const isStandaloneHeader = /^\[\[[^\]]+\]\]$/.test(cleanLine.trim());
 
       // Parse [[bold]] and [text|url]
       const parts = [];
@@ -63,6 +74,14 @@ const AccordionSection = ({ title, content, isRichText = false }) => {
         return (
           <div key={index} className="ml-6 mb-2">
             • {parts.length > 0 ? parts : cleanLine}
+          </div>
+        );
+      }
+
+      if (isStandaloneHeader) {
+        return (
+          <div key={index} className={index === 0 ? "mb-3" : "mt-6 mb-3"}>
+            {parts.length > 0 ? parts : cleanLine}
           </div>
         );
       }

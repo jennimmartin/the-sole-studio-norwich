@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { getTreatments } from "../lib/contentful";
 import BookNowButton from "../components/ui/BookNowButton";
 import SpecialOffers from "../components/SpecialOffers";
+import PageTitle from "../components/PageTitle";
+
 import LoyaltyRewards from "../components/LoyaltyRewards";
 
 const Treatments = () => {
@@ -117,8 +119,8 @@ const Treatments = () => {
       <div className="space-y-12">
         {/* Hero Section - CENTERED */}
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl mb-4">Treatments</h1>
-          <p>
+          <PageTitle title="Treatments" />
+          <p className="text-base md:text-lg text-charcoal-500 max-w-2xl mx-auto">
             Specialist foot care tailored to your needs. Professional, unrushed,
             completely private.
           </p>
@@ -451,7 +453,7 @@ const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
       <div className="mt-auto">
         <BookNowButton
           variant=""
-          className="w-full justify-center text-sm sm:text-base opacity-80 hover:opacity-100 transition-opacity"
+          className="w-full justify-center opacity-80 hover:opacity-100 transition-opacity"
         >
           Book Now
         </BookNowButton>

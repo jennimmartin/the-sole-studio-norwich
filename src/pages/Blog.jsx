@@ -35,7 +35,7 @@ const Blog = () => {
       <PageTitle title="Blog" />
       {/* Header */}
       <div className="space-y-12 mb-12">
-        <p className="space-y-4 text-base md:text-lg max-w-2xl">
+        <p className="text-base md:text-lg text-charcoal-500">
           Insights on foot care, wellness, and looking after yourself.
         </p>
       </div>
@@ -48,7 +48,7 @@ const Blog = () => {
           </p>
         </div>
       ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {posts.map((post) => (
             <BlogCard key={post.id} post={post} />
           ))}
@@ -70,19 +70,24 @@ const BlogCard = ({ post }) => {
   };
 
   return (
-    <Link to={`/blog/${post.slug}`} className="group">
-      <article className="bg-white border border-neutral-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
-        {/* Image */}
-        {post.featuredImage && (
-          <div className="aspect-[4/3] bg-neutral-100 overflow-hidden">
+    <Link to={`/blog/${post.slug}`} className="group h-full">
+      <article className="bg-white border border-neutral-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+        {/* Image (or graceful placeholder if a post has none yet) */}
+        <div className="aspect-[4/3] bg-neutral-100 overflow-hidden flex-shrink-0">
+          {post.featuredImage ? (
             <img
               src={post.featuredImage}
               alt={post.title}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-          </div>
-        )}
-        <div className="p-6">
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-neutral-300 text-sm uppercase tracking-wide">
+              The Sole Studio Norwich
+            </div>
+          )}
+        </div>
+
+        <div className="p-6 flex flex-col flex-grow">
           {/* Date & Author */}
           <div className="text-sm text-charcoal-500 mb-3">
             {formatDate(post.publishDate)} · {post.author}
@@ -95,8 +100,8 @@ const BlogCard = ({ post }) => {
           <p className="text-charcoal-500 leading-relaxed mb-4 line-clamp-3">
             {post.excerpt}
           </p>
-          {/* Read More */}
-          <div className="text-sm group-hover:translate-x-2 transition-transform inline-block">
+          {/* Read More — pinned to the bottom so it lines up across a row */}
+          <div className="text-sm group-hover:translate-x-2 transition-transform inline-block mt-auto">
             Read more →
           </div>
         </div>

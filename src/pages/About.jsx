@@ -1,6 +1,7 @@
 import PageTitle from "../components/PageTitle";
 
 import BookNowButton from "../components/ui/BookNowButton";
+import suzannePhoto from "../../public/images/suzanne-placeholder.png";
 
 const About = () => {
   return (
@@ -10,7 +11,7 @@ const About = () => {
       <div className="space-y-12">
         {/* Section 1: Specialist foot care with purpose */}
         <div className="space-y-4 text-base md:text-lg">
-          <h2 className="text-2xl md:text-3xl mb-6">
+          <h2 className="text-3xl md:text-4xl mb-6">
             Specialist foot care with purpose
           </h2>
           <p>
@@ -25,7 +26,7 @@ const About = () => {
             problems fully and podiatry feels unnecessary.
           </p>
           <p>The Sole Studio Norwich exists in the space between.</p>
-          <p className="font-extrabold">
+          <p className="font-semibold">
             A specialist approach - not one-size-fits-all
           </p>
           <p>
@@ -45,7 +46,7 @@ const About = () => {
 
         {/* Section 3: Who is this for */}
         <div className="space-y-4 text-base md:text-lg">
-          <h2 className="text-2xl md:text-3xl mb-6">
+          <h2 className="text-3xl md:text-4xl mb-6">
             Who is The Sole Studio Norwich for?
           </h2>
           <p>People with active lifestyles</p>
@@ -56,7 +57,7 @@ const About = () => {
             If a condition falls outside of our scope, you will be advised
             honestly and guided to the appropriate care.
           </p>
-          <p className="font-extrabold">A calm, private space</p>
+          <p className="font-semibold">A calm, private space</p>
           <p>
             The Sole Studio Norwich is a quiet, appointment-only environment
             designed to make clients feel at ease from the moment they arrive.
@@ -71,9 +72,22 @@ const About = () => {
 
         {/* Section 5: Meet Suzanne */}
         <div className="space-y-4 text-base md:text-lg">
-          <h2 className="text-2xl md:text-3xl mb-6">
+          <h2 className="text-3xl md:text-4xl mb-6">
             Meet Suzanne - Founder and therapist
           </h2>
+
+          <div className="mb-8">
+            {/*
+              PLACEHOLDER IMAGE — AI-generated, not a real photo of Suzanne.
+              Swap the src below for her actual photo before this goes live.
+            */}
+            <img
+              src={suzannePhoto}
+              alt="Suzanne Martin, founder of The Sole Studio Norwich"
+              className="w-full sm:max-w-sm border border-neutral-200"
+            />
+          </div>
+
           <p>
             Hi, I'm Suzanne Martin, the owner and therapist behind The Sole
             Studio Norwich. I was born and raised in Norfolk and have lived here

@@ -13,7 +13,7 @@ const Landing = () => {
     <div>
       {/* Hero Section */}
       <section className="py-10 sm:py-14 md:py-20 px-4 text-center bg-white">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-3 sm:mb-4 md:mb-5 max-w-4xl mx-auto leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-3 sm:mb-4 md:mb-5 max-w-4xl mx-auto leading-tight">
           Expert foot care for every step
         </h1>
 

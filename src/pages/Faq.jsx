@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getFaqs } from "../lib/contentful";
 import AccordionSectionRichText from "../components/AccordionSectionRichText";
+import PageTitle from "../components/PageTitle";
 
 const Faq = () => {
   const [faqs, setFaqs] = useState([]);
@@ -39,10 +40,8 @@ const Faq = () => {
 
   return (
     <div className="align-element">
-      <h1 className="text-4xl md:text-5xl text-center mb-4">
-        Frequently Asked Questions
-      </h1>
-      <p className="text-center text-charcoal-500 mb-12 max-w-2xl mx-auto">
+      <PageTitle title="Frequently Asked Questions" />
+      <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 max-w-2xl mx-auto">
         Find answers to common questions about our services, appointments, and
         treatments.
       </p>
@@ -62,13 +61,18 @@ const Faq = () => {
   );
 };
 
+// Builds the same margin-based rhythm as the plain-text accordion
+// (mt-6 before each new question, mirroring a section header; mb-3 after
+// each answer, mirroring a paragraph) instead of raw <br/><br/> breaks,
+// which rendered as a much bigger gap than Legal's spacing.
 const formatFaqsForAccordion = (faqs) => {
-  const result = faqs
+  return faqs
     .sort((a, b) => a.displayOrder - b.displayOrder)
-    .map((faq) => `<strong>${faq.question}</strong><br/><br/>${faq.answer}`)
-    .join("<br/><br/>");
-
-  return result;
+    .map((faq, index) => {
+      const questionMargin = index === 0 ? "mb-2" : "mt-6 mb-2";
+      return `<div class="${questionMargin} font-bold">${faq.question}</div><div class="mb-3">${faq.answer}</div>`;
+    })
+    .join("");
 };
 
 export default Faq;

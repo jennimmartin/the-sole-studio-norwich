@@ -1,13 +1,12 @@
 import { useState } from "react";
 import AccordionSection from "../components/AccordionSection";
+import PageTitle from "../components/PageTitle";
 
 const Legal = () => {
   return (
     <div className="align-element">
-      <h1 className="text-4xl md:text-5xl text-center mb-4">
-        Legal Information
-      </h1>
-      <p className="text-center text-charcoal-500 mb-12 max-w-2xl mx-auto">
+      <PageTitle title="Legal Information" />
+      <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 max-w-2xl mx-auto">
         Important policies and legal information for The Sole Studio Norwich
       </p>
 
@@ -76,7 +75,7 @@ const customerPoliciesContent = `[[Booking and Appointments]]
 - We kindly ask that any appointment changes or cancellations are made with at least [[24 hours' notice]].
 - Appointments cancelled or rescheduled with less than 24 hours' notice will result in the loss of the deposit paid.
 - Appointments cancelled or amended with more than 24 hours' notice will have the deposit transferred to account credit for future use.
-- Where possible, cancellations and amendments should be made through our online booking system. If you are unable to do so, please contact us at hello@thesolestudionorwich.co.uk.
+- Where possible, cancellations and amendments should be made through our online booking system. If you are unable to do so, please contact us at [hello@thesolestudionorwich.co.uk|mailto:hello@thesolestudionorwich.co.uk].
 
 By booking an appointment, you acknowledge and agree to this cancellation policy.
 
@@ -93,7 +92,7 @@ The safety, wellbeing, and comfort of our clients and staff are our priority. We
 
 This includes, but is not limited to, the following circumstances:
 
-Arrival significantly late for an appointment.
+- Arrival significantly late for an appointment.
 - A medical condition, injury, allergy, medication, or other contraindication makes treatment unsuitable or unsafe.
 - The client is under the age of 16.
 - The client is believed to be under the influence of alcohol, drugs, or any substance that may impair judgement or safety.
@@ -206,7 +205,7 @@ We will only send marketing communications where:
 - We are otherwise permitted to do so under applicable law.
 You can withdraw your consent and unsubscribe from marketing communications at any time by:
 - Clicking the unsubscribe link in our emails; or
-- Contacting us at hello@thesolestudionorwich.co.uk
+- Contacting us at [hello@thesolestudionorwich.co.uk|mailto:hello@thesolestudionorwich.co.uk]
 Opting out of marketing communications will not affect service-related communications such as appointment reminders or treatment information.
 
 [[Lawful Basis for Processing]]
@@ -347,7 +346,7 @@ If you do not agree to these Terms, you must not use our website or services.
 
 [[2. Appointments and Bookings]]
 
-Appointments must be booked in advance using our online booking system or by contacting us at [[hello@thesolestudionorwich.co.uk.]]
+Appointments must be booked in advance using our online booking system or by contacting us at [hello@thesolestudionorwich.co.uk|mailto:hello@thesolestudionorwich.co.uk].
 
 A [[50% deposit]] is required to secure all appointments.
 
