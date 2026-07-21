@@ -40,7 +40,7 @@ export const getBlogPosts = async () => {
   try {
     const response = await client.getEntries({
       content_type: "blogPost",
-      //"fields.isPublished": true,//
+      "fields.isPublished": true,
       order: "-fields.publishDate",
     });
 
@@ -66,7 +66,7 @@ export const getBlogPost = async (slug) => {
     const response = await client.getEntries({
       content_type: "blogPost",
       "fields.slug": slug,
-      //"fields.isPublished": true,//
+      "fields.isPublished": true,
       limit: 1,
     });
 
