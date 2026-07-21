@@ -30,6 +30,12 @@ const Treatments = () => {
       });
   }, []);
 
+  useEffect(() => {
+    if (!loading) {
+      window.scrollTo(0, 0);
+    }
+  }, [loading]);
+
   // Helper function to scroll to section with offset for sticky nav
   const scrollToSection = (sectionId) => {
     setTimeout(() => {

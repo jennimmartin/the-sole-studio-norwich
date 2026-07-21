@@ -20,6 +20,12 @@ const Blog = () => {
       });
   }, []);
 
+  useEffect(() => {
+    if (!loading) {
+      window.scrollTo(0, 0);
+    }
+  }, [loading]);
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
