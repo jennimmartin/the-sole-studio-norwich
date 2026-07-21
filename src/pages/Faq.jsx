@@ -10,7 +10,7 @@ const Faq = () => {
   useEffect(() => {
     getFaqs()
       .then((data) => {
-        console.log("FAQs fetched:", data);
+        // console.log("FAQs fetched:", data);
         setFaqs(data);
         setLoading(false);
       })
@@ -19,6 +19,16 @@ const Faq = () => {
         setLoading(false);
       });
   }, []);
+
+  // ScrollToTop resets scroll on route change, but that fires before this
+  // page's real content has loaded (it only shows a short "Loading..." state
+  // at that point). Reset again once the actual content is in, so we're not
+  // left wherever the previous page happened to be scrolled to.
+  useEffect(() => {
+    if (!loading) {
+      window.scrollTo(0, 0);
+    }
+  }, [loading]);
 
   if (loading) {
     return (
@@ -41,7 +51,7 @@ const Faq = () => {
   return (
     <div className="align-element">
       <PageTitle title="Frequently Asked Questions" />
-      <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 mx-auto">
+      <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 max-w-2xl mx-auto">
         Find answers to common questions about our services, appointments, and
         treatments.
       </p>
