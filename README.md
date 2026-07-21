@@ -92,14 +92,13 @@ If in doubt: if it's a one-off content image tied to a specific page (like a fou
 | About page copy                                       | Hardcoded directly in `About.jsx`                                                                                  |
 | Special Offers box                                    | Hardcoded directly in `SpecialOffers.jsx` — edit the `OFFERS`-adjacent copy in that file directly, no CMS involved |
 
-## Blog page — currently disabled
+## Blog page — currently live for the demo, likely to be disabled again after
 
-The Blog isn't linked anywhere on the live site right now (Suzanne's still getting comfortable with adding content in Contentful). Nothing was deleted — the routes in `App.jsx` and the nav link in `StickyNav.jsx` are commented out, not removed, and `Blog.jsx`/`BlogPost.jsx` themselves are untouched. To bring it back:
+The Blog is currently switched on (with a dummy post) for demo purposes. It's expected to go back to disabled afterward, while Suzanne gets comfortable adding real content in Contentful — at which point, comment out rather than delete:
 
-1. In `App.jsx`, uncomment the `Blog`/`BlogPost` import lines and the two commented-out route entries (`path: "blog"` and `path: "blog/:slug"`).
-2. In `StickyNav.jsx`, uncomment the "Blog" `<Link>` in both the desktop `<nav>` and the mobile menu `<nav>`.
-
-That's it — everything's already in place, just commented out.
+1. In `App.jsx`, comment out the `Blog`/`BlogPost` import lines and their two route entries (`path: "blog"` and `path: "blog/:slug"`).
+2. In `StickyNav.jsx`, comment out the "Blog" `<Link>` in both the desktop `<nav>` and the mobile menu `<nav>`.
+   To bring it back again later, just uncomment the same lines.
 
 ## Known placeholders / before this goes live
 
