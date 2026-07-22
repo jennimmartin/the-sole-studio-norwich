@@ -1,6 +1,6 @@
 import { EXTERNAL_LINKS } from "./externalLinks";
 
-// TODO: confirm actual live domain once decided, then update SITE_URL below.
+// *TODO: confirm actual live domain once decided, then update SITE_URL below.
 // Everything else here is already accurate (pulled from the existing Footer).
 export const SITE_URL = "https://www.thesolestudionorwich.co.uk";
 
