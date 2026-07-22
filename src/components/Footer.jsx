@@ -200,7 +200,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-white hover:text-neutral-400 duration-300"
               >
-                Jenni M Martin
+                Jenni Martin
               </a>
             </span>
           </h5>
