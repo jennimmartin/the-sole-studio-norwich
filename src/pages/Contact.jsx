@@ -1,9 +1,16 @@
 import ContactForm from "../components/ui/ContactForm";
 import PageTitle from "../components/PageTitle";
 
+import SEO from "../components/SEO";
+
 const Contact = () => {
   return (
     <div className="align-element">
+      <SEO
+        title="Contact"
+        description="Get in touch with The Sole Studio Norwich to book an appointment or ask a question. Find our address, phone number, and opening hours in Norwich."
+        path="/contact"
+      />
       <PageTitle title="Get In Touch" />
 
       <div className="space-y-12">

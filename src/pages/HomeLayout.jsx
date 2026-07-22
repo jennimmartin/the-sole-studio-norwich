@@ -6,10 +6,12 @@ import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import EmailPopup from "../components/EmailPopup";
 import CookieConsent from "../components/CookieConsent";
+import LocalBusinessSchema from "../components/LocalBusinessSchema";
 
 const HomeLayout = () => {
   return (
     <>
+      <LocalBusinessSchema />
       <AppShell>
         <ScrollToTop />
 

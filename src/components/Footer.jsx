@@ -1,36 +1,5 @@
 import { Link } from "react-router-dom";
-import { EXTERNAL_LINKS, hasLink } from "../config/externalLinks";
-
-// Footer data - update here when info changes
-const FOOTER_DATA = {
-  businessName: "The Sole Studio Norwich",
-  address: {
-    line1: "Suite G, Sapphire House",
-    line2: "Roundtree Way",
-    city: "Norwich",
-    postcode: "NR7 8SQ",
-  },
-  phone: "07854 918746",
-  email: "hello@thesolestudionorwich.co.uk",
-  openingHours: [
-    { day: "Tuesday", time: "6:15pm to 9:00pm" },
-    { day: "Thursday", time: "6:15pm to 9:00pm" },
-    { day: "Saturday", time: "9:00am to 4:00pm" },
-  ],
-  map: {
-    embedUrl:
-      "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2420.5746712492396!2d1.3244835412980225!3d52.64959692674245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSuite%20G%2C%20Sapphire%20House%2C%20Roundtree%20Way%2C%20Norwich%20NR7%208SQ!5e0!3m2!1sen!2sfr!4v1772723078141!5m2!1sen!2sfr", // Add actual embed URL
-    latitude: 52.649799169385886,
-    longitude: 1.3278745112323629,
-  },
-
-  social: {
-    facebook: EXTERNAL_LINKS.facebook,
-    instagram: EXTERNAL_LINKS.instagram,
-    tiktok: EXTERNAL_LINKS.tiktok,
-    email: "hello@thesolestudionorwich.co.uk",
-  },
-};
+import { BUSINESS_INFO } from "../config/businessInfo";
 
 // Clears the stored cookie choice and reloads, so CookieConsent's own
 // mount check sees no stored answer and shows the banner again — same
@@ -53,7 +22,7 @@ const Footer = () => {
               <div className="bg-white border border-neutral-200 h-64 md:h-80">
                 {/* Google Map Embed */}
                 <iframe
-                  src={FOOTER_DATA.map.embedUrl}
+                  src={BUSINESS_INFO.map.embedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -72,7 +41,7 @@ const Footer = () => {
               <div className="mb-8">
                 <h3 className="text-2xl mb-4">Opening Times</h3>
                 <div className="space-y-2">
-                  {FOOTER_DATA.openingHours.map((schedule, index) => (
+                  {BUSINESS_INFO.openingHours.map((schedule, index) => (
                     <div key={index} className="flex justify-between">
                       <span className="font-semibold">{schedule.day}</span>
                       <span className="text-charcoal-500">{schedule.time}</span>
@@ -86,37 +55,37 @@ const Footer = () => {
                 <h3 className="text-2xl mb-4">Contact Us</h3>
                 <div className="space-y-2">
                   <p>
-                    {FOOTER_DATA.address.line1}
+                    {BUSINESS_INFO.address.line1}
                     <br />
-                    {FOOTER_DATA.address.line2}
+                    {BUSINESS_INFO.address.line2}
                     <br />
-                    {FOOTER_DATA.address.city}
+                    {BUSINESS_INFO.address.city}
                     <br />
-                    {FOOTER_DATA.address.postcode}
+                    {BUSINESS_INFO.address.postcode}
                   </p>
                   <p>
                     <a
-                      href={`tel:${FOOTER_DATA.phone.replace(/\s/g, "")}`}
+                      href={`tel:${BUSINESS_INFO.phone.replace(/\s/g, "")}`}
                       className="hover:text-neutral-800 transition-colors"
                     >
-                      {FOOTER_DATA.phone}
+                      {BUSINESS_INFO.phone}
                     </a>
                   </p>
                   <p>
                     <a
-                      href={`mailto:${FOOTER_DATA.email}`}
+                      href={`mailto:${BUSINESS_INFO.email}`}
                       className="hover:text-neutral-800 transition-colors"
                     >
-                      {FOOTER_DATA.email}
+                      {BUSINESS_INFO.email}
                     </a>
                   </p>
                 </div>
 
                 {/* Social Icons */}
                 <div className="flex gap-4 mt-6">
-                  {FOOTER_DATA.social.facebook && (
+                  {BUSINESS_INFO.social.facebook && (
                     <a
-                      href={FOOTER_DATA.social.facebook}
+                      href={BUSINESS_INFO.social.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center hover:bg-blue-700 transition-colors"
@@ -131,9 +100,9 @@ const Footer = () => {
                       </svg>
                     </a>
                   )}
-                  {FOOTER_DATA.social.instagram && (
+                  {BUSINESS_INFO.social.instagram && (
                     <a
-                      href={FOOTER_DATA.social.instagram}
+                      href={BUSINESS_INFO.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded flex items-center justify-center hover:opacity-90 transition-opacity"
@@ -149,9 +118,9 @@ const Footer = () => {
                     </a>
                   )}
 
-                  {FOOTER_DATA.social.tiktok && (
+                  {BUSINESS_INFO.social.tiktok && (
                     <a
-                      href={FOOTER_DATA.social.tiktok}
+                      href={BUSINESS_INFO.social.tiktok}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-black rounded flex items-center justify-center hover:bg-neutral-800 transition-colors"
@@ -167,7 +136,7 @@ const Footer = () => {
                     </a>
                   )}
                   <a
-                    href={`mailto:${FOOTER_DATA.social.email}`}
+                    href={`mailto:${BUSINESS_INFO.social.email}`}
                     className="w-12 h-12 bg-neutral-700 rounded flex items-center justify-center hover:bg-neutral-800 transition-colors"
                     aria-label="Email"
                   >
@@ -221,7 +190,7 @@ const Footer = () => {
       <div className="bg-black">
         <div className="align-element">
           <h5 className="text-center py-6 text-white text-sm">
-            &copy; {new Date().getFullYear()} {FOOTER_DATA.businessName}
+            &copy; {new Date().getFullYear()} {BUSINESS_INFO.businessName}
             {" | "}
             <span>
               Created by{" "}

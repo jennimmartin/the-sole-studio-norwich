@@ -2,9 +2,16 @@ import { useState } from "react";
 import AccordionSection from "../components/AccordionSection";
 import PageTitle from "../components/PageTitle";
 
+import SEO from "../components/SEO";
+
 const Legal = () => {
   return (
     <div className="align-element">
+      <SEO
+        title="Legal Information"
+        description="Customer policies, privacy policy, and terms and conditions for The Sole Studio Norwich."
+        path="/legal"
+      />
       <PageTitle title="Legal Information" />
       <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 max-w-2xl mx-auto">
         Important policies and legal information for The Sole Studio Norwich

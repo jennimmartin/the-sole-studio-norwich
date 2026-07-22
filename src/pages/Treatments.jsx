@@ -3,6 +3,7 @@ import { getTreatments } from "../lib/contentful";
 import BookNowButton from "../components/ui/BookNowButton";
 import SpecialOffers from "../components/SpecialOffers";
 import PageTitle from "../components/PageTitle";
+import SEO from "../components/SEO";
 
 import LoyaltyRewards from "../components/LoyaltyRewards";
 
@@ -30,6 +31,10 @@ const Treatments = () => {
       });
   }, []);
 
+  // ScrollToTop resets scroll on route change, but that fires before this
+  // page's real content has loaded (it only shows a short "Loading..." state
+  // at that point). Reset again once the actual content is in, so we're not
+  // left wherever the previous page happened to be scrolled to.
   useEffect(() => {
     if (!loading) {
       window.scrollTo(0, 0);
@@ -122,6 +127,11 @@ const Treatments = () => {
 
   return (
     <div className="align-element">
+      <SEO
+        title="Treatments"
+        description="Specialist foot care in Norwich — Thai foot massage, toenail reconstruction, Elim pedicures, and more. Professional, unrushed, completely private."
+        path="/treatments"
+      />
       <div className="space-y-12">
         {/* Hero Section - CENTERED */}
         <div className="text-center">

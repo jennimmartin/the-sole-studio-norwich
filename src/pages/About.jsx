@@ -2,9 +2,16 @@ import PageTitle from "../components/PageTitle";
 
 import BookNowButton from "../components/ui/BookNowButton";
 
+import SEO from "../components/SEO";
+
 const About = () => {
   return (
     <div className="align-element">
+      <SEO
+        title="About"
+        description="Meet Suzanne, founder and therapist behind The Sole Studio Norwich — expert, judgement-free foot care in a private, unrushed studio setting."
+        path="/about"
+      />
       <PageTitle title="About The Sole Studio Norwich" />
 
       <div className="space-y-12">

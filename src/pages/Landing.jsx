@@ -8,9 +8,16 @@ import Review from "../components/Review";
 import BookNowButton from "../components/ui/BookNowButton";
 import ViewTreatmentsButton from "../components/ui/ViewTreatmentsButton";
 
+import SEO from "../components/SEO";
+
 const Landing = () => {
   return (
     <div>
+      <SEO
+        title="Expert Foot Care in Norwich"
+        description="Specialist foot treatments in Norwich for active lifestyles, demanding jobs, and ongoing foot concerns. Bridging the gap between beauty and podiatry."
+        path="/"
+      />
       {/* Hero Section */}
       <section className="py-10 sm:py-14 md:py-20 px-4 text-center bg-white">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-3 sm:mb-4 md:mb-5 max-w-4xl mx-auto leading-tight">

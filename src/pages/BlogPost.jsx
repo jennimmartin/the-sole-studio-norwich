@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getBlogPost } from "../lib/contentful";
 
+import SEO from "../components/SEO";
+
 const BlogPost = () => {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
@@ -53,6 +55,11 @@ const BlogPost = () => {
 
   return (
     <div className="bg-white py-16 md:py-24">
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+      />
       <article className="align-element">
         {/* Back Link */}
         <Link

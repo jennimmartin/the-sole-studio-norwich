@@ -4,6 +4,8 @@ import { getBlogPosts } from "../lib/contentful";
 
 import PageTitle from "../components/PageTitle";
 
+import SEO from "../components/SEO";
+
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -38,6 +40,11 @@ const Blog = () => {
 
   return (
     <div className="align-element">
+      <SEO
+        title="Blog"
+        description="Insights on foot care, wellness, and looking after yourself from The Sole Studio Norwich."
+        path="/blog"
+      />
       <PageTitle title="Blog" />
       {/* Header */}
       <div className="space-y-12 mb-12">

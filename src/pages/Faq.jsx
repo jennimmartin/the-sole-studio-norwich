@@ -3,6 +3,8 @@ import { getFaqs } from "../lib/contentful";
 import AccordionSectionRichText from "../components/AccordionSectionRichText";
 import PageTitle from "../components/PageTitle";
 
+import SEO from "../components/SEO";
+
 const Faq = () => {
   const [faqs, setFaqs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -50,6 +52,11 @@ const Faq = () => {
 
   return (
     <div className="align-element">
+      <SEO
+        title="Frequently Asked Questions"
+        description="Answers to common questions about treatments, appointments, and policies at The Sole Studio Norwich."
+        path="/faq"
+      />
       <PageTitle title="Frequently Asked Questions" />
       <p className="text-center text-base md:text-lg text-charcoal-500 mb-12 max-w-2xl mx-auto">
         Find answers to common questions about our services, appointments, and
