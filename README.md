@@ -55,6 +55,7 @@ src/
     AppShell.jsx           — thin outer shell wrapper
   lib/
     contentful.js          — all Contentful fetch functions (treatments, blog posts, FAQs)
+    analytics.js           — tool-agnostic analytics loader, see "Cookies & analytics" below
   pages/
     Landing.jsx             — homepage
     About.jsx               — studio + founder bio
@@ -92,18 +93,29 @@ If in doubt: if it's a one-off content image tied to a specific page (like a fou
 | About page copy                                       | Hardcoded directly in `About.jsx`                                                                                  |
 | Special Offers box                                    | Hardcoded directly in `SpecialOffers.jsx` — edit the `OFFERS`-adjacent copy in that file directly, no CMS involved |
 
+## Cookies & analytics — how consent is wired
+
+The cookie banner (`CookieConsent.jsx`) is fully functional, but deliberately doesn't hardcode any specific analytics tool — that decision hasn't been made yet. Instead:
+
+- **`src/lib/analytics.js`** is the single place to add whichever analytics tool gets chosen (Simple Analytics, GA4, etc.) — it exports `initAnalytics()` and `revokeAnalyticsConsent()`, both currently empty stubs with commented examples for both a cookieless and a cookie-based tool.
+- `CookieConsent.jsx` already calls `initAnalytics()` both when someone clicks Accept, and on every later page load for a returning visitor who accepted previously — so nothing else needs to change once the tool is picked, just fill in that one file.
+- A **"Cookie Preferences" link in the footer** lets a visitor reopen the banner and change their earlier choice at any time.
+
+**Before adding a real analytics script**, know the difference: a cookie-based tool (GA4) must only run inside `initAnalytics()`, since it should never load before consent. A genuinely cookieless tool (e.g. Simple Analytics) doesn't need to be gated at all, technically — but routing it through `initAnalytics()` anyway keeps behavior consistent and this file as the one source of truth.
+
 ## Blog page — currently live for the demo, likely to be disabled again after
 
 The Blog is currently switched on (with a dummy post) for demo purposes. It's expected to go back to disabled afterward, while Suzanne gets comfortable adding real content in Contentful — at which point, comment out rather than delete:
 
 1. In `App.jsx`, comment out the `Blog`/`BlogPost` import lines and their two route entries (`path: "blog"` and `path: "blog/:slug"`).
 2. In `StickyNav.jsx`, comment out the "Blog" `<Link>` in both the desktop `<nav>` and the mobile menu `<nav>`.
-   To bring it back again later, just uncomment the same lines.
+
+To bring it back again later, just uncomment the same lines.
 
 ## Known placeholders / before this goes live
 
 - **About page founder photo** (`src/assets/images/suzanne-placeholder.png`) is Suzanne, but an AI-generated rendering rather than a straight photograph. Not urgent to change, but worth swapping for an unedited photo if/when one's available — flagged in the code comment above the `<img>` tag in `About.jsx` so it's a conscious choice rather than forgotten.
-- Blog is currently disabled (see above) — once re-enabled, it'll show "No posts yet" until real posts are added in Contentful.
+- Blog is currently live with a dummy post for the demo (see above) — swap in real posts, or comment it back out, once the demo's done.
 
 ## Design/typography reference
 
