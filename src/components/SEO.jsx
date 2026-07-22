@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { SITE_URL, BUSINESS_INFO } from "../config/businessInfo";
+import { SITE_URL, BUSINESS_INFO } from "../config/temp-businessInfo";
 
 // Usage, at the top of any page component:
 //

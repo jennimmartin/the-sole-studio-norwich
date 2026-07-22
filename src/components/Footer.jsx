@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BUSINESS_INFO } from "../config/businessInfo";
+import { BUSINESS_INFO } from "../config/temp-businessInfo";
 
 // Clears the stored cookie choice and reloads, so CookieConsent's own
 // mount check sees no stored answer and shows the banner again — same
