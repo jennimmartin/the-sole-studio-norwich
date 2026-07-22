@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { initAnalytics, revokeAnalyticsConsent } from "../lib/analytics";
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -7,22 +8,30 @@ const CookieConsent = () => {
   useEffect(() => {
     // Check if user has already consented
     const hasConsented = localStorage.getItem("cookieConsent");
+
     if (!hasConsented) {
       setShowBanner(true);
+      return;
+    }
+
+    // Returning visitor who already made a choice in a previous session —
+    // nothing else in the app re-runs this, so it has to happen here on
+    // every page load, not just at the moment of clicking Accept.
+    if (hasConsented === "accepted") {
+      initAnalytics();
     }
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem("cookieConsent", "accepted");
     setShowBanner(false);
-    // Initialize analytics here if needed
-    // e.g., window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    initAnalytics();
   };
 
   const declineCookies = () => {
     localStorage.setItem("cookieConsent", "declined");
     setShowBanner(false);
-    // Don't initialize analytics
+    revokeAnalyticsConsent();
   };
 
   if (!showBanner) return null;
@@ -31,16 +40,16 @@ const CookieConsent = () => {
     <div className="fixed bottom-0 left-0 right-0 bg-black text-white p-6 shadow-lg z-50">
       <div className="align-element">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          
           {/* Message */}
           <div className="flex-1">
             <p className="text-sm md:text-base mb-2">
-              We use cookies to improve your experience on our website and to analyze site traffic.
+              We use cookies to improve your experience on our website and to
+              analyze site traffic.
             </p>
             <p className="text-xs text-neutral-300">
               By clicking "Accept", you consent to our use of cookies.{" "}
-              <Link 
-                to="/legal" 
+              <Link
+                to="/legal"
                 className="underline hover:text-white transition-colors"
               >
                 Learn more in our Cookie Policy

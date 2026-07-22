@@ -32,6 +32,14 @@ const FOOTER_DATA = {
   },
 };
 
+// Clears the stored cookie choice and reloads, so CookieConsent's own
+// mount check sees no stored answer and shows the banner again — same
+// path as a first-time visitor.
+const reopenCookiePreferences = () => {
+  localStorage.removeItem("cookieConsent");
+  window.location.reload();
+};
+
 const Footer = () => {
   return (
     <footer>
@@ -89,7 +97,7 @@ const Footer = () => {
                   <p>
                     <a
                       href={`tel:${FOOTER_DATA.phone.replace(/\s/g, "")}`}
-                      className="underline hover:text-neutral-800 transition-colors"
+                      className="hover:text-neutral-800 transition-colors"
                     >
                       {FOOTER_DATA.phone}
                     </a>
@@ -97,7 +105,7 @@ const Footer = () => {
                   <p>
                     <a
                       href={`mailto:${FOOTER_DATA.email}`}
-                      className="underline hover:text-neutral-800 transition-colors"
+                      className="hover:text-neutral-800 transition-colors"
                     >
                       {FOOTER_DATA.email}
                     </a>
@@ -195,6 +203,13 @@ const Footer = () => {
                   <span className="text-black underline hover:text-charcoal-500 transition-colors text-sm px-0.5">
                     <Link to="/faq">FAQs</Link>
                   </span>
+                  {" | "}
+                  <button
+                    onClick={reopenCookiePreferences}
+                    className="text-black underline hover:text-charcoal-500 transition-colors text-sm px-0.5"
+                  >
+                    Cookie Preferences
+                  </button>
                 </div>
               </div>
             </div>
