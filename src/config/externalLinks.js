@@ -9,7 +9,8 @@ export const EXTERNAL_LINKS = {
     : "https://thesolestudionorwich.book.app/book-now", // Real URL for production - it will have sole-studio
 
   // Social media
-  facebook: "https://facebook.com/thesolestudionorwich",
+  facebook:
+    "https://www.facebook.com/profile.php?id=61589109004688&mibextid=wwXIfr&rdid=isQ812xuAKmThgAp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18w8cGhYm8%2F%3Fmibextid%3DwwXIfr",
   instagram: "https://www.instagram.com/thesolestudionorwich",
   tiktok: "",
 
