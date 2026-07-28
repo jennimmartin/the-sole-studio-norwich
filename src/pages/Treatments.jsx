@@ -149,7 +149,9 @@ const Treatments = () => {
         {thaiFootMassage.length > 0 && (
           <div id="thai-foot-massage">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">Thai Foot Massage</h2>
+              <h2 className="text-3xl md:text-4xl mb-6 text-center">
+                Thai Foot Massage
+              </h2>
               <p>
                 Restorative relief for tired, overworked feet. A therapeutic
                 treatment using traditional Thai techniques to improve
@@ -187,7 +189,7 @@ const Treatments = () => {
         {toenailReconstruction.length > 0 && (
           <div id="toenail-reconstruction">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">
+              <h2 className="text-3xl md:text-4xl mb-6 text-center">
                 Toenail Reconstruction
               </h2>
               <p>
@@ -233,7 +235,7 @@ const Treatments = () => {
         {elim.length > 0 && (
           <div id="elim">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">ELIM</h2>A
+              <h2 className="text-3xl md:text-4xl mb-6 text-center">ELIM</h2>A
               results-driven, medical-grade pedicure designed to restore
               comfort, improve skin condition, and support long-term foot
               health. This advanced, non-invasive treatment goes beyond a
@@ -270,7 +272,9 @@ const Treatments = () => {
         {pedicures.length > 0 && (
           <div id="pedicures">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">Pedicures</h2>
+              <h2 className="text-3xl md:text-4xl mb-6 text-center">
+                Pedicures
+              </h2>
               <p>
                 Treat your feet to a professional, restorative pedicure designed
                 to improve comfort, hygiene, and overall foot health. Your
@@ -313,7 +317,9 @@ const Treatments = () => {
         {gelMani.length > 0 && (
           <div id="gel-manicures">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">Gel Manicures</h2>
+              <h2 className="text-3xl md:text-4xl mb-6 text-center">
+                Gel Manicures
+              </h2>
               <p>
                 Available exclusively when booked alongside a gel pedicure. The
                 result is a consistent, high-standard finish across both hands
@@ -348,7 +354,9 @@ const Treatments = () => {
         {brows.length > 0 && (
           <div id="eyebrows-lashes">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-4">Eyebrows & Lashes</h2>
+              <h2 className="text-3xl md:text-4xl mb-6 text-center">
+                Eyebrows & Lashes
+              </h2>
               <p className="mb-2">
                 Natural definition with a clean, professional finish. Tailored
                 brow and lash services designed to enhance your natural shape,

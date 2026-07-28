@@ -17,7 +17,7 @@ const About = () => {
       <div className="space-y-12">
         {/* Section 1: Specialist foot care with purpose */}
         <div className="space-y-4 text-base md:text-lg">
-          <h2 className="text-3xl md:text-4xl mb-6">
+          <h2 className="text-3xl md:text-4xl mb-6 text-center">
             Specialist foot care with purpose
           </h2>
           <p>
@@ -52,7 +52,7 @@ const About = () => {
 
         {/* Section 3: Who is this for */}
         <div className="space-y-4 text-base md:text-lg">
-          <h2 className="text-3xl md:text-4xl mb-6">
+          <h2 className="text-3xl md:text-4xl mb-6 text-center">
             Who is The Sole Studio Norwich for?
           </h2>
           <p>People with active lifestyles</p>
@@ -78,7 +78,7 @@ const About = () => {
 
         {/* Section 5: Meet Suzanne */}
         <div className="space-y-4 text-base md:text-lg">
-          <h2 className="text-3xl md:text-4xl mb-6">
+          <h2 className="text-3xl md:text-4xl mb-8 text-center ">
             Meet Suzanne - Founder and therapist
           </h2>
 
