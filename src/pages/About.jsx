@@ -88,7 +88,7 @@ const About = () => {
               Swap the src below for her actual photo before this goes live.
             */}
             <img
-              src="/images/suzanne-placeholder.png"
+              src="/images/suzanne.jpg"
               alt="Suzanne Martin, founder of The Sole Studio Norwich"
               className="w-full sm:max-w-sm sm:mx-auto border border-neutral-200"
             />

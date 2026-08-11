@@ -114,7 +114,6 @@ To bring it back again later, just uncomment the same lines.
 
 ## Known placeholders / before this goes live
 
-- **About page founder photo** (`src/assets/images/suzanne-placeholder.png`) is Suzanne, but an AI-generated rendering rather than a straight photograph. Not urgent to change, but worth swapping for an unedited photo if/when one's available — flagged in the code comment above the `<img>` tag in `About.jsx` so it's a conscious choice rather than forgotten.
 - Blog is currently live with a dummy post for the demo (see above) — swap in real posts, or comment it back out, once the demo's done.
 
 ## Design/typography reference
