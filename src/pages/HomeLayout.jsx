@@ -21,7 +21,7 @@ const HomeLayout = () => {
         <Outlet />
         <Footer />
       </AppShell>
-      <EmailPopup />
+      {/* <EmailPopup /> */}
       <CookieConsent />
     </>
   );
