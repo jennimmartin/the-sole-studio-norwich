@@ -46,12 +46,12 @@ export default function StickyNav() {
             >
               FAQs
             </Link>
-            <Link
+            {/*<Link
               className="text-lg text-white hover:text-neutral-400 duration-300 tracking-wide"
               to="/blog"
             >
               Blog
-            </Link>
+  </Link>*/}
           </nav>
 
           {/* Mobile Hamburger (only shows when menu is closed) */}
@@ -143,13 +143,13 @@ export default function StickyNav() {
           >
             FAQs
           </Link>
-          <Link
+          {/*<Link
             className="text-2xl text-white hover:text-neutral-400 duration-300 tracking-widest"
             to="/blog"
             onClick={closeMenu}
           >
             Blog
-          </Link>
+      </Link>*/}
         </nav>
       </div>
     </>

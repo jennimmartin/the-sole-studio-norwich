@@ -8,3 +8,4 @@ export { default as Contact } from "./Contact";
 export { default as Blog } from "./Blog";
 export { default as BlogPost } from "./BlogPost";
 export { default as Faq } from "./Faq";
+export { default as Book } from "./Book";

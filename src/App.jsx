@@ -8,9 +8,10 @@ import {
   Contact,
   Legal,
   Error,
-  Blog,
-  BlogPost,
+  // Blog,
+  // BlogPost,
   Faq,
+  Book,
 } from "./pages";
 
 if ("scrollRestoration" in window.history) {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
         element: <Landing />,
       },
       {
-        path: "treatments",
+        path: "Treatments",
         element: <Treatments />,
       },
       {
@@ -43,17 +44,21 @@ const router = createBrowserRouter([
         path: "legal",
         element: <Legal />,
       },
-      {
-        path: "blog",
-        element: <Blog />,
-      },
-      {
-        path: "blog/:slug",
-        element: <BlogPost />,
-      },
+      // {
+      //   path: "blog",
+      //   element: <Blog />,
+      // },
+      // {
+      //   path: "blog/:slug",
+      //   element: <BlogPost />,
+      // },
       {
         path: "faq",
         element: <Faq />,
+      },
+      {
+        path: "book",
+        element: <Book />,
       },
     ],
   },
