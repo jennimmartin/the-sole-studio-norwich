@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getTreatments } from "../lib/contentful";
 import BookNowButton from "../components/ui/BookNowButton";
 import SpecialOffers from "../components/SpecialOffers";
@@ -149,9 +149,7 @@ const Treatments = () => {
         {thaiFootMassage.length > 0 && (
           <div id="thai-foot-massage">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-6 text-center">
-                Thai Foot Massage
-              </h2>
+              <h2 className="text-3xl md:text-4xl mb-4">Thai Foot Massage</h2>
               <p>
                 Restorative relief for tired, overworked feet. A therapeutic
                 treatment using traditional Thai techniques to improve
@@ -189,7 +187,7 @@ const Treatments = () => {
         {toenailReconstruction.length > 0 && (
           <div id="toenail-reconstruction">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-6 text-center">
+              <h2 className="text-3xl md:text-4xl mb-4">
                 Toenail Reconstruction
               </h2>
               <p>
@@ -235,7 +233,7 @@ const Treatments = () => {
         {elim.length > 0 && (
           <div id="elim">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-6 text-center">ELIM</h2>A
+              <h2 className="text-3xl md:text-4xl mb-4">ELIM</h2>A
               results-driven, medical-grade pedicure designed to restore
               comfort, improve skin condition, and support long-term foot
               health. This advanced, non-invasive treatment goes beyond a
@@ -272,9 +270,7 @@ const Treatments = () => {
         {pedicures.length > 0 && (
           <div id="pedicures">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-6 text-center">
-                Pedicures
-              </h2>
+              <h2 className="text-3xl md:text-4xl mb-4">Pedicures</h2>
               <p>
                 Treat your feet to a professional, restorative pedicure designed
                 to improve comfort, hygiene, and overall foot health. Your
@@ -317,9 +313,7 @@ const Treatments = () => {
         {gelMani.length > 0 && (
           <div id="gel-manicures">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-6 text-center">
-                Gel Manicures
-              </h2>
+              <h2 className="text-3xl md:text-4xl mb-4">Gel Manicures</h2>
               <p>
                 Available exclusively when booked alongside a gel pedicure. The
                 result is a consistent, high-standard finish across both hands
@@ -354,9 +348,7 @@ const Treatments = () => {
         {brows.length > 0 && (
           <div id="eyebrows-lashes">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl mb-6 text-center">
-                Eyebrows & Lashes
-              </h2>
+              <h2 className="text-3xl md:text-4xl mb-4">Eyebrows & Lashes</h2>
               <p className="mb-2">
                 Natural definition with a clean, professional finish. Tailored
                 brow and lash services designed to enhance your natural shape,
@@ -413,6 +405,26 @@ const Treatments = () => {
 // Treatment Card Component
 const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const descriptionRef = useRef(null);
+
+  // Character-count heuristics can't reliably predict whether text will
+  // visually wrap past 3 lines — that depends on the actual words, the
+  // card's width, and the font, none of which a simple .length check
+  // knows about. Measuring the real rendered height (while still
+  // clamped) is the only way to know for certain whether "Read more" is
+  // actually needed.
+  useEffect(() => {
+    const checkOverflow = () => {
+      const el = descriptionRef.current;
+      if (!el) return;
+      setIsOverflowing(el.scrollHeight > el.clientHeight + 1);
+    };
+
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [treatment.description]);
 
   return (
     <div className="bg-white border border-neutral-200 p-8 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
@@ -440,12 +452,13 @@ const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
       {/* Description */}
       <div className="mb-6">
         <div
+          ref={descriptionRef}
           className={`text-charcoal-500 leading-relaxed ${
             !isExpanded ? "line-clamp-3" : ""
           }`}
           dangerouslySetInnerHTML={{ __html: treatment.description }}
         />
-        {treatment.description && treatment.description.length > 200 && (
+        {isOverflowing && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="text-sm text-black hover:text-charcoal-500 mt-2 transition-colors"

@@ -11,7 +11,6 @@ import {
   // Blog,
   // BlogPost,
   Faq,
-  Book,
 } from "./pages";
 
 if ("scrollRestoration" in window.history) {
@@ -55,10 +54,6 @@ const router = createBrowserRouter([
       {
         path: "faq",
         element: <Faq />,
-      },
-      {
-        path: "book",
-        element: <Book />,
       },
     ],
   },

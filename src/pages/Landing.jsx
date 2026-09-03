@@ -8,8 +8,6 @@ import Review from "../components/Review";
 import BookNowButton from "../components/ui/BookNowButton";
 import ViewTreatmentsButton from "../components/ui/ViewTreatmentsButton";
 
-import BookingWidget from "../components/BookingWidget";
-
 import SEO from "../components/SEO";
 
 const Landing = () => {
@@ -35,24 +33,7 @@ const Landing = () => {
           Bridging the gap between beauty and podiatry.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-md sm:max-w-none mx-auto">
-          {/*
-            TEMPORARY — for Suzanne to trial the new internal booking page.
-            Uses a plain <a> tag (not React Router's <Link>) deliberately —
-            the BookApp widget script appears to depend on the browser's
-            window 'load' event to finish its own internal setup, which
-            only fires on a genuine full page load. React Router's <Link>
-            navigates without reloading the page, so that event never
-            fires again after the very first page load — this is why the
-            widget only appeared after a manual refresh. A plain <a> tag
-            forces a real page load on click, same as a refresh does.
-            To revert: delete this <a> and put back <BookNowButton />.
-          */}
-          <a
-            href="/book"
-            className="transition-all duration-300 cursor-pointer inline-block text-center bg-black text-white hover:text-neutral-400 px-6 py-3"
-          >
-            Book an Appointment
-          </a>
+          <BookNowButton />
           <ViewTreatmentsButton />
         </div>
       </section>
