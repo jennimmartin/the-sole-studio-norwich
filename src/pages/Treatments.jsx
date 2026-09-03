@@ -5,7 +5,7 @@ import SpecialOffers from "../components/SpecialOffers";
 import PageTitle from "../components/PageTitle";
 import SEO from "../components/SEO";
 
-import LoyaltyRewards from "../components/LoyaltyRewards";
+// import LoyaltyRewards from "../components/LoyaltyRewards"; // planned, not ready yet
 
 const Treatments = () => {
   const [treatments, setTreatments] = useState([]);
@@ -396,7 +396,9 @@ const Treatments = () => {
           </div>
         )}
 
-        {/* Loyalty & Discounts - CENTERED */}
+        {/* Loyalty & Discounts — planned for later, not built yet. See
+            LAUNCH-CHECKLIST.md addendum. When ready: uncomment the import
+            above and render <LoyaltyRewards /> here. */}
       </div>
     </div>
   );
