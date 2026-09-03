@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!--
+  TODO: confirm this domain matches SITE_URL in src/config/businessInfo.js
+  and your actual live domain before submitting to Search Console.
+-->
+
+<url>
+  <loc>https://www.thesolestudionorwich.co.uk/</loc>
+  <lastmod>2026-09-03</lastmod>
+</url>
+
+<url>
+  <loc>https://www.thesolestudionorwich.co.uk/about</loc>
+  <lastmod>2026-09-03</lastmod>
+</url>
+
+<url>
+  <loc>https://www.thesolestudionorwich.co.uk/treatments</loc>
+  <lastmod>2026-09-03</lastmod>
+</url>
+
+<url>
+  <loc>https://www.thesolestudionorwich.co.uk/contact</loc>
+  <lastmod>2026-09-03</lastmod>
+</url>
+
+<url>
+  <loc>https://www.thesolestudionorwich.co.uk/faq</loc>
+  <lastmod>2026-09-03</lastmod>
+</url>
+
+<url>
+  <loc>https://www.thesolestudionorwich.co.uk/legal</loc>
+  <lastmod>2026-09-03</lastmod>
+</url>
+
+<!--
+  Blog is currently disabled (see LAUNCH-CHECKLIST.md addendum) — add
+  /blog here once it's switched back on and has real content. Individual
+  blog post URLs (/blog/:slug) can't be hardcoded here since they come
+  from Contentful and change as posts are added — that would need either
+  manual updates each time, or a small build script that generates this
+  file dynamically from Contentful's data. Worth revisiting once the blog
+  is actually live rather than building that now for a page that's off.
+-->
+
+</urlset>
