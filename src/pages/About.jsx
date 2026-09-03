@@ -83,10 +83,6 @@ const About = () => {
           </h2>
 
           <div className="mb-8">
-            {/*
-              PLACEHOLDER IMAGE — AI-generated, not a real photo of Suzanne.
-              Swap the src below for her actual photo before this goes live.
-            */}
             <img
               src="/images/suzanne.jpg"
               alt="Suzanne Martin, founder of The Sole Studio Norwich"
