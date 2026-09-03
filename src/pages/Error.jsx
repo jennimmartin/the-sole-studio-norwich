@@ -38,8 +38,8 @@ const Error = () => {
             {is404 ? (
               <>
                 Looking for something specific? Try our{" "}
-                <Link to="/services" className="underline hover:text-black">
-                  services page
+                <Link to="/treatments" className="underline hover:text-black">
+                  treatments page
                 </Link>{" "}
                 or{" "}
                 <Link to="/contact" className="underline hover:text-black">
