@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thesolestudionorwich.co.uk/sitemap.xml
+Sitemap: https://www.thesolestudionorwich.co.uk/sitemap.xml
