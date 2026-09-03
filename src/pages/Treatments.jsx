@@ -405,7 +405,7 @@ const Treatments = () => {
 // Treatment Card Component
 const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isOverflowing, setIsOverflowing] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(true);
   const descriptionRef = useRef(null);
 
   // Character-count heuristics can't reliably predict whether text will
@@ -418,10 +418,26 @@ const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
     const checkOverflow = () => {
       const el = descriptionRef.current;
       if (!el) return;
-      setIsOverflowing(el.scrollHeight > el.clientHeight + 1);
+
+      // Measuring scrollHeight while the line-clamp is active isn't
+      // reliable across browsers — clipped content can get excluded from
+      // the measurement entirely rather than just visually hidden. So:
+      // temporarily remove the clamp, measure the text's true natural
+      // height with nothing hiding it, then put the clamp back.
+      const wasClamped = el.classList.contains("line-clamp-3");
+      if (wasClamped) el.classList.remove("line-clamp-3");
+
+      const lineHeight = parseFloat(getComputedStyle(el).lineHeight) || 0;
+      const naturalHeight = el.scrollHeight;
+      const threeLinesHeight = lineHeight * 3;
+
+      if (wasClamped) el.classList.add("line-clamp-3");
+
+      setIsOverflowing(naturalHeight > threeLinesHeight + 1);
     };
 
     checkOverflow();
+    document.fonts?.ready?.then(checkOverflow);
     window.addEventListener("resize", checkOverflow);
     return () => window.removeEventListener("resize", checkOverflow);
   }, [treatment.description]);
@@ -453,8 +469,8 @@ const TreatmentCard = ({ treatment, needsPatchTest = false }) => {
       <div className="mb-6">
         <div
           ref={descriptionRef}
-          className={`text-charcoal-500 leading-relaxed ${
-            !isExpanded ? "line-clamp-3" : ""
+          className={`text-charcoal-500 leading-relaxed prose prose-sm max-w-none ${
+            !isExpanded && isOverflowing ? "line-clamp-3" : ""
           }`}
           dangerouslySetInnerHTML={{ __html: treatment.description }}
         />
